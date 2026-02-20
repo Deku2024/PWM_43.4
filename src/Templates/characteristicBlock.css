@@ -1,0 +1,15 @@
+hgroup {
+    background-color: grey;
+    font-family: SansSerif, SansSerif, sans-serif;
+    font-size: 10pt;
+    padding: 7px;
+    text-align: center;
+    width: 58px;
+    height: 70px;
+}
+
+button {
+    width: 44px;
+    height: 30px;
+    text-align: center;
+}

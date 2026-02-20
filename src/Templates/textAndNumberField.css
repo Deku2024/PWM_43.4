@@ -1,0 +1,15 @@
+hgroup {
+    background-color: grey;
+    padding: 5px;
+    width: 101px;
+    text-align: center;
+}
+
+.stat-title {
+    background-color: darkgray;
+    height: 25px;
+}
+.stat-value {
+    background-color: darkgray;
+    height: 57px;
+}
