@@ -1,15 +1,24 @@
 hgroup {
-    background-color: grey;
+    background-color: #eedede;
     font-family: SansSerif, SansSerif, sans-serif;
-    font-size: 10pt;
-    padding: 7px;
+    font-size: 8pt;
     text-align: center;
-    width: 58px;
-    height: 70px;
+    border: 2px black solid;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 button {
-    width: 44px;
-    height: 30px;
-    text-align: center;
+    border: 1px solid black;
+    background-color: #cc903f;
+    border-radius: 4px;
+}
+
+p {
+    margin: 4px;
 }
