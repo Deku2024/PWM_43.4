@@ -2,7 +2,11 @@
 hgroup
 {
     padding: 10px;
-    background-color: grey;
+    background-color: #b5b5b5;
     width: 885px;
-    height: 831px;
+    height: 600px;
+
+    border-radius: 10px;
+    border: 1px black solid;
+    margin: 10px;
 }

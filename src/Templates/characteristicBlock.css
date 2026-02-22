@@ -11,9 +11,11 @@ hgroup {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    cursor: pointer;
 }
 
-button {
+#imageButton {
     border: 1px solid black;
     background-color: #cc903f;
     border-radius: 4px;
