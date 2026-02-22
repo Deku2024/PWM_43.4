@@ -1,0 +1,23 @@
+nav {
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+    width: 8%;
+    background-color: tan;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+}
+
+img {
+    width: 50px;
+    height: auto;
+    margin: 20px 0 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
