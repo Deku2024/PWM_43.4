@@ -1,7 +1,7 @@
 .container {
     display: grid;
 
-    grid-template-columns: 1fr 80px;
+    grid-template-columns: 1fr 100px;
 
     gap: 10px;
     background-color: lightgray;
@@ -22,7 +22,7 @@ textarea {
     flex-direction: column;
     gap: 30px;
     margin-top: 30px;
-    margin-left: auto;
+
 }
 
 button {
