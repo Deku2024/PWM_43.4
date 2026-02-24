@@ -4,13 +4,15 @@
   <meta charset="UTF-8" />
   <title>D&D Player Cards</title>
   <script src="xlu-include-file.js"></script>
-  <link rel="stylesheet" href="./Templates/logTiradas.css">
-  <link rel="stylesheet" href="./Templates/userIconandName.css">
-  <link rel="stylesheet" href="./Templates/playersSideBar.css">
+  <link rel="stylesheet" href="playerCampaignMain.css">
 </head>
 <body>
-<section xlu-include-file="./Templates/logTiradas.html"></section>
-<section xlu-include-file="./Templates/playersSideBar.html"></section>
+
+<section id="playersSideBar" xlu-include-file="./Templates/playersSideBar.html">
+</section>
+
+<div class="logybotón" xlu-include-file="./Templates/logTiradas.html"></div>
+
 
 <script>
   xLuIncludeFile();

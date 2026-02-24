@@ -1,5 +1,60 @@
 body {
     display: flex;
+    margin: 1%;
+}
+
+.logybotón {
+    margin-left: auto;
+    display: flex;
     flex-direction: column;
-    
+    height: 95vh;
+    width: 15%
+}
+
+.logtiradas {
+    background-color: tan;
+    height: 90vh;
+    border-radius: 10px;
+}
+
+#utilidad {
+    width: 100%;
+    padding: 5px;
+    margin-top: auto;
+    border-radius: 10px;
+    border: 0;
+}
+
+#utilidad:hover {
+    cursor: pointer;
+    background-color: darkgray;
+}
+
+#playersSideBar {
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+    width: 15%;
+}
+
+#playersSideBar ul {
+    background-color: tan;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+    list-style: none;
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.userIconandName {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+p {
+    padding: 5px;
 }
