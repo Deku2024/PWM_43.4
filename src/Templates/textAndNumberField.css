@@ -1,4 +1,4 @@
-hgroup {
+.textAndNumberBlock {
     width: 100px;
     text-align: center;
 
@@ -10,7 +10,7 @@ hgroup {
 }
 
 
-#stat-title {
+.stat-title {
     background-color: darkgray;
     height: 25px;
     width: 90px;
@@ -21,7 +21,7 @@ hgroup {
     align-items: center;
     justify-content: center;
 }
-#stat-value {
+.stat-value {
     background-color: darkgray;
     height: 57px;
     width: 90px;
