@@ -1,0 +1,26 @@
+.characteristicBlock {
+    background-color: #eedede;
+    font-family: SansSerif, SansSerif, sans-serif;
+    font-size: 8pt;
+    text-align: center;
+    border: 2px black solid;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.characteristicButton {
+    border: 1px solid black;
+    background-color: #cc903f;
+    border-radius: 4px;
+}
+
+.characteristicName {
+    margin: 4px;
+}
