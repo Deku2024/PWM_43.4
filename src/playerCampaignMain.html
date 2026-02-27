@@ -7,13 +7,17 @@
   <link rel="stylesheet" href="playerCampaignMain.css">
 </head>
 <body>
-<!--<header xlu-include-file="./Templates/headerLoggedIn.html"></header>-->
+<header id="header" xlu-include-file="./Templates/headerLoggedIn.html"></header>
 
-<section id="playersSideBar" xlu-include-file="./Templates/playersSideBar.html"></section>
+<div id="layout">
 
-<section id="sessionArea" xlu-include-file="./Templates/sessionAreaTemplate.html"></section>
+  <section id="playersSideBar" xlu-include-file="./Templates/playersSideBar.html"></section>
 
-<div class="logybotón" xlu-include-file="./Templates/logTiradas.html"></div>
+  <main id="sessionArea"></main>
+  <div class="logybotón" xlu-include-file="./Templates/logTiradas.html"></div>
+
+</div>
+
 
 <!--<div xlu-include-file="./Templates/characteristicBlockTemplate.html"></div>-->
 
