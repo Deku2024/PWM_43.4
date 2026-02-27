@@ -1,0 +1,12 @@
+.container{
+    background-color: lightgray;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+
+
+}
+.text{
+    margin-right: 290px;
+}
