@@ -3,31 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <title>Join Session</title>
+  <script src="xlu-include-file.js"></script>
+  <link rel="stylesheet" href="./joinSession.css">
 </head>
 <body>
+  <header xlu-include-file="./Templates/headerLoggedIn.html"></header>
 
-<main>
+  <nav xlu-include-file="./Templates/navbar.html"></nav>
 
-  <h1>
+  <main>
+    <h1>Lorem Ipsum</h1>
 
-  </h1>
+    <label for="idSession"></label><input id="idSession" placeholder="Session's ID">
+    <label for="sessionPassword"></label><input id="sessionPassword" placeholder="Session's Password">
 
-  <input>
-  <input>
+    <div id="buttons">
+      <button>
+        Lorem Ipsum
+      </button>
 
-  <div>
-    <button>
-      Lorem Ipsum
-    </button>
-
-    <button>
-      Lorem Ipsum
-    </button>
-
-  </div>
-
-</main>
+      <button>
+        Lorem Ipsum
+      </button>
+    </div>
 
 
+    <script>
+      xLuIncludeFile();
+    </script>
+
+  </main>
 </body>
 </html>
