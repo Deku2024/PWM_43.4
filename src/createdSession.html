@@ -3,49 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <title>Created session</title>
+  <script src="xlu-include-file.js"></script>
   <link rel="stylesheet" href="createdSession.css">
 </head>
 
 <body>
 
-<h1>Lorem Ipsum</h1>
+<header xlu-include-file="./Templates/headerLoggedIn.html"></header>
 
-<div class="container">
+<nav xlu-include-file="./Templates/navbar.html"></nav>
 
-  <div class="left">
-    <h1>Lorem Ipsum</h1>
 
-    <p class="description">
-      Quisque nec neque eget leo ultrices iaculis. Sed id hendrerit leo, vel
-      vestibulum magna. In lacus justo, efficitur id felis quis, mollis feugiat est.
-      Vestibulum cursus ex vitae libero dignissim, in eleifend lorem luctus.
-      Vestibulum ornare, nulla id commodo tempus, orci ligula condimentum augue,
-      et facilisis orci neque ac ex. Duis tempor mauris vel eros mollis, nec
-      efficitur neque rhoncus. Aenean a accumsan justo. Donec at orci finibus,
-      viverra metus ut, imperdiet dolor. Vivamus rutrum dolor et eros aliquam
-      vestibulum.
-    </p>
-  </div>
+<main>
 
-  <div class="right">
+  <section id="mainSection">
 
-    <img src="Assets/aspasfooter.png" alt="Imagen">
+    <div class="left">
+      <h1>Lorem Ipsum</h1>
+      <h2>Lorem Ipsum</h2>
 
-    <div class="id-row">
-      <button class="small-btn">Botón</button>
-      <p class="id">ID: 3232345234526</a>
+      <p class="description">
+        Quisque nec neque eget leo ultrices iaculis. Sed id hendrerit leo, vel
+        vestibulum magna. In lacus justo, efficitur id felis quis, mollis feugiat est.
+        Vestibulum cursus ex vitae libero dignissim, in eleifend lorem luctus.
+        Vestibulum ornare, nulla id commodo tempus, orci ligula condimentum augue,
+        et facilisis orci neque ac ex. Duis tempor mauris vel eros mollis, nec
+        efficitur neque rhoncus. Aenean a accumsan justo. Donec at orci finibus,
+        viverra metus ut, imperdiet dolor. Vivamus rutrum dolor et eros aliquam
+        vestibulum.Quisque nec neque eget leo ultrices iaculis. Sed id hendrerit leo, vel
+        vestibulum magna. In lacus justo, efficitur id felis quis, mollis feugiat est.
+        Vestibulum cursus ex vitae libero dignissim, in eleifend lorem luctus.
+        Vestibulum ornare, nulla id commodo tempus, orci ligula condimentum augue,
+        et facilisis orci neque ac ex. Duis tempor mauris vel eros mollis, nec
+        efficitur neque rhoncus. Aenean a accumsan justo. Donec at orci finibus,
+        viverra metus ut, imperdiet dolor. Vivamus rutrum dolor et eros aliquam
+        vestibulum.Quisque nec neque eget leo ultrices iaculis. Sed id hendrerit leo, vel
+        vestibulum magna. In lacus justo, efficitur id felis quis, mollis feugiat est.
+        Vestibulum cursus ex vitae libero dignissim, in eleifend lorem luctus.
+        Vestibulum ornare, nulla id commodo tempus, orci ligula condimentum augue,
+        et facilisis orci neque ac ex. Duis tempor mauris vel eros mollis, nec
+        efficitur neque rhoncus. Aenean a accumsan justo. Donec at orci finibus,
+        viverra metus ut, imperdiet dolor. Vivamus rutrum dolor et eros aliquam
+        vestibulum.
+      </p>
     </div>
 
-    <button class="large-btn">Botón</button>
+    <div class="right">
 
-  </div>
+      <img id="sessionPhoto" src="Assets/aspasfooter.png" alt="Imagen">
 
-</div>
+      <div class="id-row">
+        <button class="small-btn">Botón</button>
+        <p class="id">ID: 3232345234526</p>
+      </div>
 
-<div class="bottom">
-  <h1>Lorem Ipsum:</h1>
-  <p>@ipsumtdolor</p>
-</div>
+      <button class="large-btn">Botón</button>
+
+    </div>
+
+  </section>
+
+  <section id="additionalSection">
+    <div class="bottom">
+      <h1>Lorem Ipsum:</h1>
+      <p>@ipsumtdolor</p>
+    </div>
+
+  </section>
+
+</main>
+
+
+<script>
+  xLuIncludeFile();
+</script>
 
 </body>
 </html>
