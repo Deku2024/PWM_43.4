@@ -1,0 +1,113 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+
+#Main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 5vh;
+}
+
+img {
+    margin: 2%;
+    width: 25vw;
+}
+
+input {
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 0;
+    padding: 0.3%;
+
+    text-align: center;
+
+    width: 50vh;
+    height: 5vh;
+}
+
+
+
+input {
+    border: 1px solid black;
+    border-radius: 2px;
+    margin: 0 0 3vh 0;
+}
+
+#ButtonDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    margin: 0;
+    padding: 0;
+
+    width: 53.9vh;
+}
+
+button {
+    border: 1px solid black;
+    border-radius: 2px;
+    margin: 5%;
+}
+
+.mainButton {
+    height: 5vh;
+}
+
+p {
+    margin: 5%;
+}
+
+.buttonHeader {
+    background-color: darkgray;
+    height: 5vh;
+    width: 80%;
+    margin: 0 0;
+}
+
+
+#headerSection {
+    display: grid;
+    grid-template-columns: 1fr 10vw 10vw;
+    row-gap: 2vw;
+
+    height: 10vh;
+    width: 100%;
+
+    background-color: lightgrey;
+    padding: 0;
+    margin: 0;
+    top: 0;
+}
+
+#headerSection > *:not(:first-child) {
+    margin-top: 2.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#headerSection > *:first-child {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2.5vh;
+}
+
+a {
+    width: 11.3vw;
+    height: 4.8vh;
+    margin: 0 0 0 2vw;
+}
+
+#headerLogo {
+    object-fit: contain;
+    margin: 0;
+    padding: 0;
+}
+
+
+
