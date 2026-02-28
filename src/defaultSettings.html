@@ -3,49 +3,90 @@
 <head>
   <meta charset="UTF-8">
   <title>Default Settings</title>
+  <script src="xlu-include-file.js"></script>
   <link rel="stylesheet" href="defaultSettings.css">
 </head>
 <body>
 
-<div class="container">
+<header xlu-include-file="./Templates/headerLoggedIn.html"></header>
+
+<nav xlu-include-file="./Templates/navbar.html"></nav>
+
+<main>
 
   <h1>Lorem Ipsum</h1>
 
-  <div class="formGrid">
+  <div>
+    <section>
 
-    <div class="field">
-      <label>Lorem ipsum</label>
-      <input type="text">
-    </div>
+      <form class="field">
 
-    <div class="field">
-      <label>Lorem ipsum</label>
-      <input type="text">
-    </div>
+        <span>Lorem Ipsum</span>
+        <label>
+          <input type="text" placeholder="Lorem Ipsum">
+        </label>
 
-    <div class="field">
-      <label>Lorem ipsum</label>
-      <input type="text">
-    </div>
+      </form>
 
-    <div class="field">
-      <label>Lorem ipsum</label>
-      <input type="text">
-    </div>
+      <form class="field">
 
-    <div class="field">
-      <label>Lorem ipsum</label>
-      <input type="text">
-    </div>
+        <span>Lorem Ipsum</span>
 
-    <div class="field">
-      <label>Lorem ipsum</label>
-      <input type="text">
-    </div>
+        <label>
+          <input type="text" placeholder="Lorem Ipsum">
+        </label>
 
+      </form>
+
+      <form class="field">
+
+        <span>Lorem Ipsum</span>
+        <label>
+          <input type="text" placeholder="Lorem Ipsum">
+        </label>
+
+      </form>
+
+    </section>
+
+
+    <section>
+
+      <form class="field">
+
+        <span>Lorem Ipsum</span>
+        <label>
+          <input type="text" placeholder="Lorem Ipsum">
+        </label>
+
+      </form>
+
+      <form class="field">
+
+        <span>Lorem Ipsum</span>
+        <label>
+          <input type="text" placeholder="Lorem Ipsum">
+        </label>
+
+      </form>
+
+      <form class="field">
+
+        <span>Lorem Ipsum</span>
+        <label>
+          <input type="text" placeholder="Lorem Ipsum">
+        </label>
+
+      </form>
+
+    </section>
   </div>
 
-</div>
+</main>
+
+<script>
+  xLuIncludeFile();
+</script>
 
 </body>
 </html>

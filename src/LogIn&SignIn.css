@@ -9,7 +9,6 @@ body {
     flex-direction: column;
     align-items: center;
 
-    margin-top: 5vh;
 }
 
 img {
@@ -53,48 +52,57 @@ button {
     margin: 5%;
 }
 
-.mainButton {
-    height: 5vh;
+
+#headerItems {
+    background-color: lightgray;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    grid-template-columns: 1fr 14vw;
+    margin: 0;
+    padding: 2vh 0 1vh;
 }
 
-p {
-    margin: 5%;
+#headerItems > :first-child {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+
+    margin-left: 2%;
+}
+
+#headerItems > :last-child {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+}
+
+#buttonGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 10%;
 }
 
 .buttonHeader {
-    background-color: darkgray;
-    height: 5vh;
-    width: 80%;
-    margin: 0 0;
-}
+    width: 40%;
+    height: 4vh;
 
+    border: 1px solid black;
+    border-radius: 4px;
 
-#headerSection {
-    display: grid;
-    grid-template-columns: 1fr 10vw 10vw;
-    row-gap: 2vw;
-
-    height: 10vh;
-    width: 100%;
-
-    background-color: lightgrey;
-    padding: 0;
-    margin: 0;
-    top: 0;
-}
-
-#headerSection > *:not(:first-child) {
-    margin-top: 2.5vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#headerSection > *:first-child {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 2.5vh;
+    cursor: pointer;
 }
 
 a {
@@ -103,11 +111,38 @@ a {
     margin: 0 0 0 2vw;
 }
 
-#headerLogo {
-    object-fit: contain;
-    margin: 0;
-    padding: 0;
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: lightgray;
+
+    height: 10vh;
+
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
+footer a {
+    width: 60px;
+    height: 60px;
+}
 
+footer img {
+    object-fit: cover;
+
+    width: 60px;
+    height: 60px;
+}
+
+footer p {
+    margin: 0% 0 0 -15%;
+}
 

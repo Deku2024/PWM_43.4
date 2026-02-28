@@ -1,62 +1,127 @@
 body{
-    margin:0;
-    padding:50px;
     font-family: Georgia, serif;
+
+    margin-top: 20vh;
+    padding: 0;
+
+    width: 83vw;
+    height: 78vh;
 }
 
-h1{
+main {
+    display: grid;
+    grid-template-rows: 10vh 30vh 1fr;
+    row-gap: 5vh;
+
+    justify-items: center;
+
+    padding-left: 10vw;
+
+    width: 100%;
+    height: 100%;
+
+}
+
+main > :first-child {
+    justify-self: start;
+}
+
+h1 {
     font-style: italic;
-    font-size:40px;
-    margin-bottom:40px;
+    font-size: 30pt;
+
+    align-self: start;
+
+    margin: 0 0 0 11%;
 }
 
-.top-section{
-    display:flex;
-    gap:60px;
-    align-items:flex-start;
+#mainForm {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 81%;
 }
 
-img{
-    width:270px;
-    height:270px;
-    display:flex;
-    justify-content:ceter;
-    align-items:center;
+#imagen {
+    margin-top: 8.2%;
+    width: 35%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
 }
 
+.formFieldsGroups {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
 
-
-.form-fields{
-    flex:1;
-    display:flex;
-    flex-direction:column;
-    gap:20px;
+    align-items: end;
+    width: 100%;
+    height: 100%;
 }
 
-label{
-    font-style: italic;
-    font-size:16px;
-    margin-bottom:5px;
+.form-fields {
+    width: 100%;
+    height: 50%;
+    margin-top: 5.2%;
 }
 
 input{
-    background:#cfcfcf;
-    border:none;
-    height:25px;
-    padding:5px 10px;
+    background: lightgrey;
+
+    border: 1px solid black;
+    border-radius: 4px;
+
     font-family: Georgia, serif;
+    width: 100%;
+    height: 80%;
 }
 
-.buttons{
-    display:flex;
-    justify-content:space-between;
-    margin-top:120px;
+p {
+    margin: 0 0 1%;
 }
 
-button{
-    background:#bfbfbf;
-    border:none;
-    padding:15px 50px;
-    cursor:pointer;
+.buttons {
+    align-items: end;
+
+    display: grid;
+    grid-template-columns: 1fr 9vw 9vw;
+
+    padding-right: 15.6%;
+
+    width: 100%;
+    height: 80%;
+}
+
+button {
+    background: lightgrey;
+
+    border: 1px solid black;
+    border-radius: 4px;
+
+    cursor: pointer;
+
     font-family: Georgia, serif;
+
+    width: 90%;
+    height: 20%;
+}
+
+#firstButton {
+    align-self: end;
+    width: 10%;
+
+    margin-left: 23.5%;
+}
+
+header {
+    background: lightgrey;
+
+    padding: 1%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
