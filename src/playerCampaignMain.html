@@ -7,20 +7,58 @@
   <link rel="stylesheet" href="playerCampaignMain.css">
 </head>
 <body>
-<!--<header xlu-include-file="./Templates/headerLoggedIn.html"></header>-->
+<header id="header" xlu-include-file="./Templates/headerLoggedIn.html"></header>
 
-<section id="playersSideBar" xlu-include-file="./Templates/playersSideBar.html"></section>
+<div id="layout">
 
-<section id="sessionArea" xlu-include-file="./Templates/sessionAreaTemplate.html"></section>
+  <section id="playersSideBar" xlu-include-file="./Templates/playersSideBar.html"></section>
 
-<div class="logybotón" xlu-include-file="./Templates/logTiradas.html"></div>
+  <main id="sessionArea">
+    <section id="leftSection">
+      <button id="characterImageButton"><img id="characterImage" src="./Assets/d20.png" alt="Character's Image"></button>
+      <div id="characteristicsGroup">
+        <article class="characteristicBlock" xlu-include-file="./Templates/characteristicBlockTemplate.html"></article>
+        <article class="characteristicBlock" xlu-include-file="./Templates/characteristicBlockTemplate.html"></article>
+        <article class="characteristicBlock" xlu-include-file="./Templates/characteristicBlockTemplate.html"></article>
+        <article class="characteristicBlock" xlu-include-file="./Templates/characteristicBlockTemplate.html"></article>
+        <article class="characteristicBlock" xlu-include-file="./Templates/characteristicBlockTemplate.html"></article>
+        <article class="characteristicBlock" xlu-include-file="./Templates/characteristicBlockTemplate.html"></article>
+      </div>
 
-<!--<div xlu-include-file="./Templates/characteristicBlockTemplate.html"></div>-->
+      <button class="dropDownButton">Lorem Ipsum <span>></span></button>
+      <button class="dropDownButton">Lorem Ipsum <span>></span></button>
+      <button class="dropDownButton">Lorem Ipsum <span>></span></button>
 
-<!--<div id="textAndNumberFields" xlu-include-file="./Templates/textAndNumberFieldTemplate.html"></div>-->
+    </section>
+    <section id="rightSection">
+      <div id="basicCharacterInfo" class="rightSectionWrapper">
+        <label for="characterName"></label> <input class="firstField" id="characterName" type="text" placeholder="Name">
+        <label for="characterRace"></label> <input class="secondField" id="characterRace" type="text" placeholder="Race">
+        <label for="characterAge"></label> <input class="thirdField" id="characterAge" type="text" placeholder="Age">
+      </div>
 
-<!--<div id="throwDiceDrop-Down" xlu-include-file="./Templates/throwDicesTemplate.html"></div>-->
+      <div id="advancedCharacterInfo" class="rightSectionWrapper">
+        <label for="characterClasses"></label> <input class="firstField" id="characterClasses" type="text" placeholder="Classes">
+        <label for="characterExperience"></label> <input class="secondField" id="characterExperience" type="text" placeholder="Experience">
+        <label for="characterAligment"></label> <input class="thirdField" id="characterAligment" type="text" placeholder="Aligment">
+      </div>
 
+      <div id="miscCharacterValues" class="rightSectionWrapper">
+        <label for="salvationThrows"></label> <input id="salvationThrows" type="text" placeholder="Salvation Throws">
+
+        <article class="miscValueField" xlu-include-file="./Templates/textAndNumberFieldTemplate.html"></article>
+        <article class="miscValueField" xlu-include-file="./Templates/textAndNumberFieldTemplate.html"></article>
+        <article class="miscValueField" xlu-include-file="./Templates/textAndNumberFieldTemplate.html"></article>
+      </div>
+
+      <label for="characterDescription"></label><input placeholder="Description" type="text" id="characterDescription">
+
+      <section id="dropDownArea"> </section>
+
+    </section>
+  </main>
+  <div class="logAndButton" xlu-include-file="./Templates/logTiradas.html"></div>
+</div>
 
 
 <script>
