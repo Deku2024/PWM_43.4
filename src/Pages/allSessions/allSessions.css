@@ -31,11 +31,16 @@ main {
     width: 10%;
     margin-left: auto;
     padding: 0.5vw 0;
+}
+
+#joinSession {
+    width: 100%;
+    height: 100%;
     border-radius: 7px;
     border: 1px solid darkgray;
 }
 
-#createSessionButton:hover {
+#joinSession:hover {
     border: 1px solid gray;
     background-color: darkgray;
 }
@@ -127,4 +132,16 @@ li {
     height: 100%;
 
     transition: background-color 0.15s;
+}
+
+.link {
+    width: 25%;
+    height: 10%;
+    margin: 0;
+}
+
+.link button {
+    width: 36%;
+    height: 10%;
+    margin: 0;
 }

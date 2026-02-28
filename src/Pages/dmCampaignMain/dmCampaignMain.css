@@ -181,3 +181,8 @@ textarea {
 #lastNote {
     margin-bottom: 3%;
 }
+
+.goBackButton {
+    width: 100%;
+    margin: 0;
+}

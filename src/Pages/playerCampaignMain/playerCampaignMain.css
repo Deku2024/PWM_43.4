@@ -108,7 +108,7 @@ a {
 }
 
 .characteristicBlock {
-    background-color: #eedede;
+    background-color: white;
     font-family: SansSerif, SansSerif, sans-serif;
     font-size: 8pt;
     text-align: center;
@@ -333,4 +333,9 @@ span {
     transform: translate(100%);
     font-weight: bold;
     font-size: 16pt;
+}
+
+.goBackButton {
+    width: 100%;
+    margin: 0;
 }

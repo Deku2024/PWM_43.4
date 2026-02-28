@@ -194,6 +194,10 @@ button {
     font-size: 16pt;
     cursor: pointer;
     border-radius: 4px;
+    width: 100%;
+}
+
+.link {
     width: 61%;
 }
 
