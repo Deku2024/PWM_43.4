@@ -107,18 +107,18 @@ A continuación, se presentan los requisitos funcionales con los que cuenta el p
 Todos los mockups, así como el storyboard, se encuentran en imágenes individuales en la carpeta del proyecto, PWM_43.4, concretamente en la ruta ./src/Mockups. Los contenidos de dicho directorio se encuentran aquí listados:
 
 
-- [Sessions.png](./Sessions.png)
-- [createdsession.png](./createdsession.png)
-- [createsession.png](./createsession.png)
-- [defaultsettings.png](./defaultsettings.png)
-- [dmcampaignmain.png](./dmcampaignmain.png)
-- [homepage.png](./homepage.png)
-- [joinsession.png](./joinsession.png)
-- [login.png](./login.png)
-- [playercampaignmain.png](./playercampaignmain.png)
-- [profilesettings.png](./profilesettings.png)
-- [signin.png](./signin.png)
-
+- [Sessions.png](./src/Mockups/Sessions.png)
+- [createdsession.png](./src/Mockups/createdsession.png)
+- [createsession.png](./src/Mockups/createsession.png)
+- [defaultsettings.png](./src/Mockups/defaultsettings.png)
+- [dmcampaignmain.png](./src/Mockups/dmcampaignmain.png)
+- [homepage.png](./src/Mockups/homepage.png)
+- [joinsession.png](./src/Mockups/joinsession.png)
+- [login.png](./src/Mockups/login.png)
+- [playercampaignmain.png](./src/Mockups/playercampaignmain.png)
+- [profilesettings.png](./src/Mockups/profilesettings.png)
+- [signin.png](./src/Mockups/signin.png)
+  
 <br>
 <h3>Relación entre los mockups y las páginas HTML</h3>
 
@@ -157,6 +157,7 @@ En este apartado se muestran los templates identificados y su uso en las distint
 
 <br>
 En la siguiente tabla se indica la página html y los templates que forman parte de ellas.
+<br>
 
 <table>
   <thead>
@@ -279,6 +280,7 @@ Es por este motivo que userIconandName.html no aparecía en la tabla anterior.
 El único uso de JavaScript que se ha hecho es mediante el script proporcionado por el profesorado para hacer la integración provisional de los templates en las páginas HTML.
 <br>
 En cuanto a la estructuración de las hojas de estilo, en una primera instancia habíamos asignado una hoja de estilos a cada template. Luego cuando empezamos a montar las páginas haciendo uso de dichos templates, encontramos más cómodo emplear una hoja de estilos para cada página del proyecto y descartar las individuales de cada template. De esta manera fue más sencilla la organización de los contenidos de las páginas y la relación entre ellos.
+
 
 
 
