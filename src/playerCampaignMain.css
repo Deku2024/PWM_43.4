@@ -153,7 +153,7 @@ a {
     margin: 1%;
 }
 
-input {
+input, textarea {
     display: inline-block;
     border: 1px solid black;
     border-radius: 4px;
@@ -188,7 +188,7 @@ input {
 .stat-title {
     background-color: white;
     height: 100%;
-    width: 95%;
+    width: 94%;
     border-radius: 4px;
 }
 
@@ -241,6 +241,7 @@ input {
 #characterDescription {
     width: 96%;
     height: 20%;
+    resize: none;
 }
 
 #dropDownArea {
