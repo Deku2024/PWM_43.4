@@ -1,6 +1,6 @@
-body{
+body {
     padding:0;
-    margin: 9vh 0 0 9vw;
+    margin: 9vh 0 0 11vw;
 
     font-family: Georgia, serif;
 
@@ -103,7 +103,7 @@ main {
     padding: 2%;
 }
 
-h1{
+h1 {
     font-style: italic;
     font-size: 40pt;
     margin: 0 0 2%;

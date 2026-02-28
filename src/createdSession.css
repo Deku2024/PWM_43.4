@@ -11,7 +11,7 @@ main {
     display: flex;
     flex-direction: column;
     margin-top: 11vh;
-    margin-left: 17vw;
+    margin-left: 21vw;
     width: 100%;
     height: 98%;
 }
@@ -27,7 +27,7 @@ main {
     flex-direction: row;
     justify-content: flex-start;
 
-    margin-top: -10%;
+    margin-top: -15%;
     margin-left: 48%;
 }
 
@@ -80,11 +80,14 @@ a {
 h1 {
     font-style: italic;
     font-size: 26pt;
+
+    margin-top: 12%;
 }
 
 h2 {
-   font-style: italic;
+    font-style: italic;
     font-size: 18pt;
+    margin-bottom: 10%;
 }
 
 .right{
@@ -98,12 +101,14 @@ h2 {
 }
 
 .description{
+
     font-size: 10pt;
     line-height: 1.6;
-    max-width: 50vh;
     color: gray;
 
+    max-width: 50vh;
     max-height: 50vh;
+
     overflow-y: auto;
 
     margin-bottom: 0;
