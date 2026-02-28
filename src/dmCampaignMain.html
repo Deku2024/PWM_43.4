@@ -1,16 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <title>D&D DM notes</title>
+  <script src="xlu-include-file.js"></script>
+  <link rel="stylesheet" href="dmCampaignMain.css">
+</head>
+<body>
+<header id="header" xlu-include-file="./Templates/headerLoggedIn.html"></header>
 
-    <section id="playersSideBar" xlu-include-file="./Templates/playersSideBar.html"></section>
+<div id="layout">
 
-    <section id="sessionArea" xlu-include-file="./Templates/sessionAreaTemplate.html"></section>
+  <section id="playersSideBar" xlu-include-file="./Templates/playersSideBar.html"></section>
 
-    <div class="logybotón" xlu-include-file="./Templates/logTiradas.html"></div>
+  <main id="sessionArea">
 
-  </body>
+    <article xlu-include-file="./Templates/dmNote.html" class="note" id="firstNote"></article>
+
+    <article xlu-include-file="./Templates/dmNote.html" class="note"></article>
+
+    <article xlu-include-file="./Templates/dmNote.html" class="note"></article>
+
+    <article xlu-include-file="./Templates/dmNote.html" class="note"></article>
+
+    <article xlu-include-file="./Templates/dmNote.html" class="note" id="lastNote"></article>
+
+  </main>
+
+  <div class="logAndButton" xlu-include-file="./Templates/logTiradas.html"></div>
+
+</div>
+
+
+<script>
+  xLuIncludeFile();
+</script>
+
+</body>
 </html>
