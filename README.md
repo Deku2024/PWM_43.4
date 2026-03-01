@@ -285,12 +285,3 @@ Otro aspecto a destacar es que el CSS de las páginas se ha hecho para que se as
 <br>
 Por último, en los ajustes por defecto de la sesión se ha hecho que todo sean campos de texto rellenables en el HTML y en el mockup correspondiente se han dejado las cajas vacías porque todavía no se ha llegado a la decisión de qué ajustes son por defecto y cuáles serán propios de la sesión. Por tanto, esos campos de ajuste no son los definitivos y están a expensas de ser modificados en el Sprint siguiente.
 
-
-
-
-
-
-Las imágenes de los mockups, así coko el storyboard, se encuentran en la carpeta del proyecto, concretamente en la ruta /src/Mockups
-
-
-La página html inicial del proyecto es index.html e implementa el mockup que corresponde al mockup de Home Page.
