@@ -280,7 +280,17 @@ Es por este motivo que userIconandName.html no aparecía en la tabla anterior.
 El único uso de JavaScript que se ha hecho es mediante el script proporcionado por el profesorado para hacer la integración provisional de los templates en las páginas HTML.
 <br>
 En cuanto a la estructuración de las hojas de estilo, en una primera instancia habíamos asignado una hoja de estilos a cada template. Luego cuando empezamos a montar las páginas haciendo uso de dichos templates, encontramos más cómodo emplear una hoja de estilos para cada página del proyecto y descartar las individuales de cada template. De esta manera fue más sencilla la organización de los contenidos de las páginas y la relación entre ellos.
+<br>
+Otro aspecto a destacar es que el CSS de las páginas se ha hecho para que se asemeje lo más posible a los mockups presentados, por lo que todavía carecen de la estética final que se le pretende dar a la web. En relación a esto, hay botones a los que todavía no podemos dotar de la finalidad pensada para ellos porque requieren de un uso más avanzado de JavaScript del que se usa en este Sprint. Lo mismo ocurre con los desplegables presentes en algunas de las páginas.
+<br>
+Por último, en los ajustes por defecto de la sesión se ha hecho que todo sean campos de texto rellenables en el HTML y en el mockup correspondiente se han dejado las cajas vacías porque todavía no se ha llegado a la decisión de qué ajustes son por defecto y cuáles serán propios de la sesión. Por tanto, esos campos de ajuste no son los definitivos y están a expensas de ser modificados en el Sprint siguiente.
 
 
 
 
+
+
+Las imágenes de los mockups, así coko el storyboard, se encuentran en la carpeta del proyecto, concretamente en la ruta /src/Mockups
+
+
+La página html inicial del proyecto es index.html e implementa el mockup que corresponde al mockup de Home Page.
