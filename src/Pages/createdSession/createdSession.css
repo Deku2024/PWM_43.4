@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+
+    font-family: Georgia, serif;
+
+    width: 90vw;
+    height: 90vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 11vh;
+    margin-left: 21vw;
+    width: 100%;
+    height: 98%;
+}
+
+#mainSection {
+    display: grid;
+    grid-template-columns: 32% 40%;
+    column-gap: 10%;
+}
+
+#additionalSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    margin-top: -15%;
+    margin-left: 48%;
+}
+
+#headerItems {
+    background-color: lightgray;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+}
+
+#headerItems > :first-child {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+}
+
+#headerItems > :last-child {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8vh;
+}
+
+.anchorNavigationButton {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    font-style: italic;
+    font-size: 30pt;
+
+    margin-top: 12%;
+}
+
+h2 {
+    font-style: italic;
+    font-size: 18pt;
+    margin-bottom: 10%;
+}
+
+.right{
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 25%;
+
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.description{
+
+    font-size: 10pt;
+    line-height: 1.6;
+    color: gray;
+
+    max-width: 50vh;
+    max-height: 50vh;
+
+    overflow-y: auto;
+
+    margin-bottom: 0;
+}
+
+#sessionPhoto {
+    width: 100%;
+    height: 40%;
+
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.id-row{
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.small-btn{
+    background:#9d9797;
+    padding:1vh 5vh;
+    cursor:pointer;
+}
+
+.large-btn{
+    padding: 3%;
+
+    width: 85%;
+    font-size: 12pt;
+    cursor:pointer;
+}
+
+#acceptButton {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+
+.bottom {
+    text-align:center;
+}
+
+.id {
+    font-size:2vh;
+}
+
+nav {
+    position: fixed;
+    top: 7.5vh;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 8vw;
+    background-color: lightgray;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15vh;
+    width: 5vw;
+    height: 10vh;
+}
+
+.navigationImage {
+    width: 100%;
+    height: 100%;
+
+    transition: background-color 0.15s;
+}
+
+button {
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: lightgrey;
+}
+

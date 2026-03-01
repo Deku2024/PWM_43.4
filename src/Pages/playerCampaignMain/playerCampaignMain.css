@@ -1,0 +1,338 @@
+body {
+    margin: 0;
+    padding-top: 9vh;
+    padding-right: 0.5vw;
+    padding-left: 0.5vw;
+    display: flex;
+    flex-direction: column;
+    min-height: 88.3vh;
+
+}
+
+.logAndButton {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 3%;
+}
+
+.throwLogs {
+    background-color: darkgray;
+    flex: 1;
+    border-radius: 10px;
+}
+
+#utility {
+    width: 100%;
+    padding: 5px;
+    margin-top: 2%;
+    border-radius: 10px;
+    border: 0;
+}
+
+#utility:hover {
+    cursor: pointer;
+    background-color: darkgray;
+}
+
+#playersSideBar {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#playersSideBar ul {
+    background-color: darkgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    list-style: none;
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.userIconandName {
+    display: inline-flex;
+    align-items: center;
+}
+
+p {
+    padding: 5px;
+}
+
+
+#layout {
+    display: flex;
+    flex: 1;
+    height: 50%;
+}
+
+#headerItems {
+    background-color: darkgray;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    grid-template-columns: 1fr auto;
+    margin: 0;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+}
+
+#headerItems > :first-child {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+}
+
+#headerItems > :last-child {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.characteristicBlock {
+    background-color: white;
+    font-family: SansSerif, SansSerif, sans-serif;
+    font-size: 8pt;
+    text-align: center;
+    border: 2px black solid;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.characteristicButton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    border: 1px black solid;
+    background-color: grey;
+    border-radius: 4px;
+
+    width: 80%;
+    height: 70%;
+    padding: 0;
+
+    cursor: pointer;
+
+}
+
+.characteristicButton img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.characteristicName {
+    margin: -4%;
+}
+
+#textAndNumberFields {
+    margin: 1%;
+}
+
+input, textarea {
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 0.4%;
+}
+
+#sessionArea {
+    display: grid;
+    grid-template-columns: 13vw 1fr;
+    flex: 3;
+    margin: 0 0.7%;
+    padding: 0;
+    background-color: grey;
+    border-radius: 10px;
+    border: none;
+}
+
+.textAndNumberBlock {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: 20% 80%;
+}
+
+.textAndNumberBlock > :last-child {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+}
+
+.stat-title {
+    background-color: white;
+    height: 100%;
+    width: 94%;
+    border-radius: 4px;
+}
+
+.stat-value {
+    background-color: white;
+    height: 80%;
+    width: 95%;
+    border-radius: 4px;
+    margin: 0;
+    text-align: center;
+}
+
+#miscCharacterValues {
+    width: 100%;
+    height: 100%;
+}
+
+.miscValueField {
+    display: inline-block;
+    width: 22%;
+    padding: 0.7%;
+}
+
+.rightSectionWrapper {
+    width: 96%;
+    margin: 0;
+    padding: 0;
+}
+
+#basicCharacterInfo {
+    height: 7%;
+}
+
+#advancedCharacterInfo {
+    height: 4%;
+}
+
+#miscCharacterValues {
+    display: flex;
+    height: 16%;
+}
+
+#rightSection {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 1%;
+}
+
+#characterDescription {
+    width: 96%;
+    height: 20%;
+    resize: none;
+}
+
+#dropDownArea {
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid black;
+    width: 96.6%;
+    height: 50%;
+    margin-left: 0.4%;
+}
+
+#characteristicsGroup {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 3%;
+
+    height: 40%;
+    width: 100%;
+    margin-top: 8%;
+}
+
+#characteristicsGroup > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.firstField {
+    width: 49%;
+    margin-right: 0.7%;
+}
+
+.secondField {
+    width: 17%;
+    margin-right: 5.6%;
+}
+
+.thirdField {
+    width: 12%;
+}
+
+#salvationThrows {
+    margin-bottom: 0.7%;
+    margin-top: 0.7%;
+}
+
+#leftSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+}
+
+#characterImageButton {
+    width: 96%;
+    height: 20%;
+    margin-right: 6%;
+    margin-left: 3%;
+    align-items: center;
+    background: none;
+    padding: 0;
+
+    border-radius: 4px;
+    border: none;
+}
+
+#characterImageButton img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dropDownButton {
+    width: 96%;
+    height: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    border-radius: 6px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+span {
+    transform: translate(100%);
+    font-weight: bold;
+    font-size: 16pt;
+}
+
+.goBackButton {
+    width: 100%;
+    margin: 0;
+}

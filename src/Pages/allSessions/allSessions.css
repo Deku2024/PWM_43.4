@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family: Georgia, serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vw;
+    margin-left: 20vw;
+    width: 100vh;
+    height: 100vh;
+}
+
+.session {
+    background-color: darkgray;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    margin-top: 1vw;
+    border-radius: 10px;
+    padding: 0 1vw 0 1vw;
+
+}
+
+#createSessionButton {
+    width: 10%;
+    margin-left: auto;
+    padding: 0.5vw 0;
+}
+
+#joinSession {
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+    border: 1px solid darkgray;
+}
+
+#joinSession:hover {
+    border: 1px solid gray;
+    background-color: darkgray;
+}
+
+#buttons {
+    margin-left: auto;
+}
+
+#headerItems {
+    background-color: lightgray;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+}
+
+#headerItems > :first-child {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+}
+
+#headerItems > :last-child {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 15vh;
+}
+
+h1 {
+    font-size: 30pt;
+    font-style: italic;
+}
+
+.anchorNavigationButton {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+img:hover {
+    filter: brightness(0.7);
+}
+
+nav {
+    position: fixed;
+    top: 7.5vh;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 8vw;
+    background-color: lightgray;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15vh;
+    width: 5vw;
+    height: 10vh;
+}
+
+.navigationImage {
+    width: 100%;
+    height: 100%;
+
+    transition: background-color 0.15s;
+}
+
+.link {
+    width: 25%;
+    height: 10%;
+    margin: 0;
+}
+
+.link button {
+    width: 36%;
+    height: 10%;
+    margin: 0;
+}
