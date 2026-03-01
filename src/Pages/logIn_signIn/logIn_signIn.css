@@ -63,7 +63,7 @@ button {
     align-items: center;
     grid-template-columns: 1fr 14vw;
     margin: 0;
-    padding: 2vh 0 1vh;
+    padding: 2vh 0;
 }
 
 #headerItems > :first-child {
