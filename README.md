@@ -119,7 +119,21 @@ Todos los mockups, así como el storyboard, se encuentran en imágenes individua
 - [profilesettings.png](./src/Mockups/profilesettings.png)
 - [signin.png](./src/Mockups/signin.png)
 - [storyboardGrabacion.mp4](./src/Mockups/storyboardGrabacion.mp4)
-  
+
+<br>
+<h3>Breve explicación de los mockups</h3>
+
+ - Sessions.png: Muestra las sesiones de las que el usuario forma parte o es propietario, desde aquí también se puede unir a una sesión con el botón correspondiente.
+- createdsession.png: Muestra la información de la sesión ya creada.
+- createsession.png: Formulario para que el usuario cree la sesión.
+- defaultsettings.png: Son los ajustes por defecto de las sesiones que cree el usuario.
+- dmcampaignmain.png: Es lo que ve el usuario con rol de DM cuando entra en la sesión.
+- homepage.png: Este mockup es el punto de partida de la aplicación web. Pretende mostrar información de lo que es posible hacer con las funcionalidades de la web.
+- joinsession.png: Permite unirse a las sesiones creadas por otros usuarios proporcionando el ID de la sesión y una contraseña si dicha sesión ha sido configurada de esa manera.
+- login.png y sigin.png: Pantallas de acceso a la web. Permiten iniciar sesión o registrarse.
+- profileSettings.png: Son los ajustes de la cuenta del usuario, donde puede entre otros, actualizar sus datos.
+- playercampaignmain.png: Es lo que el usuario que tenga rol de jugador verá cuando entre en una sesión de la que no es propietario.
+
 <br>
 <h3>Relación entre los mockups y las páginas HTML</h3>
 
@@ -285,5 +299,6 @@ En cuanto a la estructuración de las hojas de estilo, en una primera instancia 
 Otro aspecto a destacar es que el CSS de las páginas se ha hecho para que se asemeje lo más posible a los mockups presentados, por lo que todavía carecen de la estética final que se le pretende dar a la web. En relación a esto, hay botones a los que todavía no podemos dotar de la finalidad pensada para ellos porque requieren de un uso más avanzado de JavaScript del que se usa en este Sprint. Lo mismo ocurre con los desplegables presentes en algunas de las páginas.
 <br>
 Por último, en los ajustes por defecto de la sesión, se ha hecho que todo sean campos de texto rellenables en el HTML y en el mockup correspondiente se han dejado las cajas vacías porque todavía no se ha llegado a la decisión de qué ajustes son por defecto y cuáles serán propios de la sesión. Por tanto, esos campos de ajuste no son los definitivos y están a expensas de ser modificados en el Sprint siguiente.
+
 
 
