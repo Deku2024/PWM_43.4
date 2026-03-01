@@ -118,6 +118,7 @@ Todos los mockups, así como el storyboard, se encuentran en imágenes individua
 - [playercampaignmain.png](./src/Mockups/playercampaignmain.png)
 - [profilesettings.png](./src/Mockups/profilesettings.png)
 - [signin.png](./src/Mockups/signin.png)
+- [storyboardGrabacion.mp4](./src/Mockups/storyboardGrabacion.mp4)
   
 <br>
 <h3>Relación entre los mockups y las páginas HTML</h3>
@@ -137,7 +138,7 @@ Se presenta a continuación un listado de todas las páginas HTML de las que dis
 - profileSettings.html  ⇒  [profilesettings.png](./profilesettings.png)
 
 <br>
-La página de inicio del proyecto es index.html y a partir de ella se puede ir desplazando por el resto de las páginas mediante los botones correspondientes.
+La página de inicio del proyecto es index.html, que se encuentra concretamente en la ruta ./src/Pages/index, y a partir de ella se puede ir desplazando por el resto de las páginas mediante los botones correspondientes.
 <br>
 <h3>Templates identificados y su uso en las páginas del proyecto</h3>
 
@@ -283,5 +284,6 @@ En cuanto a la estructuración de las hojas de estilo, en una primera instancia 
 <br>
 Otro aspecto a destacar es que el CSS de las páginas se ha hecho para que se asemeje lo más posible a los mockups presentados, por lo que todavía carecen de la estética final que se le pretende dar a la web. En relación a esto, hay botones a los que todavía no podemos dotar de la finalidad pensada para ellos porque requieren de un uso más avanzado de JavaScript del que se usa en este Sprint. Lo mismo ocurre con los desplegables presentes en algunas de las páginas.
 <br>
-Por último, en los ajustes por defecto de la sesión se ha hecho que todo sean campos de texto rellenables en el HTML y en el mockup correspondiente se han dejado las cajas vacías porque todavía no se ha llegado a la decisión de qué ajustes son por defecto y cuáles serán propios de la sesión. Por tanto, esos campos de ajuste no son los definitivos y están a expensas de ser modificados en el Sprint siguiente.
+Por último, en los ajustes por defecto de la sesión, se ha hecho que todo sean campos de texto rellenables en el HTML y en el mockup correspondiente se han dejado las cajas vacías porque todavía no se ha llegado a la decisión de qué ajustes son por defecto y cuáles serán propios de la sesión. Por tanto, esos campos de ajuste no son los definitivos y están a expensas de ser modificados en el Sprint siguiente.
+
 
