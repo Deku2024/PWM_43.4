@@ -12,5 +12,5 @@ function init() {
   loadTemplate('../../Templates/dmNote.html', 'fourthNote');
   loadTemplate('../../Templates/dmNote.html', 'fifthNote');
   loadTemplate('../../Templates/dmNote.html', 'lastNote');
-  loadTemplate("../../Templates/logTiradas.html", 'logTirada');
+  loadTemplate("../../Templates/logTiradas.html", 'log');
 }
