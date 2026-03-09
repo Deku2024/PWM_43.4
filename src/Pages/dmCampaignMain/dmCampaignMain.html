@@ -7,7 +7,7 @@
   <script type="module" src="dmCampaignMain.js"></script>
 </head>
 <body>
-<header id="header" xlu-include-file="../../Templates/headerLoggedIn.html"></header>
+<header id="header"></header>
 
 <div id="layout">
 
@@ -15,26 +15,21 @@
 
   <main id="sessionArea">
 
-    <article xlu-include-file="../../Templates/dmNote.html" class="note" id="firstNote"></article>
+    <article class="note firstNote" id="firstNote"></article>
 
-    <article xlu-include-file="../../Templates/dmNote.html" class="note"></article>
+    <article class="note" id = "secondNote"></article>
 
-    <article xlu-include-file="../../Templates/dmNote.html" class="note"></article>
+    <article class="note" id = "thirdNote"></article>
 
-    <article xlu-include-file="../../Templates/dmNote.html" class="note"></article>
+    <article class="note" id = "fourthNote"></article>
 
-    <article xlu-include-file="../../Templates/dmNote.html" class="note" id="lastNote"></article>
+    <article class="note lastnote" id="lastNote"></article>
 
   </main>
 
-  <div class="logAndButton" xlu-include-file="../../Templates/logTiradas.html"></div>
+  <div class="logAndButton" id = "log"></div>
 
 </div>
-
-
-<script>
-  xLuIncludeFile();
-</script>
 
 </body>
 </html>
