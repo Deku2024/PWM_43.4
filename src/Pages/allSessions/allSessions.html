@@ -3,30 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <title>My Sessions</title>
-  <script src="../../xlu-include-file.js"></script>
   <link rel="stylesheet" href="allSessions.css">
+  <script type="module" src="allSessions.js"></script>
 </head>
 <body>
-    <header xlu-include-file="../../Templates/headerLoggedIn.html"></header>
+<header id="header"></header>
 
-    <nav xlu-include-file="../../Templates/navBar.html"></nav>
+<nav id="navBar"></nav>
 
-    <main>
+<main>
 
-      <h1>Lorem Ipsum</h1>
+  <h1>Lorem Ipsum</h1>
 
-      <a id="createSessionButton" href="../joinSession/joinSession.html"><button id="joinSession">Join</button></a>
+  <a id="createSessionButton" href="../joinSession/joinSession.html"><button id="joinSession">Join</button></a>
 
-      <div class="session" xlu-include-file="../../Templates/sessionMenu.html"></div>
-      <div class="session" xlu-include-file="../../Templates/sessionMenu.html"></div>
-      <div class="session" xlu-include-file="../../Templates/sessionMenu.html"></div>
+  <div id="session1" class="session"></div>
+  <div id="session2" class="session"></div>
+  <div id="session3" class="session"></div>
 
-    </main>
-
-
-<script>
-  xLuIncludeFile();
-</script>
+</main>
 
 </body>
 </html>
