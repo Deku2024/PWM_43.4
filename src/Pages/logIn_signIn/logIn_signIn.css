@@ -81,19 +81,18 @@ button {
 }
 
 header {
-    position: fixed;
-    top: 0;
+    position: sticky;
+    /*top: 0;
     left: 0;
-    right: 0;
+    right: 0;*/
     height: 6vh;
     display: flex;
     align-items: center;
 }
 
 #buttonGroup {
-    display: flex;
+    align-items: center;
     flex-direction: row;
-    justify-content: space-between;
     margin-right: 10%;
 }
 
