@@ -1,0 +1,119 @@
+[
+  {
+    "id": "PJ4T8L2K9WQXA",
+    "sesion_id": "M4T8L2W9C6BA",
+    "jugador_id": "u2",
+
+    "nombre": "Borin Martillo de Hierro",
+    "raza": "Enano de las colinas",
+    "edad": 85,
+    "alineamiento": "Legal bueno",
+    "clase": "Guerrero",
+    "experiencia": 4200,
+    "descripcion": "Un veterano guerrero enano con una barba trenzada y una armadura llena de cicatrices de batalla.",
+
+    "AC": 18,
+    "vida": 34,
+    "vida_temporal": 0,
+    "vida_maxima": 34,
+
+    "tiradas_salvacion": {
+      "fuerza": true,
+      "destreza": false,
+      "constitucion": true,
+      "inteligencia": false,
+      "sabiduria": false,
+      "carisma": false
+    },
+
+    "atributos": {
+      "fuerza": 17,
+      "destreza": 12,
+      "constitucion": 16,
+      "inteligencia": 10,
+      "sabiduria": 11,
+      "carisma": 9
+    },
+
+    "habilidades_clase": [
+      "Segundo aliento",
+      "Estilo de combate: defensa",
+      "Acción adicional"
+    ],
+
+    "inventario": [
+      { "nombre": "Hacha de batalla", "tipo": "arma" },
+      { "nombre": "Escudo de acero", "tipo": "armadura" },
+      { "nombre": "Armadura de cota de malla", "tipo": "armadura" },
+      { "nombre": "Ración de viaje", "tipo": "consumible" }
+    ],
+
+    "habilidades": {
+      "atletismo": 5,
+      "supervivencia": 2,
+      "percepcion": 2,
+      "intimidacion": 1
+    }
+  },
+
+
+  {
+    "id": "PJ9Q2Z7M4KXLB",
+    "sesion_id": "M4T8L2W9C6BA",
+    "jugador_id": "u3",
+
+    "nombre": "Lia Sombrasuave",
+    "raza": "Mediana piesligeros",
+    "edad": 27,
+    "alineamiento": "Neutral",
+    "clase": "Pícaro",
+    "experiencia": 3900,
+    "descripcion": "Una ladrona ágil y astuta que se mueve por las sombras con una sonrisa traviesa.",
+
+    "AC": 15,
+    "vida": 24,
+    "vida_temporal": 0,
+    "vida_maxima": 24,
+
+    "tiradas_salvacion": {
+      "fuerza": false,
+      "destreza": true,
+      "constitucion": false,
+      "inteligencia": true,
+      "sabiduria": false,
+      "carisma": false
+    },
+
+    "atributos": {
+      "fuerza": 9,
+      "destreza": 18,
+      "constitucion": 12,
+      "inteligencia": 14,
+      "sabiduria": 11,
+      "carisma": 13
+    },
+
+    "habilidades_clase": [
+      "Ataque furtivo",
+      "Acción astuta",
+      "Pericia"
+    ],
+
+    "inventario": [
+      { "nombre": "Daga", "tipo": "arma" },
+      { "nombre": "Arco corto", "tipo": "arma" },
+      { "nombre": "Juego de herramientas de ladrón", "tipo": "herramienta" },
+      { "nombre": "Capa oscura", "tipo": "objeto" }
+    ],
+
+    "habilidades": {
+      "sigilo": 7,
+      "acrobacias": 6,
+      "engaño": 4,
+      "percepcion": 3,
+      "investigacion": 4
+    }
+  }
+
+]
+
