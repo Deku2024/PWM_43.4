@@ -37,6 +37,7 @@ nav, header {
     border: 1px solid var(--gold);
 }
 
+/* configuracion header */
 header {
     top: 0;
     left: 0;
@@ -67,6 +68,7 @@ header #userIcon p {
     margin-left: 5%;
 }
 
+/* configuracion nav bar */
 nav {
     top: calc(10% + 1px);
     left: 0;
@@ -74,6 +76,20 @@ nav {
     bottom: 0;
     box-shadow: 5px -10px 10px rgba(0, 0, 0, 0.3) inset;
 }
+
+nav ul {
+    height: 50%;
+    
+    padding: 20%;
+    margin: 50% 0 0;
+
+    list-style: none;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 
 button {
     color: white;
