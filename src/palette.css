@@ -1,0 +1,89 @@
+:root {
+    /*--primary: #ebe0cc;*/
+    /*--secondary-hover: rgb(93, 16, 21);*/
+    /*--secondary: #e4d5bb; !* este color no me acaba de convencer *!*/
+    /*--accent: #88644a;*/
+    
+    /*--primary-new: #fbf1ec;*/
+    /*--secondary-new: rgb(135, 36, 40);*/
+    /*--secondary-new-hover: #f82b2b;*/
+    /*--accent-new: #ebe0cc;*/
+
+
+    --primary-red: #872428;
+
+    --parchment-light: #f5efe6;
+    --parchment: #ebe0cc;
+    --parchment-dark: #d8c9a9;
+
+    --wood: #a67c52;
+    --wood-dark: #6b4a2f;
+
+    --gold: #c9a24a;
+    --iron: #4a4a4a;
+    --steel: #2f2f2f;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--parchment-light);
+}
+
+nav, header {
+    position: fixed;
+    background-color: var(--parchment-dark);
+    
+    border: 1px solid var(--gold);
+}
+
+header {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10%;
+    
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3) inset;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    margin-left: 2%;
+}
+
+header #userIcon {
+    display: flex;
+    margin-right: 5%;
+}
+
+header #userIcon img {
+    margin-top: 22%;
+}
+
+header #userIcon p {
+    margin-left: 5%;
+}
+
+nav {
+    top: calc(10% + 1px);
+    left: 0;
+
+    bottom: 0;
+    box-shadow: 5px -10px 10px rgba(0, 0, 0, 0.3) inset;
+}
+
+button {
+    color: white;
+    background-color: var(--iron);
+    
+    transition: background-color 0.15s, color 0.15s;
+}
+
+button:hover {
+    color: black;
+    background-color: var(--gold);
+}
+
