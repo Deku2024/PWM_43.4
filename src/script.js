@@ -1,16 +1,17 @@
 export function loadTemplate(fileName, selector, callback) {
 
   fetch(fileName)
-    .then((res) => res.text())
-    .then((text) => {
-      const elements = document.querySelectorAll(selector);
+    .then(res => res.text())
+    .then(text => {
 
-      elements.forEach((el) => {
+      document.querySelectorAll(selector).forEach(el => {
         el.innerHTML = text;
       });
 
       if (callback) {
         callback();
       }
+
     });
+
 }
