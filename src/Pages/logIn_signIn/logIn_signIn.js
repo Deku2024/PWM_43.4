@@ -1,9 +1,11 @@
 import { loadTemplate } from '../../script.js';
 
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener('DOMContentLoaded', async function() {
+  await init();
+});
 
-function init() {
+async function init() {
 
-  loadTemplate('../../Templates/header.html', 'header');
-  loadTemplate('../../Templates/footer.html', 'footer');
+  await loadTemplate('../../Templates/header.html', 'header');
+  await loadTemplate('../../Templates/footer.html', 'footer');
 }

@@ -1,9 +1,11 @@
 import { loadTemplate } from '../../script.js';
 
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener('DOMContentLoaded', async function() {
+  await init();
+});
 
-function init() {
-  loadTemplate('../../Templates/userIconAndName.html', '#userIcon');
-  loadTemplate('../../Templates/headerLoggedIn.html', '#headerLoggedIn');
-  loadTemplate('../../Templates/navbar.html', '#navbar');
+async function init() {
+  await loadTemplate('../../Templates/userIconAndName.html', '#userIcon');
+  await loadTemplate('../../Templates/headerLoggedIn.html', '#headerLoggedIn');
+  await loadTemplate('../../Templates/navbar.html', '#navbar');
 }
