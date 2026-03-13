@@ -167,11 +167,11 @@ textarea {
     margin-bottom: 10%;
 }
 
-#firstNote {
+.firstNote {
     margin: 0;
 }
 
-#lastNote {
+.lastNote {
     margin-bottom: 3%;
 }
 
