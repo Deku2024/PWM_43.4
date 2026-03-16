@@ -8,15 +8,9 @@ body {
     height: 80vh;
 }
 
-
-main {
-    display: grid;
-    grid-template-rows: 20vh 1fr;
-}
-
 main div {
     display: grid;
-    grid-template-columns: repeat(2, 20vw);
+    grid-template-columns: repeat(2, 40%);
 }
 
 form {
@@ -36,11 +30,12 @@ section {
 
 h1 {
 
-    font-style: italic;
+    font-family: "Macondo", cursive;
+    font-weight: 400;
+    font-style: normal;
     font-size: 30pt;
-
-    margin: 0;
-}
+    margin-top: 10%;
+    }
 
 input {
     padding-left: 5%;
@@ -82,47 +77,4 @@ li {
     margin-top: 15vh;
     width: 5vw;
     height: 10vh;
-}
-
-.navigationImage {
-    width: 100%;
-    height: 100%;
-
-    transition: background-color 0.15s;
-}
-
-#headerItems {
-    background-color: lightgray;
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr auto;
-    padding: 0.5rem 2rem 0.5rem 2rem;
-}
-
-#headerItems > :first-child {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: row;
-}
-
-#headerItems > :last-child {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-}
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 8vh;
-}
-
-.anchorNavigationButton {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-
 }
