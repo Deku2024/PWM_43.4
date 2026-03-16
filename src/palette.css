@@ -25,9 +25,8 @@
 }
 
 body {
-    height: 100vh;
-    width: 100vw;
     background-color: var(--parchment-light);
+    overflow: hidden;
 }
 
 nav, header {
@@ -90,7 +89,27 @@ nav ul {
     justify-content: space-between;
 }
 
+.navigationImage {
+    width: 100%;
+    height: 100%;
 
+    transition: background-color 0.15s;
+}
+
+nav li {
+    margin-top: 10%;
+}
+
+/* configuracion del main */
+main {
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    right: 0;
+    bottom: 0;
+}
+
+/* varias configuraciones */
 button {
     color: white;
     background-color: var(--iron);
@@ -102,4 +121,9 @@ button:hover {
     color: black;
     background-color: var(--gold);
 }
+
+main {
+    padding-left: min(19%, 5vw);
+}
+
 
