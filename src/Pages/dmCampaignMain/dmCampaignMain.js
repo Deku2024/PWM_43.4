@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', init);
 
 function init() {
 
+  loadTemplate('../../Templates/header.html', 'header');
   loadTemplate('../../Templates/headerLoggedIn.html', 'header');
   loadTemplate('../../Templates/playersSideBar.html', 'playersSideBar');
   loadTemplate('../../Templates/dmNote.html', 'firstNote');

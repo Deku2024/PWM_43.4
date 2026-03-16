@@ -25,9 +25,8 @@
 }
 
 body {
-    height: 100vh;
-    width: 100vw;
     background-color: var(--parchment-light);
+    overflow: hidden;
 }
 
 nav, header {
@@ -37,6 +36,7 @@ nav, header {
     border: 1px solid var(--gold);
 }
 
+/* configuracion header */
 header {
     top: 0;
     left: 0;
@@ -67,6 +67,7 @@ header #userIcon p {
     margin-left: 5%;
 }
 
+/* configuracion nav bar */
 nav {
     top: calc(10% + 1px);
     left: 0;
@@ -75,6 +76,40 @@ nav {
     box-shadow: 5px -10px 10px rgba(0, 0, 0, 0.3) inset;
 }
 
+nav ul {
+    height: 50%;
+    
+    padding: 20%;
+    margin: 50% 0 0;
+
+    list-style: none;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navigationImage {
+    width: 100%;
+    height: 100%;
+
+    transition: background-color 0.15s;
+}
+
+nav li {
+    margin-top: 10%;
+}
+
+/* configuracion del main */
+main {
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    right: 0;
+    bottom: 0;
+}
+
+/* varias configuraciones */
 button {
     color: white;
     background-color: var(--iron);
@@ -86,4 +121,9 @@ button:hover {
     color: black;
     background-color: var(--gold);
 }
+
+main {
+    padding-left: min(19%, 5vw);
+}
+
 
