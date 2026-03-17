@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <title>Sign in</title>
@@ -16,38 +16,49 @@
   <img src="../../Assets/d20.png" alt="Logo" width="300" height="100">
 
   <h1>
-    Lorem Ipsum
+    Regístrate
   </h1>
 
-  <label>
-    <input placeholder="Lorem Ipsum"  type="text">
-  </label>
+  <form id="signIn-form" action="/" novalidate>
+    <div class="input-control">
+      <label for="username"></label>
+      <input id="username" name="username" placeholder="Nombre de Usuario"  type="text" minlength="6" maxlength="25" pattern="^[A-Za-z0-9._-]+$" required>
+      <div class="error-message" id="usernameError"></div>
+    </div>
 
-  <label>
-    <input placeholder="Lorem Ipsum"  type="text">
-  </label>
+    <div class="input-control">
+      <label for="email"></label>
+      <input id="email" name="username" placeholder="Correo Electrónico"  type="email" required>
+      <div class="error-message" id="emailError"></div>
+    </div>
 
-  <label>
-    <input placeholder="Lorem Ipsum"  type="text">
-  </label>
+    <div class="input-control">
+      <label for="password"></label>
+      <input id="password" name="password" placeholder="Contraseña"  type="password" minlength="8" maxlength="15" required>
+      <div class="error-message" id="passwordError"></div>
+    </div>
 
-  <label>
-    <input placeholder="Lorem Ipsum"  type="text">
-  </label>
+    <div class="input-control">
+      <label for="repeatpassw"></label>
+      <input id="repeatpassw" name="repeatpassw" placeholder="Repita Contraseña"  type="password" required>
+      <div class="error-message" id="repeatpasswError"></div>
+    </div>
 
+    <a href="../allSessions/allSessions.html" class="link">
+      <button id="acceptButton" class="mainButton" type="submit">
+        Registrarse
+      </button>
+    </a>
+
+  </form>
   <div id="ButtonDiv">
 
     <a href="../index/index.html" class="link">
       <button id="cancelButton" class="mainButton">
-        Botón
+        Cancelar
       </button>
     </a>
 
-    <a href="../allSessions/allSessions.html" class="link">
-      <button id="acceptButton" class="mainButton">
-        Botón
-      </button>
-    </a>
 
     <p>
       Lorem ipsum dolor sit amet
@@ -55,10 +66,9 @@
 
     <a href="./logIn.html" class="link">
       <button class="swtichButton">
-        Botón
+        Iniciar sesión
       </button>
     </a>
-
   </div>
 
 </main>

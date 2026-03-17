@@ -34,7 +34,7 @@ main img {
     align-items: center;
 }
 
-.card h1 {
+.card h2 {
     font-family: "Times New Roman", serif;
     font-style: italic;
     font-size: 28pt;
@@ -137,7 +137,7 @@ footer img {
 }
 
 footer p {
-    margin: 0% 0 0 -15%;
+    margin: 0 0 0 -15%;
 }
 
 .link {
