@@ -3,61 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <title>Create Session</title>
-  <script src="../../xlu-include-file.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Macondo&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="createSession.css">
+  <link rel="stylesheet" href="../../palette.css">
+  <script type="module" src="createSession.js"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
 <body>
 
-<header xlu-include-file="../../Templates/headerLoggedIn.html"></header>
+<header></header>
 
-<nav xlu-include-file="../../Templates/navbar.html"></nav>
+<nav></nav>
 
 <main>
 
   <div class="left">
-    <h1>Lorem Ipsum</h1>
+    <h1>Crear sesión</h1>
 
     <div class="top">
       <label>
-        <input class="small-box-top" placeholder="Lorem Ipsum">
+        <input placeholder="Nombre">
       </label>
 
       <label>
-        <input class="small-box-top" placeholder="Lorem Ipsum">
+        <input placeholder="Nº jugadores">
       </label>
     </div>
 
     <label>
-      <textarea class="large-box" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim, massa vel dapibus accumsan, massa sapien feugiat mi, vel consequat quam turpis eu urna. Integer non velit erat."></textarea></label>
+      <textarea class="large-box" placeholder="Introduzca la descripción de la campaña"></textarea></label>
 
     <label>
-      <input class="small-box" placeholder="Lorem Ipsum">
+      <input placeholder="Contraseña">
     </label>
-    <a class="link" href="../allSessions/allSessions.html"><button>Botón</button></a>
+    <a class="link" href="../allSessions/allSessions.html"><button>Cancelar</button></a>
 
   </div>
 
   <div class="right">
 
-    <img id="sessionPhoto" src="../../Assets/aspasfooter.png">
+    <img src="../../Assets/aspasfooter.png">
 
-    <p class="small-text">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Suspendisse dignissim, massa vel dapibus accumsan, massa
-      sapien feugiat mi, vel consequat quam turpis eu urna.
-      Integer non velit erat.
-    </p>
+    <div class="img-foot">
+      <p>
+        ¡¡Pon un nombre a tu campaña!! Limita el número de jugadores y descríbela a tu antojo. Añade una contraseña para evitar que el pícaro de turno se cuele en tus sesiones. Por último, ¡¡añade una iamgen para que tu campaña sea única e inigualable!!
+      </p>
 
-    <a class="link" href="../createdSession/createdSession.html"><button>Botón</button></a>
-
+      <a class="link" href="../createdSession/createdSession.html"><button>Crear sesión</button></a>
+    </div>
   </div>
 
 </main>
-
-<script>
-  xLuIncludeFile();
-</script>
 
 </body>
 </html>

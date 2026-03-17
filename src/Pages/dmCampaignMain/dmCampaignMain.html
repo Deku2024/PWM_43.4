@@ -3,38 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <title>D&D DM notes</title>
-  <script src="../../xlu-include-file.js"></script>
   <link rel="stylesheet" href="dmCampaignMain.css">
+  <script type="module" src="dmCampaignMain.js"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
-<header id="header" xlu-include-file="../../Templates/headerLoggedIn.html"></header>
+<header id="header"></header>
 
 <div id="layout">
 
-  <section id="playersSideBar" xlu-include-file="../../Templates/playersSideBar.html"></section>
+  <section id="playersSideBar"></section>
 
   <main id="sessionArea">
 
-    <article xlu-include-file="../../Templates/dmNote.html" class="note" id="firstNote"></article>
+    <article class="note firstNote" id="firstNote"></article>
 
-    <article xlu-include-file="../../Templates/dmNote.html" class="note"></article>
+    <article class="note" id = "secondNote"></article>
 
-    <article xlu-include-file="../../Templates/dmNote.html" class="note"></article>
+    <article class="note" id = "thirdNote"></article>
 
-    <article xlu-include-file="../../Templates/dmNote.html" class="note"></article>
+    <article class="note" id = "fourthNote"></article>
 
-    <article xlu-include-file="../../Templates/dmNote.html" class="note" id="lastNote"></article>
+    <article class="note lastnote" id="lastNote"></article>
 
   </main>
 
-  <div class="logAndButton" xlu-include-file="../../Templates/logTiradas.html"></div>
+  <div class="logAndButton" id = "log"></div>
 
 </div>
-
-
-<script>
-  xLuIncludeFile();
-</script>
 
 </body>
 </html>
