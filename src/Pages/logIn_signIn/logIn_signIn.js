@@ -27,7 +27,7 @@ function showSuccess(input, errorDiv) {
 }
 
 
-const form = document.getElementById('signIn-form');
+
 function validateInput(input, errorDiv, validator) {
 
   input.addEventListener("input", () => {
@@ -116,9 +116,35 @@ validateInput(repeat, repeatError, (input) => {
 
 
 
+
+const form = document.getElementById('signIn-form');
+
 form.addEventListener("submit", event => {
   if (!form.checkValidity()) {
     event.preventDefault();
   }
 });
 
+
+const form2 = document.getElementById('logIn-form');
+
+form2.addEventListener('submit', event => {
+  event.preventDefault();
+  const username = document.querySelector("#firstInput").value.trim();
+  const password = document.querySelector("#lastInput").value.trim();
+  const errorDiv = form2.querySelector('.error-message');
+
+  fetch('../../data/users.json')
+    .then(response => response.json())
+    .then(data => {
+    const user = data.find(u => u.nombre === username && u.password === password);
+    if (user) {
+      localStorage.setItem('user', JSON.stringify(user));
+      window.location.href = "../allSessions/allSessions.html";
+    } else {
+      errorDiv.textContent = "Credenciales incorrectas";
+    }
+  })
+    .catch(error => { console.error(error); });
+
+})

@@ -15,26 +15,38 @@
   <img src="../../Assets/d20.png" alt="Logo" width="300" height="100">
 
   <h1>
-    Lorem Ipsum
+    Inicio de Sesión
   </h1>
+  <form novalidate action="/" id="logIn-form">
+    <div class="input">
+      <label for="firstInput"></label>
+      <input placeholder="Nombre de usuario" id="firstInput" type="text">
+    </div>
 
-  <label for="firstInput"></label><input placeholder="Lorem Ipsum" id="firstInput" type="text">
+    <div class="input">
+      <label for="lastInput"></label>
+      <input placeholder="Contraseña" id="lastInput" type="password">
+    </div>
 
-  <label for="lastInput"></label><input placeholder="Lorem Ipsum" id="lastInput" type="text">
+    <div class="error-message"></div>
+
+    <a class="link">
+      <button id="acceptButton" class="mainButton">
+        Iniciar sesion
+      </button>
+    </a>
+
+  </form>
+
 
   <div id="ButtonDiv">
 
     <a href="../index/index.html" class="link">
       <button id="cancelButton" class="mainButton">
-        Botón
+        Cancelar
       </button>
     </a>
 
-    <a href="../allSessions/allSessions.html" class="link">
-      <button id="acceptButton" class="mainButton">
-        Botón
-      </button>
-    </a>
 
     <p>
       Lorem ipsum dolor sit amet

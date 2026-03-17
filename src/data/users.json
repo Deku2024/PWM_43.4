@@ -8,12 +8,14 @@
   {
     "id": "u2",
     "nombre": "camelCase",
-    "correo": "hirahi2024@gmail.com"
+    "correo": "hirahi2024@gmail.com",
+    "password": ""
   },
   {
     "id": "u3",
     "nombre": "carlaconka",
-    "correo": "carla2205@gmail.com"
+    "correo": "carla2205@gmail.com",
+    "password": ""
   }
 
 ]
