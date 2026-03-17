@@ -2,6 +2,8 @@ section {
     display: flex;
     flex-direction: column;
     width: 50%;
+    margin-left: 4%;
+    margin-top: 4%;
 }
 
 .session {
@@ -9,10 +11,12 @@ section {
     border-radius: 12px;
     border: 2px solid var(--steel);
     width: clamp(10vw, 100%, 44vw);
+    height: 8vh;
     margin-top: 1%;
     
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     padding-left: 1%;
     padding-right: 1%;
@@ -23,8 +27,9 @@ section {
 }
 
 .buttons {
-    margin-top: 1%;
+    margin-top: 2%;
     margin-right: 2%;
+    height: 100%;
     display: flex;
     column-gap: 3%;
 }
