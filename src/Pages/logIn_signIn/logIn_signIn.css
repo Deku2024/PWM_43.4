@@ -171,3 +171,26 @@ footer p {
     height: 50%;
 }
 
+
+/* Para temas de validación, no tocar salvo necesario */
+.input-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-control input {
+    border: 2px solid #ebe0cc;
+    border-radius: 4px;
+}
+
+.input-control input:focus {
+    outline: 0;
+}
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
