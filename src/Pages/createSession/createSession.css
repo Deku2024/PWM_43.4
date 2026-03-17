@@ -1,88 +1,65 @@
-.navigationImage {
-    width: 100%;
-    height: 100%;
-
-    transition: background-color 0.15s;
+main {
+    display: flex;
 }
 
-main {
-    display: grid;
-    grid-template-columns: 1fr 40%;
+.left, .right{
+    flex: 1;
+    padding: 0;
+    margin: 0 0 0 5%;
 }
 
 .top {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50%;
+    margin-bottom: 6%;
+    gap: 5%;
+}
+
+input {
     width: 100%;
+    height: 4vh;
 }
 
-.top input:first-child {
-    justify-self: start;
+textarea {
     width: 100%;
-}
-
-.top input:last-child {
-    justify-self: end;
-    width: 100%;
-}
-
-.small-box-top{
-    width: 50%;
-}
-
-.left,
-.right{
-    display:flex;
-    flex-direction:column;
-
-    width: 100%;
-    height: 100%;
-}
-
-.right {
-    align-items: center;
-}
-
-.small-box{
-    width: 60%;
-}
-
-.large-box{
-    width: 100%;
-    height: 90%;
-
-    margin-bottom: 50%;
-    margin-top: 2%;
+    height: 50%;
     resize: none;
+    margin-bottom: 10%;
 }
 
+p {
+    max-width: 80%;
+}
 
-#sessionPhoto {
-    margin-top: 18.8%;
+.left button {
+    width: clamp(5vw, 100%, 23vw);
+    height: 6%;
+    margin-top: 3%;
+}
 
-    border: 1px solid black;
-    border-radius: 4px;
-
+.right img {
+    margin-top: 25%;
     width: 70%;
     height: 30%;
 }
 
-.small-text{
-
-    max-width: 55%;
-    margin-bottom: 7%;
+.img-foot {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-button {
-    border: 1px solid black;
-    font-size: 16pt;
-    cursor: pointer;
-    border-radius: 4px;
-    width: 100%;
+.right p {
+    text-align: center;
 }
 
-.link {
-    width: 61%;
+.img-foot button {
+    width: clamp(6vw, 27vw, 27vw);
+    height: 140%;
 }
+
+
+
 
