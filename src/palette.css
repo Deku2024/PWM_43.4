@@ -9,6 +9,7 @@
     /*--secondary-new-hover: #f82b2b;*/
     /*--accent-new: #ebe0cc;*/
 
+
     --primary-red: #872428;
 
     --parchment-light: #f5efe6;
@@ -114,6 +115,9 @@ li {
     height: auto;
 
     transition: background-color 0.15s;
+}
+
+nav li {
     margin-top: 10%;
 }
 
