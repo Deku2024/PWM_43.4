@@ -134,17 +134,27 @@ form2.addEventListener('submit', event => {
   const password = document.querySelector("#lastInput").value.trim();
   const errorDiv = form2.querySelector('.error-message');
 
+  errorDiv.textContent = "";
+
   fetch('../../data/users.json')
     .then(response => response.json())
     .then(data => {
-    const user = data.find(u => u.nombre === username && u.password === password);
-    if (user) {
-      localStorage.setItem('user', JSON.stringify(user));
-      window.location.href = "../allSessions/allSessions.html";
-    } else {
-      errorDiv.textContent = "Credenciales incorrectas";
-    }
-  })
-    .catch(error => { console.error(error); });
+      console.log(data);
+      console.log(username, password);
+      const user = data.find(u => u.nombre === username && u.password === password);
+      if (user) {
+        localStorage.setItem('user', JSON.stringify(user));
+        window.location.href = "../allSessions/allSessions.html";
+         console.log(user);
+       } else {
+        errorDiv.textContent = "Credenciales incorrectas";
+      }
+    })
+    .catch(error => {
+      console.error(error);
+      errorDiv.textContent = "Error cargando usuarios";
+    });
+
 
 })
+
