@@ -3,41 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <title>Join Session</title>
-  <script src="../../xlu-include-file.js"></script>
+  <link rel="stylesheet" href="../../palette.css">
   <link rel="stylesheet" href="joinSession.css">
   <script src="../../script.js"></script>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
   <script type="module" src="joinSession.js"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
-<header id="headerLoggedIn"></header>
+<header></header>
 
-<nav id="navbar"></nav>
+<nav></nav>
 
 <main>
-  <h1>Lorem Ipsum</h1>
+  <h1>Únete a una campaña</h1>
 
-  <label for="idSession"></label><input id="idSession" placeholder="Session's ID">
-  <label for="sessionPassword"></label><input id="sessionPassword" placeholder="Session's Password">
+  <label for="idSession"></label><input id="idSession" placeholder="ID de la campaña">
+  <label for="sessionPassword"></label><input id="sessionPassword" placeholder="Contraseña de la campaña">
 
   <div id="buttons">
-    <a class="link" href="../allSessions/allSessions.html">
+    <a class="link" href="../allSessions/allSessions.html" id="cancelButton">
       <button>
-        Lorem Ipsum
+        Cancelar
       </button>
     </a>
 
-    <a class="link" href="../playerCampaignMain/playerCampaignMain.html">
+    <a class="link" href="../playerCampaignMain/playerCampaignMain.html" id="acceptButton">
       <button>
-        Lorem Ipsum
+        Aceptar
       </button>
     </a>
   </div>
-
-
-  <script>
-    xLuIncludeFile();
-  </script>
 
 </main>
 </body>
