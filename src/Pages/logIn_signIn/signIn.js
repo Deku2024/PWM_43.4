@@ -53,7 +53,7 @@ validateInput(username, usernameError, (input) => {
     input.setCustomValidity("Debe especificar un nombre de usuario");
 
   } else if (input.validity.tooShort || input.validity.tooLong) {
-    input.setCustomValidity("Debe tener entre 15 y 25 caracteres");
+    input.setCustomValidity("Debe tener entre 6 y 25 caracteres");
 
   } else if (input.validity.patternMismatch) {
     input.setCustomValidity("Caracter no válido");
@@ -92,7 +92,7 @@ validateInput(password, passwordError, (input) => {
     input.setCustomValidity("La contraseña es obligatoria");
 
   } else if (!passwordRegex.test(input.value)) {
-    input.setCustomValidity("Contraseña no válida, debe contener al menos un caracter especial.");
+    input.setCustomValidity("Contraseña no válida, debe ser alfanumérica y contener al menos un caracter especial.");
 
   } else {
     input.setCustomValidity("");
@@ -126,35 +126,5 @@ form.addEventListener("submit", event => {
 });
 
 
-const form2 = document.getElementById('logIn-form');
 
-form2.addEventListener('submit', event => {
-  event.preventDefault();
-  const username = document.querySelector("#firstInput").value.trim();
-  const password = document.querySelector("#lastInput").value.trim();
-  const errorDiv = form2.querySelector('.error-message');
-
-  errorDiv.textContent = "";
-
-  fetch('../../data/users.json')
-    .then(response => response.json())
-    .then(data => {
-      console.log(data);
-      console.log(username, password);
-      const user = data.find(u => u.nombre === username && u.password === password);
-      if (user) {
-        localStorage.setItem('user', JSON.stringify(user));
-        window.location.href = "../allSessions/allSessions.html";
-         console.log(user);
-       } else {
-        errorDiv.textContent = "Credenciales incorrectas";
-      }
-    })
-    .catch(error => {
-      console.error(error);
-      errorDiv.textContent = "Error cargando usuarios";
-    });
-
-
-})
 
