@@ -35,7 +35,7 @@
 #playersSideBar .userIconAndName {
     display: flex;
     justify-content: center;
-    gap: 10%;
+    gap: 5%;
 
     margin-top: 2.5%;
     width: 100%;
@@ -43,7 +43,8 @@
 }
 
 #playersSideBar .userIconAndName a {
-    width: 30%;
+    margin-top: 2.5%;
+    width: 20%;
 }
 
 #playersSideBar .userIconAndName img {
