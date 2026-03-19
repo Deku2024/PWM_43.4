@@ -46,7 +46,9 @@ p, span {
 
 input::placeholder,
 textarea::placeholder,
-button {
+button,
+input,
+textarea {
     font-family: "Crimson Text", serif;
     font-weight: 400;
     font-style: normal;

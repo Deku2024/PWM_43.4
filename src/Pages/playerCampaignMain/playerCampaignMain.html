@@ -4,18 +4,26 @@
   <meta charset="UTF-8" />
   <title>D&D Player Cards</title>
   <script type="module" src="playerCampaignMain.js"></script>
+  <link rel="stylesheet" href="../../palette.css">
+  <link rel="stylesheet" href="../generalCampaignCss.css">
   <link rel="stylesheet" href="playerCampaignMain.css">
 </head>
 <body>
-<header id="headerLoggedIn"></header>
+<header></header>
 
-<div id="layout">
+<main>
 
-  <section id="playersSideBar"></section>
+  <div id="playersSideBar"></div>
 
-  <main id="sessionArea">
+  <div id="sessionArea">
+
     <section id="leftSection">
-      <button id="characterImageButton"><img id="characterImage" src="../../Assets/d20.png" alt="Character's Image"></button>
+      <div id="characterImageContainer">
+        <label for="characterImageUpload">
+          <img src="../../Assets/sheet_img_example.png" alt="Character's Image (click to change)">
+        </label>
+        <input type="file" id="characterImageUpload" accept="image/*" style="display: none;">
+      </div>
       <div id="characteristicsGroup">
         <article class="characteristicBlock"></article>
         <article class="characteristicBlock"></article>
@@ -25,40 +33,41 @@
         <article class="characteristicBlock"></article>
       </div>
 
-      <button class="dropDownButton">Lorem Ipsum <span>></span></button>
-      <button class="dropDownButton">Lorem Ipsum <span>></span></button>
-      <button class="dropDownButton">Lorem Ipsum <span>></span></button>
+      <button class="dropDownButton">Inventario <span>></span></button>
+      <button class="dropDownButton">Habilidades de clase <span>></span></button>
+      <button class="dropDownButton">Habilidades <span>></span></button>
 
     </section>
     <section id="rightSection">
-      <form id="basicCharacterInfo" class="rightSectionWrapper">
-        <label for="characterName"></label> <input class="firstField" id="characterName" type="text" placeholder="Name">
-        <label for="characterRace"></label> <input class="secondField" id="characterRace" type="text" placeholder="Race">
-        <label for="characterAge"></label> <input class="thirdField" id="characterAge" type="text" placeholder="Age">
+      <form class="rightSectionWrapper">
+        <label for="characterName"> <input class="firstField" id="characterName" type="text" placeholder="Nombre"> </label>
+        <label for="characterRace"> <input class="secondField" id="characterRace" type="text" placeholder="Raza"> </label>
+        <label for="characterAge"> <input class="thirdField" id="characterAge" type="text" placeholder="Edad"> </label>
       </form>
 
-      <form id="advancedCharacterInfo" class="rightSectionWrapper">
-        <label for="characterClasses"></label> <input class="firstField" id="characterClasses" type="text" placeholder="Classes">
-        <label for="characterExperience"></label> <input class="secondField" id="characterExperience" type="text" placeholder="Experience">
-        <label for="characterAligment"></label> <input class="thirdField" id="characterAligment" type="text" placeholder="Aligment">
+      <form class="rightSectionWrapper">
+        <label for="characterClasses"> <input class="firstField" id="characterClasses" type="text" placeholder="Clases"> </label>
+        <label for="characterExperience"> <input class="secondField" id="characterExperience" type="text" placeholder="Experiencia"> </label>
+        <label for="characterAligment"> <input class="thirdField" id="characterAligment" type="text" placeholder="Alineamiento">  </label>
       </form>
 
       <form id="miscCharacterValues" class="rightSectionWrapper">
-        <label for="salvationThrows"></label> <input id="salvationThrows" type="text" placeholder="Salvation Throws">
+        <label for="salvationThrows"><input id="salvationThrows" type="text" placeholder="Tiradas de salvación"></label>
 
         <article class="miscValueField"></article>
         <article class="miscValueField"></article>
         <article class="miscValueField"></article>
       </form>
 
-      <label for="characterDescription"></label><textarea placeholder="Description" id="characterDescription"></textarea>
+      <label for="characterDescription"><textarea placeholder="Descripción" id="characterDescription"></textarea></label>
 
       <section id="dropDownArea"> </section>
 
     </section>
-  </main>
-  <div id="logTiradas" class="logAndButton"></div>
-</div>
+  </div>
+
+  <div id="logTiradas"></div>
+</main>
 
 </body>
 </html>
