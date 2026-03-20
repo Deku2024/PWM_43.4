@@ -2,6 +2,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 form {
@@ -9,18 +10,6 @@ form {
     flex-direction: column;
     align-items: center;
     width: 35%;
-}
-
-.error {
-    font-size: 1rem;
-    color: #e74c3c;
-    padding: 6px 10px;
-    border-radius: 6px;
-    margin-top: 6px;
-
-    opacity: 2;
-    transform: translateY(-5px);
-    transition: all 0.3s ease;
 }
 
 footer {
@@ -60,11 +49,6 @@ footer p {
 
 input::placeholder {
     padding-top: 2px;
-}
-
-input:focus {
-    border-color: #c9a24a;
-    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.1);
 }
 
 /*Log In*/
