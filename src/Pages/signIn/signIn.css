@@ -22,11 +22,26 @@ main {
     width: 95%;
 }
 
-form {
+.otherOptions {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    width: 35%;
+    width: 22%;
+    justify-content: space-between;
+}
+
+.otherOptions button {
+    margin-bottom: 10%;
+    padding: 5%;
+}
+
+.otherOptions a {
+    font-family: "Crimson Text", serif;
+    font-size: 1rem;
+}
+
+.otherOptions a:hover {
+    color: #c9a24a;
 }
 
 footer {
@@ -52,6 +67,23 @@ input::placeholder {
     padding-top: 2px;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+}
+
+form a {
+    width: 63%;
+    margin-bottom: 1%;
+}
+
+form button {
+    width: 100%;
+    padding: 1%;
+}
+
 /* Sign In */
 .input-control {
     display: flex;
@@ -59,7 +91,6 @@ input::placeholder {
     align-items: center;
     width: 100%;
     height: 10%;
-    margin-bottom: 5%;
 }
 
 .input-control input {
@@ -79,6 +110,7 @@ input::placeholder {
     padding: 6px 10px;
     border-radius: 6px;
     margin-top: 6px;
+    margin-bottom: 6px;
 
     opacity: 0;
     transform: translateY(-5px);

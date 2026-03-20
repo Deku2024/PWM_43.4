@@ -57,7 +57,7 @@ form button {
 }
 
 
-#otherOptions {
+.otherOptions {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -65,17 +65,17 @@ form button {
     justify-content: space-between;
 }
 
-#otherOptions button {
+.otherOptions button {
     margin-bottom: 10%;
     padding: 5%;
 }
 
-#otherOptions a {
+.otherOptions a {
     font-family: "Crimson Text", serif;
     font-size: 1rem;
 }
 
-#otherOptions a:hover {
+.otherOptions a:hover {
     color: #c9a24a;
 }
 
