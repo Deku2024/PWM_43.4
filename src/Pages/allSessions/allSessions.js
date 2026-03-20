@@ -13,5 +13,5 @@ async function init() {
 const user = JSON.parse(localStorage.getItem('user'));
 
 if (!user) {
-  window.location.href = "../logIn_signIn/logIn.html";
+  window.location.href = "../logIn/logIn.html";
 }
