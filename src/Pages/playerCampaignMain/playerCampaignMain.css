@@ -76,7 +76,7 @@ main {
 }
 
 .dice-container:hover {
-    filter: brightness(0.7);
+    filter: brightness(var(--default-darken));
 }
 
 .dice-container img {
@@ -96,7 +96,7 @@ main {
 }
 
 #characterImageContainer img:hover {
-    filter: brightness(0.6);
+    filter: brightness(var(--default-darken));
 }
 
 #rightSection label {

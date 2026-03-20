@@ -15,7 +15,7 @@
     --parchment-light: #f5efe6;
     --parchment: #ebe0cc;
     --parchment-dark: #d8c9a9;
-
+    
     --wood: #a67c52;
     --wood-dark: #6b4a2f;
     --very-dark-wood: #321d10;
@@ -23,6 +23,8 @@
     --gold: #c9a24a;
     --iron: #4a4a4a;
     --steel: #2f2f2f;
+    
+    --default-darken: 0.8;
 }
 
 body {
@@ -90,6 +92,14 @@ header {
 
 #userIcon p {
     margin-left: 5%;
+}
+
+header a {
+    transition: filter 0.2s;
+}
+
+header a:hover {
+    filter: brightness(var(--default-darken));
 }
 
 /* configuracion nav bar */
