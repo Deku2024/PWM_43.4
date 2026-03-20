@@ -159,5 +159,11 @@ input, textarea {
     border: 1px solid black;
 }
 
+/* Por si quieren que todos los inputs se vean así cuando picas sobre ellos */
+input:focus {
+    border-color: #c9a24a;
+    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.1);
+}
+
 
 

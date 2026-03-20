@@ -18,9 +18,10 @@ form2.addEventListener('submit', event => {
   console.log("Submitted!");
   const username = document.querySelector("#firstInput").value.trim();
   const password = document.querySelector("#lastInput").value.trim();
-  const errorDiv = form2.querySelector('.error-message');
+  const errorDiv = form2.querySelector('.error');
 
   errorDiv.textContent = "";
+  errorDiv.style.backgroundColor = "#f5efe6";
 
   fetch('../../data/users.json')
     .then(response => response.json())

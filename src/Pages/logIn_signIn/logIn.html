@@ -3,8 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Log In</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Macondo&display=swap" rel="stylesheet">
   <script type="module" src="logIn.js"></script>
   <link rel="stylesheet" href="logIn_signIn.css">
+  <link rel="stylesheet" href="../../palette.css">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
@@ -13,7 +17,7 @@
 
 <main id="Main">
 
-  <img src="../../Assets/d20.png" alt="Logo" width="300" height="100">
+  <img src="../../Assets/logInSignInImage.png" alt="Logo" width="300" height="150">
 
   <h1>
     Inicio de Sesión
@@ -29,7 +33,7 @@
       <input placeholder="Contraseña" id="lastInput" type="password">
     </div>
 
-    <div class="error-message"></div>
+    <div class="error"></div>
 
 
     <button type="submit" id="acceptButton" class="mainButton">
@@ -38,27 +42,16 @@
 
   </form>
 
+  <a href="../index/index.html" class="link">
+    <button id="cancelButton" class="mainButton">
+      Cancelar
+    </button>
+  </a>
 
-  <div id="ButtonDiv">
+  <a href="./signIn.html" class="link">
+    ¿No tienes cuenta? Regístrate
+  </a>
 
-    <a href="../index/index.html" class="link">
-      <button id="cancelButton" class="mainButton">
-        Cancelar
-      </button>
-    </a>
-
-
-    <p>
-      Lorem ipsum dolor sit amet
-    </p>
-
-    <a href="./signIn.html" class="link">
-      <button class="swtichButton">
-        Botón
-      </button>
-    </a>
-
-  </div>
 
 </main>
 
