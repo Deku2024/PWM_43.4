@@ -3,76 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <title>Default Settings</title>
-  <link rel="stylesheet" href="defaultSettings.css">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script type="module" src="defaultSettings.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link rel="stylesheet" href="defaultSettings.css">
   <link rel="stylesheet" href="../../palette.css">
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Macondo&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header xlu-include-file="../../Templates/headerLoggedIn.html"></header>
+<header></header>
 
-<nav xlu-include-file="../../Templates/navbar.html"></nav>
+<nav></nav>
 
 <main>
 
-  <h1>Lorem Ipsum</h1>
+  <h1>Ajustes por defecto de la sesión</h1>
 
-  <div>
-    <section>
-
+  <div id="left">
       <form class="field">
+        <div class="setting">
+          <label for="tamaño-log"></label>
+          <input id="tamaño-log" type="number" placeholder="Tamaño log tiradas">
+        </div>
 
-        <label>
-          <input type="text" placeholder="Tamaño log tiradas">
-        </label>
+        <div class="setting">
+          <label for="max-jugadores"></label>
+          <input id="max-jugadores" type="number" placeholder="Máximo de jugadores">
+        </div>
 
+        <div class="setting">
+          <label for="auto-aceptar" class="slider">Aceptar automáticamente solicitudes de unión</label>
+          <input id="auto-aceptar" type="checkbox">
+          <span class="slider"></span>
+        </div>
+
+        <div class="setting">
+          <label for="nivel-comienzo"></label>
+          <input id="nivel-comienzo" type="number" placeholder="Nivel de comienzo de la campaña">
+        </div>
       </form>
+  </div>
 
-      <form class="field">
+  <div id="right">
+    <form class="field">
 
+      <span>Objetos de inicio de campaña</span>
 
-        <label>
-          <input type="text" placeholder="Máximo de jugadores">
-        </label>
-
-      </form>
-
-      <form class="field">
-
-        <span>Objetos de inicio de campaña</span>
-
-        <label>
-          <input type="text">
-        </label>
-
-      </form>
-
-    </section>
+      <label></label>
+        <input type="text">
 
 
-    <section>
-
-      <form class="field">
-
-        <label>
-          <input type="text" placeholder="aceptar automaticamente">
-        </label>
-
-      </form>
-
-      <form class="field">
-
-
-        <label>
-          <input type="text" placeholder="Nivel de comienzo de la campaña">
-        </label>
-
-      </form>
-
-    </section>
+    </form>
   </div>
 
 </main>

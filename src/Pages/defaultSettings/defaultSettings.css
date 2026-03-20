@@ -1,3 +1,16 @@
+main {
+    position: fixed;
+    top: 10%;
+    left: 8%;
+    right: 0;
+    bottom: 0;
+
+    padding-left: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+
 main div {
     display: grid;
     grid-template-columns: repeat(2, 40%);
