@@ -19,6 +19,7 @@ main {
     padding: 2%;
 }
 
+
 #sessionArea {
     display: grid;
     grid-template-columns: 1fr 2fr;

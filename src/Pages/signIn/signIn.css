@@ -18,7 +18,7 @@
 }
 
 .otherOptions a:hover {
-    color: #c9a24a;
+    color: var(--gold);
 }
 
 input::placeholder {
@@ -63,7 +63,7 @@ form button {
 
 .error-message {
     font-size: 1rem;
-    color: #e74c3c;
+    color: var(--error-color);
     background-color: #ffecec;
     padding: 6px 10px;
     border-radius: 6px;
@@ -76,12 +76,12 @@ form button {
 }
 
 .input-control.success input {
-    border-color: #2ecc71;
+    border-color: var(--correct-color);
     background: #f0fff4;
 }
 
 .input-control.error input {
-    border-color: #e74c3c;
+    border-color: var(--error-color);
     background: #fff5f5;
 }
 

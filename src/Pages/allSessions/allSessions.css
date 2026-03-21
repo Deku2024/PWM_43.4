@@ -1,7 +1,7 @@
 main {
     position: fixed;
     top: 10%;
-    left: 8%;
+    left: clamp(4rem, 100%, 7rem);
     right: 0;
     bottom: 0;
 
@@ -13,10 +13,10 @@ main {
 section {
     display: flex;
     flex-direction: column;
-    width: clamp(20rem, 80%, 40rem);
+    width: clamp(21rem, 100%, 40rem);
     height: 97%;
-    margin-left: 4%;
-    margin-top: 4%;
+    margin-left: clamp(0.5rem, 4%, 4rem);
+    margin-top: clamp(1rem, 2rem, 3rem);
     padding-right: 1rem;
     padding-bottom: 1rem;
 }
@@ -25,7 +25,7 @@ section ul {
     width: 100%;
     height: auto;
     padding: 0 0.5rem 0 0;
-    margin: 0;  
+    margin: 0;
     max-height: clamp(15rem, 100%, 25rem);
     overflow-y: auto;
 }
@@ -52,11 +52,12 @@ section ul {
 }
 
 .buttons {
-    margin-top: 3%;
-    margin-right: 2%;
     height: 100%;
     display: flex;
+    align-items: center;
+    justify-content: center;
     column-gap: 3%;
+    padding-right: 1rem;
 }
 
 .buttons button {
@@ -86,5 +87,5 @@ section ul {
 h1 {
     font-size: 35pt;
     margin-top: 0;
-    margin-bottom: 10%;
+    margin-bottom: clamp(1rem, 4rem, 8rem);
 }

@@ -10,7 +10,7 @@ export function initMenu() {
   close_icon = document.querySelector('#close_icon');
 }
 
-function changeIcon() {
+function changeNavBarVisibility() {
     if (!sideBar.classList.contains('show')) {
       showMenu();
     } else {
@@ -29,4 +29,4 @@ function closeMenu() {
 }
 
 
-window.changeIcon = changeIcon;
+window.changeNavBarVisibility = changeNavBarVisibility;

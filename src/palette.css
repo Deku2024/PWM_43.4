@@ -25,11 +25,13 @@
     --steel: #2f2f2f;
 
     --default-darken: 0.8;
+
+    --error-color: #e74c3c;
+    --correct-color: #2ecc71;
 }
 
 body {
     background-color: var(--parchment-light);
-    /*overflow: hidden;*/
 }
 * {
     box-sizing: border-box;
@@ -183,7 +185,7 @@ input, textarea {
     border: 1px solid black;
 }
 
-/* Por si quieren que todos los inputs se vean así cuando picas sobre ellos */
+
 input:focus {
     border-color: #c9a24a;
     box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.1);
@@ -202,6 +204,16 @@ input:focus {
     filter: brightness(var(--default-darken));
 }
 
+/* para el overlay */
+#overlay {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    transition: display 2s;
+}
+
 /* media query para el nav bar */
 @media screen and (max-width: 600px) {
     nav {
@@ -214,17 +226,21 @@ input:focus {
         display: flex;
         flex-direction: column;
         align-items: center;
-        transition: right 300ms ease-out;
+        transition: left 300ms ease-out;
     }
 
     nav.show {
         left: 0;
         padding: 0;
     }
+    
+    nav.show ~ #overlay {
+        display: block;
+    }
 
     main {
-        left: 0;
-        background-color: #2ecc71;
+        left: 0 !important;
+        padding: 0;
     }
 
     #hamburguer_menu.show-icon {
@@ -233,6 +249,10 @@ input:focus {
 
     #close_icon.show-icon {
         display: block;
+    }
+    
+    p, span {
+        font-weight: 300;
     }
 
 }
