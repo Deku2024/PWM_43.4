@@ -19,7 +19,6 @@ main {
     padding: 2%;
 }
 
-
 #sessionArea {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -80,7 +79,7 @@ main {
 }
 
 .dice-container img {
-    width: 70%;
+    width: 60%;
     height: auto;
     object-fit: contain;
 }

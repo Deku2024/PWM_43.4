@@ -30,7 +30,10 @@
 body {
     background-color: var(--parchment-light);
     overflow: hidden;
+}
 
+* {
+    box-sizing: border-box;
 }
 
 /* definicion de letras */
@@ -187,6 +190,7 @@ input, textarea {
     cursor: pointer;
     transition: filter 0.2s;
     width: clamp(3rem, 100%, 5rem);
+    height: auto;
 }
 
 #hamburguer_menu, #close_icon {
@@ -205,6 +209,7 @@ input, textarea {
         display: flex;
         flex-direction: column;
         align-items: center;
+        transition: right 300ms ease-out;
     }
     
     nav.show {

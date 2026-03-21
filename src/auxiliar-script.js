@@ -20,14 +20,12 @@ function changeIcon() {
 
 function showMenu() {
   sideBar.classList.add('show');
-  hamburguer_menu.classList.remove('show-icon');
   close_icon.classList.add('show-icon');
 }
 
 function closeMenu() {
   sideBar.classList.remove('show');
   close_icon.classList.remove('show-icon');
-  hamburguer_menu.classList.add('show-icon');
 }
 
 
