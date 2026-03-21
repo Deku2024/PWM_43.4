@@ -15,23 +15,22 @@
     --parchment-light: #f5efe6;
     --parchment: #ebe0cc;
     --parchment-dark: #d8c9a9;
-    
+
     --wood: #a67c52;
     --wood-dark: #6b4a2f;
     --very-dark-wood: #321d10;
-    
+
     --gold: #c9a24a;
     --iron: #4a4a4a;
     --steel: #2f2f2f;
-    
+
     --default-darken: 0.8;
 }
 
 body {
     background-color: var(--parchment-light);
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
-
 * {
     box-sizing: border-box;
 }
@@ -61,7 +60,7 @@ textarea {
 }
 
 
-nav, header {
+nav, header, footer {
     position: fixed;
     background-color: var(--parchment-dark);
     
@@ -110,10 +109,10 @@ nav {
     top: calc(10% - 1px);
     left: 0;
     bottom: 0;
-    right: auto; 
-    width: clamp(4rem, 100%, 7rem); 
+    right: auto;
+    width: clamp(4rem, 100%, 7rem);
     box-shadow: 5px -10px 10px rgba(0, 0, 0, 0.3) inset;
-    padding: 1rem; 
+    padding: 1rem;
 }
 
 nav ul {
@@ -152,7 +151,7 @@ nav a:hover {
 }
 
 /* configuracion del main */
-main {
+/*main {
     position: fixed;
     top: 10%;
     left: clamp(4rem, 100%, 7rem);
@@ -162,7 +161,7 @@ main {
     padding-left: 2%;
     padding-top: 1%;
     padding-bottom: 1%;
-}
+}*/
 
 /* varias configuraciones */
 button {
@@ -175,13 +174,19 @@ button {
 }
 
 button:hover {
-    color: black;
+    color: #2f2f2f;
     background-color: var(--gold);
 }
 
 input, textarea {
     border-radius: 8px;
     border: 1px solid black;
+}
+
+/* Por si quieren que todos los inputs se vean así cuando picas sobre ellos */
+input:focus {
+    border-color: #c9a24a;
+    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.1);
 }
 
 /* ocultacion del menu hamburguesa */
@@ -211,12 +216,12 @@ input, textarea {
         align-items: center;
         transition: right 300ms ease-out;
     }
-    
+
     nav.show {
         left: 0;
         padding: 0;
     }
-    
+
     main {
         left: 0;
     }

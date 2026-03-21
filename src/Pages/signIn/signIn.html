@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Sign in</title>
-  <script type="module" src="logIn_signIn.js"></script>
-  <link rel="stylesheet" href="logIn_signIn.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Macondo&display=swap" rel="stylesheet">
+  <script type="module" src="signIn.js"></script>
+  <link rel="stylesheet" href="signIn.css">
+  <link rel="stylesheet" href="../../palette.css">
+  <link rel="stylesheet" href="../../footer-headerWbuttons.css">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
@@ -13,13 +18,13 @@
 
 <main id="Main">
 
-  <img src="../../Assets/d20.png" alt="Logo" width="300" height="100">
+  <img src="../../Assets/logInSignInImage.png" alt="Logo" width="275" height="125">
 
   <h1>
     Regístrate
   </h1>
 
-  <form id="signIn-form" action="/" novalidate>
+  <form id="signIn-form" novalidate>
     <div class="input-control">
       <label for="username"></label>
       <input id="username" name="username" placeholder="Nombre de Usuario"  type="text" minlength="6" maxlength="25" pattern="^[A-Za-z0-9._-]+$" required>
@@ -51,25 +56,19 @@
     </a>
 
   </form>
-  <div id="ButtonDiv">
 
+  <div class="otherOptions">
     <a href="../index/index.html" class="link">
       <button id="cancelButton" class="mainButton">
         Cancelar
       </button>
     </a>
 
-
-    <p>
-      Lorem ipsum dolor sit amet
-    </p>
-
-    <a href="./logIn.html" class="link">
-      <button class="swtichButton">
-        Iniciar sesión
-      </button>
+    <a href="../logIn/logIn.html" class="link">
+      ¿Ya tienes cuenta? Inicia sesión
     </a>
   </div>
+
 
 </main>
 

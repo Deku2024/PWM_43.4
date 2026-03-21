@@ -27,7 +27,7 @@ function showSuccess(input, errorDiv) {
 }
 
 
-const form = document.getElementById('signIn-form');
+
 function validateInput(input, errorDiv, validator) {
 
   input.addEventListener("input", () => {
@@ -53,7 +53,7 @@ validateInput(username, usernameError, (input) => {
     input.setCustomValidity("Debe especificar un nombre de usuario");
 
   } else if (input.validity.tooShort || input.validity.tooLong) {
-    input.setCustomValidity("Debe tener entre 15 y 25 caracteres");
+    input.setCustomValidity("Debe tener entre 6 y 25 caracteres");
 
   } else if (input.validity.patternMismatch) {
     input.setCustomValidity("Caracter no válido");
@@ -92,7 +92,7 @@ validateInput(password, passwordError, (input) => {
     input.setCustomValidity("La contraseña es obligatoria");
 
   } else if (!passwordRegex.test(input.value)) {
-    input.setCustomValidity("Contraseña no válida, debe contener al menos un caracter especial.");
+    input.setCustomValidity("Contraseña no válida, debe ser alfanumérica y contener al menos un caracter especial.");
 
   } else {
     input.setCustomValidity("");
@@ -116,9 +116,15 @@ validateInput(repeat, repeatError, (input) => {
 
 
 
+
+const form = document.getElementById('signIn-form');
+
 form.addEventListener("submit", event => {
   if (!form.checkValidity()) {
     event.preventDefault();
   }
 });
+
+
+
 
