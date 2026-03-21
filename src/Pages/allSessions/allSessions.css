@@ -1,7 +1,7 @@
 main {
     position: fixed;
     top: 10%;
-    left: 8%;
+    left: clamp(4rem, 100%, 7rem);
     right: 0;
     bottom: 0;
 
