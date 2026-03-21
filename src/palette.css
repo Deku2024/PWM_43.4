@@ -224,6 +224,7 @@ input:focus {
 
     main {
         left: 0;
+        background-color: #2ecc71;
     }
 
     #hamburguer_menu.show-icon {
