@@ -21,7 +21,7 @@ section {
 .session {
     background-color: var(--wood-dark);
     border-radius: 12px;
-    border: 2px solid var(--steel);
+    border: 2px solid silver;
     width: clamp(10vw, 100%, 44vw);
     height: 8vh;
     margin-top: 1%;
@@ -30,16 +30,17 @@ section {
     justify-content: space-between;
     align-items: center;
 
-    padding-left: 1%;
+    padding-left: 2%;
     padding-right: 1%;
 }
 
 .session p {
     color: var(--gold);
+    font-size: 15pt;
 }
 
 .buttons {
-    margin-top: 2%;
+    margin-top: 3%;
     margin-right: 2%;
     height: 100%;
     display: flex;
@@ -47,11 +48,30 @@ section {
 }
 
 .buttons button {
-    height: 80%;
+    height: 70%;
     padding-left: 8px;
     padding-right: 8px;
+
+    background-color: var(--gold);
+    color: var(--very-dark-wood)
+}
+
+.buttons button:hover {
+    color: var(--gold);
+    background-color: var(--very-dark-wood);
 }
 
 #createSessionButton {
     align-self: end;
+    margin-right: -1%;
+}
+
+#createSessionButton button {
+    height: 6vh;
+}
+
+h1 {
+    font-size: 35pt;
+    margin-top: 0;
+    margin-bottom: 10%;
 }

@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Profile Settings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Macondo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../palette.css">
   <link rel="stylesheet" href="profileSettings.css">
 </head>
 <body>
@@ -12,43 +16,39 @@
 </header>
 
 <main>
-  <h1>Lorem Ipsum</h1>
+  <h1>Ajustes de perfil</h1>
 
   <form id="mainForm">
 
-    <img id="imagen" src="../../Assets/aspasfooter.png" alt="Profile Picture">
+    <div id="userIconImageContainer">
+      <label for="profileImageUpload">
+        <img src="../../Assets/default_user_icon.png" alt="Profile Picture (click to change)">
+      </label>
+      <input type="file" id="profileImageUpload" accept="image/*" style="display: none;">
+    </div>
 
-    <div class="formFieldsGroups">
+    <div id="formFieldsGroups">
 
-      <div class="form-fields">
-        <p>Lorem Ipsum</p>
-        <label>
-          <input placeholder="Lorem Ipsum" type="text">
-        </label>
-      </div>
+      <label> Nombre de usuario
+        <input type="text">
+      </label>
 
-      <div class="form-fields">
-        <p>Duis aute</p>
-        <label>
-          <input placeholder="Lorem Ipsum" type="text">
-        </label>
-      </div>
+      <label> Correo
+        <input type="text">
+      </label>
 
-      <div class="form-fields">
-        <p>Ut enim ad</p>
-        <label>
-          <input placeholder="Lorem Ipsum" type="text">
-        </label>
-      </div>
+      <label> Contraseña
+        <input type="text">
+      </label>
 
     </div>
 
   </form>
 
-  <div class="buttons">
-    <button id="firstButton">Botón</button>
-    <button>Botón</button>
-    <a href="../allSessions/allSessions.html"><button class="link">Botón</button></a>
+  <div id="buttons">
+    <button id="firstButton">Cancelar</button>
+    <button id="restablishButton">Restablecer</button>
+    <a id="acceptButton" href="../allSessions/allSessions.html"><button class="link">Aceptar</button></a>
   </div>
 
 </main>

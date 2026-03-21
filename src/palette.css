@@ -18,10 +18,13 @@
 
     --wood: #a67c52;
     --wood-dark: #6b4a2f;
+    --very-dark-wood: #321d10;
 
     --gold: #c9a24a;
     --iron: #4a4a4a;
     --steel: #2f2f2f;
+
+    --default-darken: 0.8;
 }
 
 body {
@@ -45,7 +48,9 @@ p, span {
 
 input::placeholder,
 textarea::placeholder,
-button {
+button,
+input,
+textarea {
     font-family: "Crimson Text", serif;
     font-weight: 400;
     font-style: normal;
@@ -89,29 +94,38 @@ header {
     margin-left: 5%;
 }
 
+header a {
+    transition: filter 0.2s;
+}
+
+header a:hover {
+    filter: brightness(var(--default-darken));
+}
+
 /* configuracion nav bar */
 nav {
     top: calc(10% - 1px);
     left: 0;
     bottom: 0;
-    right: 92%;
-    
+    right: auto;
+    width: clamp(4rem, 100%, 7rem);
     box-shadow: 5px -10px 10px rgba(0, 0, 0, 0.3) inset;
-    padding: 1%;
+    padding: 1rem;
 }
 
 nav ul {
-    height: 50%;
+    height: clamp(3rem, 100%, 7rem);
     padding: 0;
     list-style: none;
     
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
 li {
-    width: clamp(6vw, 100%, 8vw);
+    width: clamp(4rem, 100%, 7rem);
     height: auto;
 
     transition: background-color 0.15s;
@@ -126,11 +140,19 @@ nav img {
     height: auto;
 }
 
+nav a {
+    transition: filter 0.2s;
+}
+
+nav a:hover {
+    filter: brightness(var(--default-darken));
+}
+
 /* configuracion del main */
 /*main {
     position: fixed;
     top: 10%;
-    left: 8%;
+    left: clamp(4rem, 100%, 7rem);
     right: 0;
     bottom: 0;
     
@@ -164,6 +186,52 @@ input:focus {
     border-color: #c9a24a;
     box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.1);
 }
+
+/* ocultacion del menu hamburguesa */
+#hamburguer_menu, #close_icon {
+    display: none;
+    cursor: pointer;
+    transition: filter 0.2s;
+    width: clamp(3rem, 100%, 5rem);
+}
+
+#hamburguer_menu, #close_icon {
+    filter: brightness(var(--default-darken));
+}
+
+/* media query para el nav bar */
+@media screen and (max-width: 600px) {
+    nav {
+        top: 0;
+        bottom: 0;
+        height: auto;
+        left: -100%;
+        right: 100%;
+        z-index: 40;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav.show {
+        left: 0;
+        padding: 0;
+    }
+
+    main {
+        left: 0;
+    }
+
+    #hamburguer_menu.show-icon {
+        display: block;
+    }
+
+    #close_icon.show-icon {
+        display: block;
+    }
+
+}
+
 
 
 

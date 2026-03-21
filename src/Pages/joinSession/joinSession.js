@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', async function() {
 });
 
 async function init() {
-  await loadTemplate('../../Templates/userIconAndName.html', '#userIcon');
-  await loadTemplate('../../Templates/headerLoggedIn.html', '#headerLoggedIn');
-  await loadTemplate('../../Templates/navbar.html', '#navbar');
+  await loadTemplate('../../Templates/headerLoggedIn.html', 'header', () => {
+    loadTemplate('../../Templates/userIconAndName.html', '.userIconAndName');
+  });
+  await loadTemplate('../../Templates/navbar.html', 'nav');
 }
