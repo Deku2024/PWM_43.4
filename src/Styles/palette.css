@@ -27,11 +27,16 @@ body {
 }
 
 /* definicion de letras */
-h1,h2,h3,h4,h5,h6 {
+h1,h3,h4,h5,h6 {
     font-family: "Macondo", cursive;
     font-weight: 500;
     font-style: normal;
     font-size: 30pt;
+}
+
+h2 {
+    font-size: 23pt;
+    font-family: "Macondo", cursive;
 }
 
 p, span {
