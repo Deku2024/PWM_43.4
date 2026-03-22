@@ -1,4 +1,4 @@
-import { loadTemplate } from '../../script.js';
+import { loadTemplate } from '../../Scripts/script.js';
 
 document.addEventListener('DOMContentLoaded', async function() {
   await init();
