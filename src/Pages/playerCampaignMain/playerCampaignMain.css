@@ -16,7 +16,7 @@ main {
     background-color: var(--parchment-dark);
     border: 2px solid var(--very-dark-wood);
     border-radius: 28px;
-    padding: 2%;
+    padding: 2% 2% 0;
 }
 
 
