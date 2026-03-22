@@ -13,17 +13,29 @@ main {
 section {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    margin-left: 4%;
-    margin-top: 4%;
+    width: clamp(21rem, 100%, 40rem);
+    height: 97%;
+    margin-left: clamp(0.5rem, 4%, 4rem);
+    margin-top: clamp(1rem, 2rem, 3rem);
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+
+section ul {
+    width: 100%;
+    height: auto;
+    padding: 0 0.5rem 0 0;
+    margin: 0;
+    max-height: clamp(15rem, 100%, 25rem);
+    overflow-y: auto;
 }
 
 .session {
     background-color: var(--wood-dark);
     border-radius: 12px;
     border: 2px solid silver;
-    width: clamp(10vw, 100%, 44vw);
-    height: 8vh;
+    width: 100%;
+    height: clamp(3rem, 3.5rem, 5rem);
     margin-top: 1%;
     
     display: flex;
@@ -40,11 +52,12 @@ section {
 }
 
 .buttons {
-    margin-top: 3%;
-    margin-right: 2%;
     height: 100%;
     display: flex;
+    align-items: center;
+    justify-content: center;
     column-gap: 3%;
+    padding-right: 1rem;
 }
 
 .buttons button {
@@ -61,17 +74,18 @@ section {
     background-color: var(--very-dark-wood);
 }
 
-#createSessionButton {
-    align-self: end;
-    margin-right: -1%;
+#joinSessionButton {
+    align-self: flex-end;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
-#createSessionButton button {
-    height: 6vh;
+#joinSessionButton button {
+    height: 2.5rem;
 }
 
 h1 {
     font-size: 35pt;
     margin-top: 0;
-    margin-bottom: 10%;
+    margin-bottom: clamp(1rem, 4rem, 8rem);
 }

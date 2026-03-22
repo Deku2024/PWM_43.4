@@ -25,12 +25,16 @@
     --steel: #2f2f2f;
 
     --default-darken: 0.8;
+
+    --error-color: #e74c3c;
+    --correct-color: #2ecc71;
 }
 
 body {
     background-color: var(--parchment-light);
-    /*overflow: hidden;*/
-
+}
+* {
+    box-sizing: border-box;
 }
 
 /* definicion de letras */
@@ -132,7 +136,7 @@ li {
 }
 
 nav li {
-    margin-top: 10%;
+    margin-top: clamp(1rem, 3rem, 5rem);
 }
 
 nav img {
@@ -193,10 +197,21 @@ input:focus {
     cursor: pointer;
     transition: filter 0.2s;
     width: clamp(3rem, 100%, 5rem);
+    height: auto;
 }
 
 #hamburguer_menu, #close_icon {
     filter: brightness(var(--default-darken));
+}
+
+/* para el overlay */
+#overlay {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    transition: display 2s;
 }
 
 /* media query para el nav bar */
@@ -211,15 +226,21 @@ input:focus {
         display: flex;
         flex-direction: column;
         align-items: center;
+        transition: left 300ms ease-out;
     }
 
     nav.show {
         left: 0;
         padding: 0;
     }
+    
+    nav.show ~ #overlay {
+        display: block;
+    }
 
     main {
-        left: 0;
+        left: 0 !important;
+        padding: 0;
     }
 
     #hamburguer_menu.show-icon {
@@ -228,6 +249,10 @@ input:focus {
 
     #close_icon.show-icon {
         display: block;
+    }
+    
+    p, span {
+        font-weight: 300;
     }
 
 }
