@@ -19,13 +19,15 @@ main {
     justify-items: center;
     gap: 1rem;
     padding-right: 10%;
+    padding-top: 2%;
 }
 
 #sessionPhoto {
     grid-area: image;
-    width: clamp(8rem, 100%, 40rem);
-    height: clamp(8rem, 100%, 40rem);
+    width: clamp(12rem, 100%, 40rem);
+    height: clamp(12rem, 100%, 40rem);
     margin-top: clamp(0.5rem, 2rem, 3rem);
+    object-fit: contain;
 }
 
 .left {
@@ -36,7 +38,7 @@ main {
 
 .left p {
     max-width: 70%;
-    max-height: 50%;
+    max-height: 28%;
     overflow-y: auto;
 }
 
@@ -51,7 +53,7 @@ main {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2%;
-    margin-top: 2rem;
+    margin-top: 5rem;
     gap: 4rem;
 }
 
