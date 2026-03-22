@@ -1,7 +1,7 @@
 main {
     position: fixed;
-    top: 0;
-    left: 8%;
+    top: 3%;
+    left: 14%;
     right: 0;
     bottom: 0;
 
@@ -52,8 +52,13 @@ input {
     width: 50%;
     cursor: pointer;
     margin-top: 5%;
-    margin-bottom: 5%
+    margin-bottom: 5%;
+    font-size: 20pt;
 ;
+}
+
+#objects{
+    font-size: 20pt;
 }
 
 .checkbox-label input {
