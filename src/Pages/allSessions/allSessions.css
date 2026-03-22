@@ -60,13 +60,24 @@ section ul {
     padding-right: 1rem;
 }
 
-.buttons button {
+
+.buttons button, .buttons a {
     height: 70%;
+    background-color: var(--gold);
+    color: var(--very-dark-wood);
+    border-radius: 12px;
+}
+
+.buttons button {
     padding-left: 8px;
     padding-right: 8px;
+}
 
-    background-color: var(--gold);
-    color: var(--very-dark-wood)
+.buttons a button {
+    height: 100%;
+    width: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 .buttons button:hover {
@@ -88,4 +99,14 @@ h1 {
     font-size: 35pt;
     margin-top: 0;
     margin-bottom: clamp(1rem, 4rem, 8rem);
+}
+
+@media screen and (max-width: 600px) {
+    .joinToThisSession, .joinToThisSession button {
+        display: none;
+    }
+
+    .session {
+        cursor: pointer;
+    }
 }
