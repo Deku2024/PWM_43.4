@@ -1,5 +1,5 @@
-import { loadTemplate } from '../../script.js';
-import { initMenu } from '../../auxiliar-script.js';
+import { loadTemplate } from '../../Scripts/script.js';
+import { initMenu } from '../../Scripts/auxiliar-script.js';
 
 document.addEventListener('DOMContentLoaded', init);
 

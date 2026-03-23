@@ -10,15 +10,58 @@
 
 #mainInformation {
     display: flex;
-    justify-content: center;
     align-items: flex-start;
+    flex-wrap: wrap;
     gap: 40px;
 
     max-width: 1200px;
     margin: 0 auto;
 }
-#mainInformation section {
+
+.card {
     flex: 1;
     max-width: 300px;
     text-align: center;
+}
+
+.carousel-btn {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    #mainInformation {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 0;
+
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+
+        margin: 0;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .card {
+        min-width: 100%;
+        flex-shrink: 0;
+        scroll-snap-align: center;
+
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    #mainInformation::-webkit-scrollbar {
+        display: none;
+    }
+
+    #buttonGroup {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
 }

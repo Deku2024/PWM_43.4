@@ -1,0 +1,85 @@
+[
+  {
+    "id": "A7F3K9P2XQ1Z",
+    "usuario_id": "u1",
+    "dm_id": "u1",
+    "nombre": "Partida épica",
+    "descripcion": "Hace mil años, los Dioses Titánicos caminaron sobre el continente de Atheria. Su guerra civil fracturó el mundo, hundiendo imperios enteros bajo el mar. Para evitar el fin de todo, los dioses \"menores\" (los actuales) encerraron a los titanes en un plano de prisión sellado con cinco Llaves Celestiales.\n\n        Hoy, el sello se está rompiendo. Los cielos se tiñen de un extraño color violeta al amanecer, los ríos nacen con sabor a ceniza y la gente común comienza a tener pesadillas con colosos de piedra que despiertan bajo las montañas.\n\n        Vosotros no sois héroes famosos. Sois lo último que queda en Vallis, una ciudad mercantil situada en la encrucijada de tres reinos. Cuando la catedral de la ciudad se hunde repentinamente en un sumidero que exhala un brillo dorado prohibido, descubrís que bajo vuestros pies descansa una de las Llaves Celestiales. Ahora, sectas apocalípticas, imperios desesperados y horrores primigenios vendrán a reclamarla.Antes de que los dioses actuales (a quienes los eruditos llaman Los Siete del Cáliz) existieran, el mundo pertenecía a los Titanes Primigenios. Eran siete entidades colosales que encarnaban conceptos fundamentales:\n\n        Orthon, el Esculpidor: Tierra, piedra, estabilidad.\n\n        Vaelora, la Marea Viva: Océanos, mareas, cambio constante.\n\n        Pyrak, el Aliento Original: Fuego, forja, creación y destrucción.\n\n        Zephyros, el Susurro: Aire, libertad, mensajes, secretos.\n\n        Umbra, la Madre del Silencio: Oscuridad, muerte, lo que yace bajo tierra.\n\n        Luxiel, el Primer Ojo: Luz, verdad, justicia inamovible.\n\n        Kaelos, el Equilibrio: Tiempo, destino, la balanza cósmica.\n\n        Durante milenios, coexistieron en armonía. Pero entonces cometieron el error de crear vida consciente. Los mortales —humanos, elfos, enanos— comenzaron a adorarlos, y esa adoración los cambió. Orthon quería imperios de piedra eterna; Zephyros quería que los mortales fueran nómadas libres; Luxiel exigía leyes universales inmutables. La guerra duró trescientos años y partió el continente original en los cinco fragmentos que existen hoy.\n\n        La Traición de los Siete del Cáliz\n        Los Siete del Cáliz no eran dioses entonces. Eran mortales excepcionales —héroes, magos, guerreros— que descubrieron un secreto: los Titanes podían ser heridos si se les enfrentaba con sus propias esencias. Liderados por un mago llamado Aerion el Arquitecto, forjaron las Cinco Llaves Celestiales, artefactos capaces de crear un plano de prisión: El Vacío Pétreo.\n\n        Pero Aerion ocultó una verdad. Las Llaves no solo sellan a los Titanes; consumen su poder lentamente, transfiriéndolo a los Siete del Cáliz. Los dioses actuales no son guardianes desinteresados; son parásitos divinos que se alimentan de los Titanes prisioneros para mantener su propia divinidad. Si los Titanes mueren o escapan, los Siete del Cáliz perderían su poder y volverían a ser mortales.\n\n        El Secreto que Pocos Conocen\n        En lo más profundo del Vacío Pétreo, los Titanes no han estado inactivos. Han aprendido de su encarcelamiento. Han comprendido que su error fue crear mortales antes de ser verdaderamente sabios. Algunos Titanes —como Orthon— quieren liberarse para borrar a los mortales y empezar de nuevo. Otros —como Vaelora— quieren liberarse para guiar a los mortales sin la interferencia de los Siete del Cáliz.\n\n        Y hay un tercer bando: Kaelos, el Equilibrio, el Titán del Tiempo, ha visto todos los futuros posibles. Sabe que si no se rompe el sello de forma controlada, el mundo se desgarrará en un cataclismo peor que la guerra original. Por eso, en los últimos años, ha estado enviando ecos —visiones, profecías, sueños— a mortales concretos. A vosotros.\n\n",
+    "jugadores": 4
+  },
+  {
+    "id": "M4T8L2W9C6BA",
+    "usuario_id": "u2",
+    "dm_id": "u2",
+    "nombre": "Sesión de prueba",
+    "descripcion": "Probando nuevas reglas del juego",
+    "jugadores": 2,
+    "contrasena": "dragon123"
+  },
+  {
+    "id": "Q9Z1H5N7R3KD",
+    "usuario_id": "u1",
+    "dm_id": "u1",
+    "nombre": "Torneo semanal",
+    "descripcion": "Competencia entre amigos",
+    "jugadores": 6
+  },
+  {
+    "id": "P3X8F6L2A9KD",
+    "usuario_id": "u3",
+    "dm_id": "u3",
+    "nombre": "Batalla rápida",
+    "descripcion": "Partida corta para probar estrategias",
+    "jugadores": 3
+  },
+  {
+    "id": "Z7M2K5Q8J4RB",
+    "usuario_id": "u1",
+    "dm_id": "u1",
+    "nombre": "Modo supervivencia",
+    "descripcion": "Resistir oleadas de enemigos",
+    "jugadores": 5,
+    "contrasena": "survive"
+  },
+  {
+    "id": "D8W1N4X7L2QF",
+    "usuario_id": "u2",
+    "dm_id": "u2",
+    "nombre": "Campaña cooperativa",
+    "descripcion": "Exploración de mapa con equipo completo",
+    "jugadores": 4
+  },
+  {
+    "id": "H5R9T3V8K1PL",
+    "usuario_id": "u3",
+    "dm_id": "u3",
+    "nombre": "Partida estratégica",
+    "descripcion": "Juego centrado en economía y recursos",
+    "jugadores": 4
+  },
+  {
+    "id": "C6Y2U8M4B9AS",
+    "usuario_id": "u1",
+    "dm_id": "u1",
+    "nombre": "Desafío nocturno",
+    "descripcion": "Partida especial solo para expertos",
+    "jugadores": 3,
+    "contrasena": "nightgame"
+  },
+  {
+    "id": "L4J8P1S7X3VN",
+    "usuario_id": "u3",
+    "dm_id": "u3",
+    "nombre": "Modo sandbox",
+    "descripcion": "Partida libre para experimentar mecánicas",
+    "jugadores": 5
+  },
+  {
+    "id": "T9B5K2Q6W8ZD",
+    "usuario_id": "u2",
+    "dm_id": "u3",
+    "nombre": "Liga de fin de semana",
+    "descripcion": "Competición amistosa de fin de semana",
+    "jugadores": 8
+  }
+]

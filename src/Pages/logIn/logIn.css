@@ -62,3 +62,24 @@ form button {
 .otherOptions a:hover {
     color: #c9a24a;
 }
+
+@media (max-width: 768px) {
+    .otherOptions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+    }
+
+    form {
+        width: 100%;
+        margin-bottom: 2%;
+    }
+
+
+    #buttonGroup {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}

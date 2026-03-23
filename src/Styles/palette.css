@@ -1,15 +1,4 @@
 :root {
-    /*--primary: #ebe0cc;*/
-    /*--secondary-hover: rgb(93, 16, 21);*/
-    /*--secondary: #e4d5bb; !* este color no me acaba de convencer *!*/
-    /*--accent: #88644a;*/
-    
-    /*--primary-new: #fbf1ec;*/
-    /*--secondary-new: rgb(135, 36, 40);*/
-    /*--secondary-new-hover: #f82b2b;*/
-    /*--accent-new: #ebe0cc;*/
-
-
     --primary-red: #872428;
 
     --parchment-light: #f5efe6;
@@ -32,16 +21,21 @@
 
 body {
     background-color: var(--parchment-light);
-}
-* {
-    box-sizing: border-box;
+    /*overflow: hidden;*/
+
 }
 
 /* definicion de letras */
-h1,h2,h3,h4,h5,h6 {
+h1,h3,h4,h5,h6 {
     font-family: "Macondo", cursive;
     font-weight: 500;
     font-style: normal;
+    font-size: 30pt;
+}
+
+h2 {
+    font-size: 23pt;
+    font-family: "Macondo", cursive;
 }
 
 p, span {
@@ -85,9 +79,12 @@ header {
     padding: 0 2%;
 }
 
-#userIcon {
+header #userIcon {
     display: flex;
-    margin-right: 5%;
+    align-items: center;
+    justify-content: center;
+    margin-right: clamp(1rem, 5%, 5rem);
+    margin-left: 1rem;
 }
 
 #userIcon img {
@@ -95,7 +92,7 @@ header {
 }
 
 #userIcon p {
-    margin-left: 5%;
+    margin: 0 0 0 5%;
 }
 
 header a {
@@ -226,15 +223,43 @@ input:focus {
         display: flex;
         flex-direction: column;
         align-items: center;
-        transition: left 300ms ease-out;
+        transition: left 0.4s ease-out;
     }
 
     nav.show {
         left: 0;
         padding: 0;
     }
-    
+
     nav.show ~ #overlay {
+        display: block;
+    }
+
+    header p {
+        font-size: 10pt !important;
+    }
+
+    header {
+        display: flex;
+        padding: 0;
+    }
+
+    header > * {
+        padding: 0;
+        height: 100%;
+    }
+
+
+    #home_icon{
+        width: clamp(8rem, 100%, 14rem);
+        min-width: 5rem;
+        height: auto;
+        display: inline-block;
+    }
+
+    #home_icon img {
+        object-fit: fill;
+        width: 100%;
         display: block;
     }
 
@@ -250,9 +275,25 @@ input:focus {
     #close_icon.show-icon {
         display: block;
     }
-    
+
     p, span {
-        font-weight: 300;
+        font-size: 14pt;
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+        font-size: 24pt;
+    }
+
+    input::placeholder,
+    textarea::placeholder,
+    button,
+    input,
+    textarea {
+        font-size: 14pt;
+    }
+    
+    header #userIcon img {
+        margin-top: 70%;
     }
 
 }

@@ -89,3 +89,24 @@ form button {
     opacity: 1;
     transform: translateY(0);
 }
+
+@media (max-width: 768px) {
+    .otherOptions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+    }
+
+    form {
+        width: 70%;
+        margin-bottom: 2%;
+    }
+
+
+    #buttonGroup {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
