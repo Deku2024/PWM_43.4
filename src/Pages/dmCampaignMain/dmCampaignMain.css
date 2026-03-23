@@ -22,7 +22,7 @@ main {
 .note {
     display: block;
     width: 80%;
-    height: 20vh;
+    height: 30%;
     margin-top: 3%;
 }
 
@@ -31,7 +31,6 @@ main {
     grid-template-columns: 1fr 30%;
     gap: 1%;
 
-    padding: 0 5% 0 5%;
     margin: 2% 2% 2% 15%;
 
     background-color: #a67c52;
@@ -44,7 +43,7 @@ main {
 
 .buttons {
     display: grid;
-    height: 20%;
+    height: 15%;
     gap: 100%;
     margin-top: 3%;
 }
@@ -54,5 +53,19 @@ textarea {
     width: 98%;
     height: 80%;
 
+   min-width: 70%;
+
     margin-top: 2.3%
+}
+@media screen and (max-width: 600px){
+    #sessionArea {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .buttons{
+        height: 7%;
+        margin-top: 0%;
+
+    }
 }

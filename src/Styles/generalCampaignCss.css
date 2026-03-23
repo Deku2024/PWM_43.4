@@ -79,8 +79,10 @@ footer {
     }
     
     main {
-        display: flex;
+        display: flex !important;
         bottom: 10%;
+        left: 0 !important;
+        right: 0 !important;
     }
     
     footer {
