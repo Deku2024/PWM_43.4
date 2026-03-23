@@ -1,13 +1,4 @@
 :root {
-    /*--primary: #ebe0cc;*/
-    /*--secondary-hover: rgb(93, 16, 21);*/
-    /*--secondary: #e4d5bb; !* este color no me acaba de convencer *!*/
-    /*--accent: #88644a;*/
-    
-    /*--primary-new: #fbf1ec;*/
-    /*--secondary-new: rgb(135, 36, 40);*/
-    /*--secondary-new-hover: #f82b2b;*/
-    /*--accent-new: #ebe0cc;*/
 
 
     --primary-red: #872428;
@@ -29,7 +20,6 @@
 
 body {
     background-color: var(--parchment-light);
-    /*overflow: hidden;*/
 
 }
 
