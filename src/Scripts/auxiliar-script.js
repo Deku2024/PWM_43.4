@@ -10,7 +10,7 @@ export function initMenu() {
   close_icon = document.querySelector('#close_icon');
 }
 
-function changeIcon() {
+function changeNavBarVisibility() {
     if (!sideBar.classList.contains('show')) {
       showMenu();
     } else {
@@ -20,15 +20,13 @@ function changeIcon() {
 
 function showMenu() {
   sideBar.classList.add('show');
-  hamburguer_menu.classList.remove('show-icon');
   close_icon.classList.add('show-icon');
 }
 
 function closeMenu() {
   sideBar.classList.remove('show');
   close_icon.classList.remove('show-icon');
-  hamburguer_menu.classList.add('show-icon');
 }
 
 
-window.changeIcon = changeIcon;
+window.changeNavBarVisibility = changeNavBarVisibility;

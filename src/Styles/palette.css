@@ -1,6 +1,4 @@
 :root {
-
-
     --primary-red: #872428;
 
     --parchment-light: #f5efe6;
@@ -16,18 +14,28 @@
     --steel: #2f2f2f;
 
     --default-darken: 0.8;
+
+    --error-color: #e74c3c;
+    --correct-color: #2ecc71;
 }
 
 body {
     background-color: var(--parchment-light);
+    /*overflow: hidden;*/
 
 }
 
-
-h1,h2,h3,h4,h5,h6 {
+/* definicion de letras */
+h1,h3,h4,h5,h6 {
     font-family: "Macondo", cursive;
     font-weight: 500;
     font-style: normal;
+    font-size: 30pt;
+}
+
+h2 {
+    font-size: 23pt;
+    font-family: "Macondo", cursive;
 }
 
 p, span {
@@ -71,9 +79,12 @@ header {
     padding: 0 2%;
 }
 
-#userIcon {
+header #userIcon {
     display: flex;
-    margin-right: 5%;
+    align-items: center;
+    justify-content: center;
+    margin-right: clamp(1rem, 5%, 5rem);
+    margin-left: 1rem;
 }
 
 #userIcon img {
@@ -81,7 +92,7 @@ header {
 }
 
 #userIcon p {
-    margin-left: 5%;
+    margin: 0 0 0 5%;
 }
 
 header a {
@@ -122,7 +133,7 @@ li {
 }
 
 nav li {
-    margin-top: 10%;
+    margin-top: clamp(1rem, 3rem, 5rem);
 }
 
 nav img {
@@ -183,10 +194,21 @@ input:focus {
     cursor: pointer;
     transition: filter 0.2s;
     width: clamp(3rem, 100%, 5rem);
+    height: auto;
 }
 
 #hamburguer_menu, #close_icon {
     filter: brightness(var(--default-darken));
+}
+
+/* para el overlay */
+#overlay {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    transition: display 2s;
 }
 
 /* media query para el nav bar */
@@ -201,6 +223,7 @@ input:focus {
         display: flex;
         flex-direction: column;
         align-items: center;
+        transition: left 0.4s ease-out;
     }
 
     nav.show {
@@ -208,8 +231,41 @@ input:focus {
         padding: 0;
     }
 
+    nav.show ~ #overlay {
+        display: block;
+    }
+
+    header p {
+        font-size: 10pt !important;
+    }
+
+    header {
+        display: flex;
+        padding: 0;
+    }
+
+    header > * {
+        padding: 0;
+        height: 100%;
+    }
+
+
+    #home_icon{
+        width: clamp(8rem, 100%, 14rem);
+        min-width: 5rem;
+        height: auto;
+        display: inline-block;
+    }
+
+    #home_icon img {
+        object-fit: fill;
+        width: 100%;
+        display: block;
+    }
+
     main {
-        left: 0;
+        left: 0 !important;
+        padding: 0;
     }
 
     #hamburguer_menu.show-icon {
@@ -218,6 +274,26 @@ input:focus {
 
     #close_icon.show-icon {
         display: block;
+    }
+
+    p, span {
+        font-size: 14pt;
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+        font-size: 24pt;
+    }
+
+    input::placeholder,
+    textarea::placeholder,
+    button,
+    input,
+    textarea {
+        font-size: 14pt;
+    }
+
+    header #userIcon img {
+        margin-top: 70%;
     }
 
 }

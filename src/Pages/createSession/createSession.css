@@ -2,7 +2,7 @@ main {
     position: fixed;
     display: flex;
     top: 10%;
-    left: 8%;
+    left: 15%;
     right: 0;
     bottom: 0;
 
@@ -67,6 +67,10 @@ p {
 .img-foot button {
     width: clamp(6vw, 27vw, 27vw);
     height: 140%;
+}
+
+h1 {
+    margin-top: 1%;
 }
 
 
