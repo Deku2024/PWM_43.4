@@ -68,3 +68,28 @@
 #logTiradas section p {
     width: 32ch;
 }
+
+footer {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    #playersSideBar, #logTiradas {
+        display: none !important;
+    }
+    
+    main {
+        display: flex;
+        bottom: 10%;
+    }
+    
+    footer {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 90%;
+    }
+}
+

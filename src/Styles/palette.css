@@ -21,9 +21,8 @@
 
 body {
     background-color: var(--parchment-light);
-}
-* {
-    box-sizing: border-box;
+    /*overflow: hidden;*/
+
 }
 
 /* definicion de letras */
@@ -84,7 +83,7 @@ header #userIcon {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 1rem;
+    margin-right: clamp(1rem, 5%, 5rem);
     margin-left: 1rem;
 }
 
@@ -224,32 +223,32 @@ input:focus {
         display: flex;
         flex-direction: column;
         align-items: center;
-        transition: left 300ms ease-out;
+        transition: left 0.4s ease-out;
     }
 
     nav.show {
         left: 0;
         padding: 0;
     }
-    
+
     nav.show ~ #overlay {
         display: block;
     }
-    
+
     header p {
         font-size: 10pt !important;
     }
-    
+
     header {
         display: flex;
         padding: 0;
     }
-    
+
     header > * {
         padding: 0;
         height: 100%;
     }
-    
+
 
     #home_icon{
         width: clamp(8rem, 100%, 14rem);
@@ -257,7 +256,7 @@ input:focus {
         height: auto;
         display: inline-block;
     }
-    
+
     #home_icon img {
         object-fit: fill;
         width: 100%;
@@ -276,7 +275,7 @@ input:focus {
     #close_icon.show-icon {
         display: block;
     }
-    
+
     p, span {
         font-size: 14pt;
     }
@@ -291,6 +290,10 @@ input:focus {
     input,
     textarea {
         font-size: 14pt;
+    }
+    
+    header #userIcon img {
+        margin-top: 70%;
     }
 
 }
