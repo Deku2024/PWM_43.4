@@ -87,6 +87,11 @@ header #userIcon {
     margin-left: 1rem;
 }
 
+header #headerLogo{
+    height: 5rem;
+}
+
+
 #userIcon img {
     margin-top: 22%;
 }
@@ -212,7 +217,7 @@ input:focus {
 }
 
 /* media query para el nav bar */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 820px) {
     nav {
         top: 0;
         bottom: 0;
@@ -258,9 +263,8 @@ input:focus {
     }
 
     #home_icon img {
-        object-fit: fill;
-        width: 100%;
-        display: block;
+        margin-left: 22%;
+        margin-top: 10%;
     }
 
     main {

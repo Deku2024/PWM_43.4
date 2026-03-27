@@ -175,14 +175,23 @@ main {
     
     box-sizing: border-box;
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 820px){
     .dropDownButton {
         display: none;
     }
     #characteristicsGroup {
-        margin-top: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        height: 75%;
+        overflow: scroll;
     }
     .rightSectionWrapper {
-    display: flex;
-    flex-direction: column;}
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 0%;
+    }
+    #rightSection{
+        gap: 0;
+    }
 }

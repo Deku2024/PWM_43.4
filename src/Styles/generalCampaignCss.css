@@ -73,7 +73,7 @@ footer {
     display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 820px) {
     #playersSideBar, #logTiradas {
         display: none !important;
     }
