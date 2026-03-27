@@ -26,7 +26,10 @@ function initiateAnimation() {
   })
 }
 
-//
-// if (!user) {
-//   window.location.href = "../logIn/logIn.html";
-// }
+
+if (!user) {
+ window.location.href = "../logIn/logIn.html";
+} else {
+
+}
+

@@ -35,7 +35,7 @@ export function cargarContenidoHome() {
     .catch(error => console.error('Error:', error));
 }
 
-export function cargarSesiones() {
+export function cargarSesionesporUsuario() {
   fetch('../../data/sessions.json')
     .then(res => res.json())
     .then(data => {
@@ -46,7 +46,6 @@ export function cargarSesiones() {
       }
       data.forEach(item => {
         let article = document.createElement('article');
-        a
       })
     })
 }

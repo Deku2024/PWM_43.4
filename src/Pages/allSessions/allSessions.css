@@ -117,6 +117,7 @@ h1 {
 
     .session {
         cursor: pointer;
+        width: 90%;
     }
 }
 
