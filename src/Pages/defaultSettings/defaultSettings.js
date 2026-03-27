@@ -15,3 +15,4 @@ async function init() {
   });
   await loadTemplate('../../Templates/navBar.html', 'nav');
 }
+
