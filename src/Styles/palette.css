@@ -22,7 +22,6 @@
 body {
     background-color: var(--parchment-light);
     /*overflow: hidden;*/
-
 }
 
 /* definicion de letras */
@@ -250,7 +249,7 @@ input:focus {
     }
 
 
-    #home_icon{
+    #home_icon {
         width: clamp(8rem, 100%, 14rem);
         min-width: 5rem;
         height: auto;
@@ -290,10 +289,6 @@ input:focus {
     input,
     textarea {
         font-size: 14pt;
-    }
-    
-    header #userIcon img {
-        margin-top: 70%;
     }
 
 }
