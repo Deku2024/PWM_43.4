@@ -101,12 +101,12 @@ footer div {
 #dropDown_mobile_menu {
     display: none;
     position: fixed;
-    top: 40%;
+    top: 100%;
     right: 0;
-    bottom: 10%;
+    bottom: -100%;
     left: 0;
     background-color: var(--parchment-dark);
-    z-index: 30;
+    z-index: 10;
     padding: 1%;
 }
 
@@ -114,55 +114,65 @@ footer div {
     
     #playersSideBar, #logTiradas {
         position: fixed;
-        display: none;
         top: 0;
         height: calc(90% - 1px);
         width: 60%;
         z-index: 30;
         margin: 0;
         padding: 0;
-
     }
     
     #playersSideBar {
-        left: 0;
+        left: -100%;
+        transition: left 0.4s ease-out;
     }
     
     #logTiradas {
-        right: 0;
+        right: -100%;
+        transition: right 0.4s ease-out;
     }
     
-    #goBackButton, #logTiradas a {
+    #overlay-campaign {
+        display: none;
+    }
+
+    #playersSideBar.show {
+        left: 0;
+    }
+
+    #logTiradas.show {
+        right: 0;
+    }
+
+    #overlay-campaign.show {
+        bottom: 10%;
+        display: block;
+    }
+
+    #dropDown_mobile_menu {
+        display: block;
+        transition: top 0.4s ease-out;
+    }
+    
+    #dropDown_mobile_menu.show {
+        bottom: 10%;
+        top: 40%;
+    }
+    
+    .goBackButton, #logTiradas a {
         display: none;
     }
     
     #playersSideBar ul, #logTiradas section {
         height: 100%;
-        box-sizing: border-box;
     }
 
     #logTiradas section p {
+        box-sizing: border-box;
         width: 90%;
         max-width: 30ch;
         min-width: 18ch;
         word-wrap: break-word;
-        white-space: normal;
-    }
-    
-    #playersSideBar.show {
-        display: block;
-    }
-    
-    #logTiradas.show {
-        display: block;
-    }
-    
-    #overlay-campaign.show {
-        display: block;
-    }
-
-    #dropDown_mobile_menu.show {
-        display: block;
     }
     
     main {
@@ -174,6 +184,7 @@ footer div {
     
     footer {
         display: block;
+        z-index: 15;
     }
     
     footer img {

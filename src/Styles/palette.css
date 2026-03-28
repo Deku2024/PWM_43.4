@@ -21,7 +21,6 @@
 
 body {
     background-color: var(--parchment-light);
-    /*overflow: hidden;*/
 }
 
 /* definicion de letras */
@@ -147,19 +146,6 @@ nav a {
 nav a:hover {
     filter: brightness(var(--default-darken));
 }
-
-/* configuracion del main */
-/*main {
-    position: fixed;
-    top: 10%;
-    left: clamp(4rem, 100%, 7rem);
-    right: 0;
-    bottom: 0;
-    
-    padding-left: 2%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-}*/
 
 /* varias configuraciones */
 button {
