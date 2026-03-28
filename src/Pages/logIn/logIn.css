@@ -63,7 +63,7 @@ form button {
     color: #c9a24a;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600px), (orientation: portrait) {
     .otherOptions {
         display: flex;
         flex-direction: column;

@@ -80,7 +80,7 @@ async function cargarContenidoUsuario(user) {
 }
 
 function addMobileLink(link) {
-  if (window.matchMedia("(max-width: 600px)").matches) {
+  if (window.matchMedia("(max-width: 600px), (orientation: portrait)").matches) {
     window.location.href = link;
   }
 }
