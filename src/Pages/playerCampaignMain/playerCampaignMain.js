@@ -1,4 +1,4 @@
-import { loadTemplate } from '../../Scripts/script.js';
+import { loadCharacteristicsBlocks, loadTemplate } from '../../Scripts/script.js';
 import { initCampaignMenu } from '../../Scripts/auxiliar-campaign-script.js';
 import { initMenu } from '../../Scripts/auxiliar-script.js';
 
@@ -15,7 +15,7 @@ async function init() {
   });
   await loadTemplate('../../Templates/playersSideBar.html', '#playersSideBar');
   await loadTemplate('../../Templates/textAndNumberField.html', '.miscValueField');
-  await loadTemplate('../../Templates/characteristicBlock.html', '.characteristicBlock');
+  await loadCharacteristicsBlocks('.characteristicBlock', ["STR", "DEX", "CON", "INT", "WIS", "CHR"]);
   await loadTemplate('../../Templates/logTiradas.html', '#logTiradas');
 
 }
