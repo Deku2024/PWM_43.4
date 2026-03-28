@@ -1,4 +1,4 @@
-// este archivo js esta hecho para animaciones pequeñas y/o relacionadas con la media query
+// este archivo js esta hecho para animaciones pequeñas y/o relacionadas con la media query en navegación general
 
 let sideBar;
 let hamburguer_menu;

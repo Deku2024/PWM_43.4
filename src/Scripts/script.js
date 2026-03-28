@@ -16,6 +16,23 @@ export async function loadTemplate(fileName, selector, callback) {
 
 }
 
+export async function loadCharacteristicsBlocks(selector, characteristics, callback) {
+  fetch('../../Templates/characteristicBlock.html')
+    .then((res) => res.text())
+    .then((text) => {
+      const elements = document.querySelectorAll(selector);
+
+      elements.forEach((el, index) => {
+        el.innerHTML = text;
+        const name = el.querySelector('.characteristicName');
+        name.textContent = characteristics[index];
+      });
+    });
+  
+  if (callback) {
+    callback();
+  }
+}
 export function cargarContenidoHome() {
   fetch('../../data/content.json')
   .then(res => res.json())
