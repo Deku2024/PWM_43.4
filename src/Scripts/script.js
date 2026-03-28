@@ -35,17 +35,4 @@ export function cargarContenidoHome() {
     .catch(error => console.error('Error:', error));
 }
 
-export function cargarSesionesporUsuario() {
-  fetch('../../data/sessions.json')
-    .then(res => res.json())
-    .then(data => {
-      let dynamicContentSection = document.querySelector('#sessionSection');
-      if (!dynamicContentSection) {
-        console.error('No se encontró el selector en el DOM');
-        return;
-      }
-      data.forEach(item => {
-        let article = document.createElement('article');
-      })
-    })
-}
+
