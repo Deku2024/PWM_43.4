@@ -42,7 +42,7 @@ if (!user) {
  window.location.href = "../logIn/logIn.html";
 }
 
-export async function cargarContenidoUsuario(user) {
+async function cargarContenidoUsuario(user) {
   const [data, template] = await Promise.all([
     fetch('../../Data/sessions.json').then(r => r.json()),
     getTemplate()
@@ -62,12 +62,26 @@ export async function cargarContenidoUsuario(user) {
       clone.querySelector('.nombre').textContent = item.nombre;
       clone.querySelector('.session').style.setProperty('--i', index);
 
+      let session = clone.querySelector('.session');
       if(user.id !== item.dm_id) {
         clone.querySelector('.joinToThisSession').href = "../playerCampaignMain/playerCampaignMain.html";
+        session.onclick = function() {
+          addMobileLink("../playerCampaignMain/playerCampaignMain.html");
+        };
+      } else {
+        session.onclick = function() {
+          addMobileLink("../dmCampaignMain/dmCampaignMain.html");
+        };
       }
 
       sessionsList.appendChild(clone);
     }
   });
+}
+
+function addMobileLink(link) {
+  if (window.matchMedia("(max-width: 600px)").matches) {
+    window.location.href = link;
+  }
 }
 
