@@ -181,7 +181,7 @@ main {
     #characteristicsGroup {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        height: 75%;
+        height: 50%;
         overflow: scroll;
     }
     .rightSectionWrapper {
@@ -192,5 +192,8 @@ main {
     }
     #rightSection{
         gap: 0;
+    }
+    #characterDescription {
+        height: 20%;
     }
 }

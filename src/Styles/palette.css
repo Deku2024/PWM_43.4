@@ -101,6 +101,12 @@ header a:hover {
     filter: brightness(var(--default-darken));
 }
 
+
+
+#home_icon img{
+    width: 8rem;
+}
+
 /* configuracion nav bar */
 nav {
     top: calc(10% - 1px);
@@ -243,9 +249,8 @@ input:focus {
     }
 
     #home_icon img {
-        object-fit: fill;
-        width: 100%;
-        display: block;
+        width: 7rem;
+        margin-left: 20%;
     }
 
     main {
