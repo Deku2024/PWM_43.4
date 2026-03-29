@@ -297,20 +297,133 @@ En la siguiente tabla se indica la página html y los templates que forman parte
   </tbody>
 </table>
 
-<br>
 Cabe destacar que hay dos templates que están formados por otro template, userIconandName.html. Esos templates son playerSideBar.html y headerLoggedIn.html.
 Es por este motivo que userIconandName.html no aparecía en la tabla anterior.
+
 <br>
 
 <h2>Aspectos responsive implementados en cada página</h2>
 
-Para el RWD de tablet en modo landscape los layouts de las páginas no sufrieron muchos cambios respecto a la versión Desktop. En cambio, para el modo portrait se hicieron las mismas adaptaciones que tomaron para el diseño en móviles, de las que se hablan seguidamente.
+Para el RWD de tablet en modo *landscape* los layouts de las páginas no sufrieron muchos cambios respecto a la versión Desktop. En cambio, para el modo *portrait* se hicieron las mismas adaptaciones que tomaron para el diseño en móviles, de las que se hablan seguidamente.
 
 La realización del RWD para móviles ha sido el que más cambios ha supuesto. En primer lugar, se ha sustituido la barra de navegación lateral por un menú hamburguesa, que contiene las mismas opciones. Además, en dmCampaignMain.html y playerCampaignMain.html se realizó otra gran adaptación: hacer que el log de las tiradas realizadas y la lista de miembros de la campaña de convirtieran en desplegables que surgen de los laterales de la pantalla. También se tuvieron que quitar de la vista principal los desplegables de Inventario, Habilidades de Clase y Habilidades; que ahora se encuentran en un desplegable que sale de la parte inferior de la pantalla.
 
 Por otro lado, en la Home Page del proyecto (index.html), se tuvo que hacer que los *cards* con la información de la página se mostraran de uno en uno, en vez de los tres a la vez. Para lograr esto se hizo un carrousel únicamente con CSS que permite deslizar por dichas *cards*.
 
-En general hubo que cambiar el layout de todas las páginas en mayor o menor medida, sobre todo aquellas en las que el contenido estaba ordenado en dos grandes columnas en Desktop como createSession.html, createdSession o profileSettings.html
+A continuación se listan las páginas y los cambios que ha sufrido cada una:
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre página HTML</th>
+      <th>Cambios para RWD</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LogIn.html</td>
+      <td>
+        <ul>
+          <li>Se ha cambiado la disposición de los botones de la parte inferior del formulario.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>SignIn.html</td>
+      <td>
+        <ul>
+          <li>Se ha cambiado la disposición de los botones de la parte inferior del formulario.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>allSessions.html</td>
+      <td>
+        <ul>
+          <li>Implementa el menú hamburguesa en vez de la barra de navegación lateral.</li>
+          <li>Se ha eliminado el botón de unirse y se puede clicar directamente sobre el recuadro de la sesión para entrar en ella.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>createSession.html</td>
+      <td>
+        <ul>
+          <li>Implementa el menú hamburguesa en vez de la barra de navegación lateral.</li>
+          <li>Se elimina texto explicativo.</li>
+          <li>Todos los elementos del formulario van en la misma columna.</li>
+          <li>Se ajusta tamaño y disposición de la imagen.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>createdSession.html</td>
+      <td>
+        <ul>
+          <li>Implementa el menú hamburguesa en vez de la barra de navegación lateral.</li>
+          <li>Se ajusta tamaño y disposición de la imagen.</li>
+          <li>Los apartados de la página se reordenan para que se muestren uno debajo del otro, en vez de en dos grandes columnas.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>defaultSettings.html</td>
+      <td>
+        <ul>
+          <li>Implementa el menú hamburguesa en vez de la barra de navegación lateral.</li>
+          <li>Los campos de ajuste se sitúan uno debajo del otro, en vez de en dos columnas</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>dmCampaignMain.html</td>
+      <td>
+        <ul>
+          <li>Implementa el menú hamburguesa en vez de la barra de navegación lateral.</li>
+          <li>Los apartados laterales de log de tiradas y lista de miembros se ocultan en desplegables que se pueden mostrar con sus botones correspondientes en la parte inferior de la pantalla.</li>
+          <li>El menú hamburguesa se ha adaptado para que en vez de mostrar las opciones de navegación permita salir de la sesión.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>index.html</td>
+      <td>
+        <ul>
+          <li>La información de la página se muestra de una en una en un carrousel, como se indicó anteriormente.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>joinSession.html</td>
+      <td>
+        <ul>
+          <li>Implementa el menú hamburguesa en vez de la barra de navegación lateral.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>playerCampaignMain.html</td>
+      <td>
+        <ul>
+          <li>Implementa el menú hamburguesa en vez de la barra de navegación lateral.</li>
+          <li>Los apartados laterales de log de tiradas y lista de miembros se ocultan en desplegables que se pueden mostrar con sus botones correspondientes en la parte inferior de la pantalla.</li>
+          <li>El menú hamburguesa se ha adaptado para que en vez de mostrar las opciones de navegación permita salir de la sesión.</li>
+          <li>Los desplegables de Inventario, Habilidades y Habilidades de clase se ocultan en un desplegable que surge de la parte inferior de la pantalla, accesible también desde la parte inferior de la pantalla.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>profileSettings.html</td>
+      <td>
+        <ul>
+          <li>Se han dispuesto todos los elementos de la página uno debajo del otro.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br><br>
 
 <h2>Carga de templates y contenido JSON</h2>
 Las páginas que realizan carga de templates, y de qué templates se tratan, están ya especificadas en [este](https://github.com/Deku2024/PWM_43.4/edit/sprint2/README.md#templates-identificados-y-su-uso-en-las-p%C3%A1ginas-del-proyecto) apartado del README.md. En el proyecto, la única modificación que se ha realizado es la carga de estos templates utilizando JavaScript.
@@ -380,8 +493,7 @@ Las páginas del proyecto que hacen uso de estos archivos se especifican en la s
       <td>createdSession.html</td>
       <td>
         <ul>
-          <li>headerLoggedIn.html</li>
-          <li>navbar.html</li>
+          <li>No hace uso de carga dinámica de contenido.</li>
         </ul>
       </td>
     </tr>
@@ -443,7 +555,7 @@ La validación de formularios se ha realizado principalmente en las páginas de 
 
 A continuación se muestran los campos con los que cuenta el formulario de registro y la validación que se ha realizado en cada campo:
 
-- Nombre de usuario ⇒ es un campo requerido, con un longitud mínima de 6 y máxima de 25 caracteres. Además debe cumplir con el patrón **^[A-Za-z0-9._-]+$** que indica que el nombre será alfanumérico, con mayúsculas incluidas, y que solo admite los caracteres especiales . _ -
+- Nombre de usuario ⇒ es un campo requerido, con un longitud mínima de 6 y máxima de 25 caracteres. Además debe cumplir con el patrón **^[A-Za-z0-9._\-]+$** que indica que el nombre será alfanumérico, con mayúsculas incluidas, y que solo admite los caracteres especiales . _ -
 - Correo electrónico ⇒ es un campo requerido y debe seguir la estructura de un email, para ello en la correspondiente etiqueta HTML se ha especificado type="email".
 - Contraseña ⇒ es un campo requerido. Debe cumplir con el siguiente patrón: **/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&]).{8,15}$/**, que recoge estas especificaciones:
     - Tendrá una longitud acotada entre 8 y 15 caracteres.
@@ -463,13 +575,14 @@ La única manera de poder acceder al resto de páginas que pertenecen al área p
 
 Esta validación se ha realizado comparando los datos introducidos con los existentes en el fichero users.json en el fichero JS correspondiente a la página logIn.html.
 
+<br><br>
 
 <h2>Otros aspectos del proyecto</h2>
 Respecto al sprint anterior, creemos necesario comentar ciertos cambios que han ocurrido en la estructura del proyecto. Mientras que cada página cuenta con su directorio propio donde se encuentran sus respectivos archivos .html, .css y .js, en la realización del sprint se ha considerado la necesidad de tener scripts de JavaScript y hojas de estilo que son comunes para algunas páginas. Es por ello que en ./src existen dos directorios destinados a contener estos ficheros. Se tratan de ./src/Scripts y ./src/Styles.
 <br><br>
-Otro cambio a destacar en relación al sprint anterior, es que ya se han determinado cuáles serán los ajustes por defecto de la sesión y se ha modificado el defaultSettings.html acorde a estas decisiones. Además, con la incorporación de JS se ha podido dotar de funcionalidad a algunos botones: ahora al entrar en una sesión se detectará si el usuario es el DM (Dungeon Master) de dicha sesión para mostrar la página que corresponde. 
+Otro cambio a destacar en relación al sprint anterior, es que ya se han determinado cuáles serán los ajustes por defecto de la sesión y se ha modificado el defaultSettings.html acorde a estas decisiones. Además, con la incorporación de JS se ha podido dotar de funcionalidad a algunos botones: ahora al entrar en una sesión se detectará si el usuario es el DM (Dungeon Master) de dicha sesión para mostrar la página que corresponde. Sin embargo, el botón de borrar sigue careciendo de funcionalidad.
 <br><br>
-
+En este sprint, también se ha dotado a las páginas de una estética y estilos más similares a lo que habíamos pensado para el proyecto en un principio, pudiéndose mejorar en próximos sprints. Por otro lado, la carga de contenido en dmCampaignMain.html, playerCampaignMain.html y createdSession.html, debido a la complejidad que supone se ha aplazado para el sprint siguiente.
 
 
 
