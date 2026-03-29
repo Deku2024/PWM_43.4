@@ -182,18 +182,21 @@ main {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         height: 50%;
-        overflow: scroll;
-
+        overflow-y: auto;
+        overflow-x: hidden;
     }
+
     .rightSectionWrapper {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        margin-top: 0%;
+        margin-top: 0;
     }
+
     #rightSection{
         gap: 0;
     }
+
     #characterDescription {
         height: 20%;
     }

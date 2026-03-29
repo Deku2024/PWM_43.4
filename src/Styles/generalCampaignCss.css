@@ -215,6 +215,7 @@ footer div {
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
+        z-index: 30;
     }
 
     #dropDown_mobile_menu button {

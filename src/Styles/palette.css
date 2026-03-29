@@ -101,10 +101,9 @@ header a:hover {
     filter: brightness(var(--default-darken));
 }
 
-
-
-#home_icon img{
+#home_icon img, #headerLogo{
     width: 8rem;
+    object-fit: contain;
 }
 
 /* configuracion nav bar */
