@@ -302,9 +302,17 @@ Cabe destacar que hay dos templates que están formados por otro template, userI
 Es por este motivo que userIconandName.html no aparecía en la tabla anterior.
 <br>
 
-<h3>Aspectos responsive implementados en cada página</h3>
+<h2>Aspectos responsive implementados en cada página</h2>
 
-<h3>Carga de templates y contenido JSON</h3>
+Para el RWD de tablet en modo landscape los layouts de las páginas no sufrieron muchos cambios respecto a la versión Desktop. En cambio, para el modo portrait se hicieron las mismas adaptaciones que tomaron para el diseño en móviles, de las que se hablan seguidamente.
+
+La realización del RWD para móviles ha sido el que más cambios ha supuesto. En primer lugar, se ha sustituido la barra de navegación lateral por un menú hamburguesa, que contiene las mismas opciones. Además, en dmCampaignMain.html y playerCampaignMain.html se realizó otra gran adaptación: hacer que el log de las tiradas realizadas y la lista de miembros de la campaña de convirtieran en desplegables que surgen de los laterales de la pantalla. También se tuvieron que quitar de la vista principal los desplegables de Inventario, Habilidades de Clase y Habilidades; que ahora se encuentran en un desplegable que sale de la parte inferior de la pantalla.
+
+Por otro lado, en la Home Page del proyecto (index.html), se tuvo que hacer que los *cards* con la información de la página se mostraran de uno en uno, en vez de los tres a la vez. Para lograr esto se hizo un carrousel únicamente con CSS que permite deslizar por dichas *cards*.
+
+En general hubo que cambiar el layout de todas las páginas en mayor o menor medida, sobre todo aquellas en las que el contenido estaba ordenado en dos grandes columnas en Desktop como createSession.html, createdSession o profileSettings.html
+
+<h2>Carga de templates y contenido JSON</h2>
 Las páginas que realizan carga de templates, y de qué templates se tratan, están ya especificadas en [este](https://github.com/Deku2024/PWM_43.4/edit/sprint2/README.md#templates-identificados-y-su-uso-en-las-p%C3%A1ginas-del-proyecto) apartado del README.md. En el proyecto, la única modificación que se ha realizado es la carga de estos templates utilizando JavaScript.
 
 En cuanto a las páginas que utilizan carga de contenidos JSON, se ha realizado de manera local. Los archivos .json se encuentran en el directorio Data y son los siguientes:
@@ -430,23 +438,39 @@ Las páginas del proyecto que hacen uso de estos archivos se especifican en la s
 
 <br><br>
 
-<h3>Validación nativa de formularios HTML por parte del cliente</h3>
+<h2>Validación nativa de formularios HTML por parte del cliente</h2>
+La validación de formularios se ha realizado principalmente en las páginas de incio de sesión (logIn.html) y de registro (signIn.html).
 
+A continuación se muestran los campos con los que cuenta el formulario de registro y la validación que se ha realizado en cada campo:
 
+- Nombre de usuario ⇒ es un campo requerido, con un longitud mínima de 6 y máxima de 25 caracteres. Además debe cumplir con el patrón **^[A-Za-z0-9._-]+$** que indica que el nombre será alfanumérico, con mayúsculas incluidas, y que solo admite los caracteres especiales . _ -
+- Correo electrónico ⇒ es un campo requerido y debe seguir la estructura de un email, para ello en la correspondiente etiqueta HTML se ha especificado type="email".
+- Contraseña ⇒ es un campo requerido. Debe cumplir con el siguiente patrón: **/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&]).{8,15}$/**, que recoge estas especificaciones:
+    - Tendrá una longitud acotada entre 8 y 15 caracteres.
+    - Debe contener al menos una letra (mayúscula o minúscula).
+    - Debe contener al menos un número.
+    - Debe contener al menos uno de los siguientes símbolos: @ $ ! % * ? &.
+- Repetir contraseña ⇒ es un campo obligatorio y la contraseña introducida debe coincidir con la indicada en el campo anterior.
 
+<br><br>
 
+En cuanto al formulario de inicio de sesión, se cuenta con un usuario dummy, que se encuentra almacenado en el fichero users.json. Sus credenciales son las siguientes:
 
+    Nombre de usuario: elmagofurioso
+    Contraseña: pwm2026
 
+La única manera de poder acceder al resto de páginas que pertenecen al área privada del usuario es introduciendo bien estos parámetros, ya que en caso contrario aparecen los errores correspondientes en la validación.
+
+Esta validación se ha realizado comparando los datos introducidos con los existentes en el fichero users.json en el fichero JS correspondiente a la página logIn.html.
 
 
 <h2>Otros aspectos del proyecto</h2>
-El único uso de JavaScript que se ha hecho es mediante el script proporcionado por el profesorado para hacer la integración provisional de los templates en las páginas HTML.
-<br>
-En cuanto a la estructuración de las hojas de estilo, en una primera instancia habíamos asignado una hoja de estilos a cada template. Luego cuando empezamos a montar las páginas haciendo uso de dichos templates, encontramos más cómodo emplear una hoja de estilos para cada página del proyecto y descartar las individuales de cada template. De esta manera fue más sencilla la organización de los contenidos de las páginas y la relación entre ellos.
-<br>
-Otro aspecto a destacar es que el CSS de las páginas se ha hecho para que se asemeje lo más posible a los mockups presentados, por lo que todavía carecen de la estética final que se le pretende dar a la web. En relación a esto, hay botones a los que todavía no podemos dotar de la finalidad pensada para ellos porque requieren de un uso más avanzado de JavaScript del que se usa en este Sprint. Lo mismo ocurre con los desplegables presentes en algunas de las páginas.
-<br>
-Por último, en los ajustes por defecto de la sesión, se ha hecho que todo sean campos de texto rellenables en el HTML y en el mockup correspondiente se han dejado las cajas vacías porque todavía no se ha llegado a la decisión de qué ajustes son por defecto y cuáles serán propios de la sesión. Por tanto, esos campos de ajuste no son los definitivos y están a expensas de ser modificados en el Sprint siguiente.
+Respecto al sprint anterior, creemos necesario comentar ciertos cambios que han ocurrido en la estructura del proyecto. Mientras que cada página cuenta con su directorio propio donde se encuentran sus respectivos archivos .html, .css y .js, en la realización del sprint se ha considerado la necesidad de tener scripts de JavaScript y hojas de estilo que son comunes para algunas páginas. Es por ello que en ./src existen dos directorios destinados a contener estos ficheros. Se tratan de ./src/Scripts y ./src/Styles.
+<br><br>
+Otro cambio a destacar en relación al sprint anterior, es que ya se han determinado cuáles serán los ajustes por defecto de la sesión y se ha modificado el defaultSettings.html acorde a estas decisiones. Además, con la incorporación de JS se ha podido dotar de funcionalidad a algunos botones: ahora al entrar en una sesión se detectará si el usuario es el DM (Dungeon Master) de dicha sesión para mostrar la página que corresponde. 
+<br><br>
+
+
 
 
 
