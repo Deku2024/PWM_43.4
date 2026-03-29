@@ -104,21 +104,30 @@ A continuación, se presentan los requisitos funcionales con los que cuenta el p
 
 <h3>Ubicación de los mockups</h3>
 
-Todos los mockups, así como el storyboard, se encuentran en imágenes individuales en la carpeta del proyecto, PWM_43.4, concretamente en la ruta ./src/Mockups. Los contenidos de dicho directorio se encuentran aquí listados:
+Los mockups correspondientes a las adaptaciones a distintos dispositivos se encuentram en el directorio ./src/Mockups. En dicho directorio se encuentran tres carpetas que corresponden a los mockups de Desktop, Tablet y Mobile. La estructura quedaría de la siguiente manera:
 
+```
+src/
+  └── Mockups/
+        ├── Desktop/
+        ├── Mobile/
+        └── Tablet/
+```
 
-- [Sessions.png](./src/Mockups/Sessions.png)
-- [createdsession.png](./src/Mockups/createdsession.png)
-- [createsession.png](./src/Mockups/createsession.png)
-- [defaultsettings.png](./src/Mockups/defaultsettings.png)
-- [dmcampaignmain.png](./src/Mockups/dmcampaignmain.png)
-- [homepage.png](./src/Mockups/homepage.png)
-- [joinsession.png](./src/Mockups/joinsession.png)
-- [login.png](./src/Mockups/login.png)
-- [playercampaignmain.png](./src/Mockups/playercampaignmain.png)
-- [profilesettings.png](./src/Mockups/profilesettings.png)
-- [signin.png](./src/Mockups/signin.png)
-- [storyboardGrabacion.mp4](./src/Mockups/storyboardGrabacion.mp4)
+Los nombres de los mockups dentro de estos tres directorios son iguales y son los listados a continuación:
+
+- Sessions.png
+- createdsession.png
+- createsession.png
+- defaultsettings.png
+- dmcampaignmain.png
+- homepage.png
+- joinsession.png
+- login.png
+- playercampaignmain.png
+- profilesettings.png
+- signin.png
+- [storyboardGrabacion.mp4](./src/Mockups/storyboardGrabacion.mp4) (hacen falta cambios)
 
 <br>
 <h3>Breve explicación de los mockups</h3>
@@ -151,10 +160,12 @@ Se presenta a continuación un listado de todas las páginas HTML de las que dis
 - playerCampaignMain.html  ⇒  [playercampaignmain.png](./playercampaignmain.png)
 - profileSettings.html  ⇒  [profilesettings.png](./profilesettings.png)
 
-<br>
+
 La página de inicio del proyecto es index.html, que se encuentra concretamente en la ruta ./src/Pages/index, y a partir de ella se puede ir desplazando por el resto de las páginas mediante los botones correspondientes.
-<br>
-<h3>Templates identificados y su uso en las páginas del proyecto</h3>
+
+<br><br>
+
+### Templates identificados y su uso en las páginas del proyecto
 
 En este apartado se muestran los templates identificados y su uso en las distintas páginas del proyecto. Todos los templates se pueden encontrar en la ruta ./src/Templates
 
@@ -290,6 +301,143 @@ En la siguiente tabla se indica la página html y los templates que forman parte
 Cabe destacar que hay dos templates que están formados por otro template, userIconandName.html. Esos templates son playerSideBar.html y headerLoggedIn.html.
 Es por este motivo que userIconandName.html no aparecía en la tabla anterior.
 <br>
+
+<h3>Aspectos responsive implementados en cada página</h3>
+
+<h3>Carga de templates y contenido JSON</h3>
+Las páginas que realizan carga de templates, y de qué templates se tratan, están ya especificadas en [este](https://github.com/Deku2024/PWM_43.4/edit/sprint2/README.md#templates-identificados-y-su-uso-en-las-p%C3%A1ginas-del-proyecto) apartado del README.md. En el proyecto, la única modificación que se ha realizado es la carga de estos templates utilizando JavaScript.
+
+En cuanto a las páginas que utilizan carga de contenidos JSON, se ha realizado de manera local. Los archivos .json se encuentran en el directorio Data y son los siguientes:
+
+```
+src/
+  └── Data/
+        ├── content.json
+        ├── playersheets.json
+        ├── sessions.json
+        └── users.json
+```
+
+Breve explicación de los contenidos de cada archivo:
+
+- content.json  ⇒ se trata de los contenidos que van en la Home Page (index.html) del proyecto.
+- playersheets.json  ⇒ son los datos de las fichas de jugador, que cuentan con identificador que las mapea a un usuario.
+- sessions.json  ⇒ contiene información sobre las sesiones e igualmente están mapeadas a un usuario mediante un identificador.
+- users.json  ⇒ son los usuarios que hay en el sistema ahora mismo. Cada uno cuenta con un identificador único.
+  
+<br><br>
+Las páginas del proyecto que hacen uso de estos archivos se especifican en la siguiente tabla:
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre página HTML</th>
+      <th>Carga de contenidos JSON</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LogIn.html</td>
+      <td>
+        <ul>
+          <li>Utiliza <em>users.json</em> para la validación del inicio de sesión.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>SignIn.html</td>
+      <td>
+        <ul>
+          <li>No hace uso de carga dinámica de contenido.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>allSessions.html</td>
+      <td>
+        <ul>
+          <li>Se usa <em>sessions.json</em>para cargar las sesiones del usuario que ha iniciado sesión.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>createSession.html</td>
+      <td>
+        <ul>
+          <li>No hace uso de carga dinámica de contenido.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>createdSession.html</td>
+      <td>
+        <ul>
+          <li>headerLoggedIn.html</li>
+          <li>navbar.html</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>defaultSettings.html</td>
+      <td>
+        <ul>
+          <li>No hace uso de carga dinámica de contenido.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>dmCampaignMain.html</td>
+      <td>
+        <ul>
+          <li>No hace uso de carga dinámica de contenido.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>index.html</td>
+      <td>
+        <ul>
+          <li>Hace uso de <em>content.json</em> para cargar el texto de la página.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>joinSession.html</td>
+      <td>
+        <ul>
+          <li>No hace uso de carga dinámica de contenido.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>playerCampaignMain.html</td>
+      <td>
+        <ul>
+          <li>No hace uso de carga dinámica de contenido.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>profileSettings.html</td>
+      <td>
+        <ul>
+          <li>No hace uso de carga dinámica de contenido.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br><br>
+
+<h3>Validación nativa de formularios HTML por parte del cliente</h3>
+
+
+
+
+
+
+
 
 <h2>Otros aspectos del proyecto</h2>
 El único uso de JavaScript que se ha hecho es mediante el script proporcionado por el profesorado para hacer la integración provisional de los templates en las páginas HTML.
