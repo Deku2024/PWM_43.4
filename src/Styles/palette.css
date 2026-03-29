@@ -21,7 +21,6 @@
 
 body {
     background-color: var(--parchment-light);
-    /*overflow: hidden;*/
 }
 
 /* definicion de letras */
@@ -102,6 +101,11 @@ header a:hover {
     filter: brightness(var(--default-darken));
 }
 
+#home_icon img, #headerLogo{
+    width: 8rem;
+    object-fit: contain;
+}
+
 /* configuracion nav bar */
 nav {
     top: calc(10% - 1px);
@@ -147,19 +151,6 @@ nav a {
 nav a:hover {
     filter: brightness(var(--default-darken));
 }
-
-/* configuracion del main */
-/*main {
-    position: fixed;
-    top: 10%;
-    left: clamp(4rem, 100%, 7rem);
-    right: 0;
-    bottom: 0;
-    
-    padding-left: 2%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-}*/
 
 /* varias configuraciones */
 button {
@@ -211,7 +202,7 @@ input:focus {
 }
 
 /* media query para el nav bar */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px), (orientation: portrait) {
     nav {
         top: 0;
         bottom: 0;
@@ -257,9 +248,8 @@ input:focus {
     }
 
     #home_icon img {
-        object-fit: fill;
-        width: 100%;
-        display: block;
+        width: 7rem;
+        margin-left: 20%;
     }
 
     main {

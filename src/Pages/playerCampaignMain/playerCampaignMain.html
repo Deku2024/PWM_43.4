@@ -7,8 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Macondo&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="playerCampaignMain.css">
   <link rel="stylesheet" href="../../Styles/palette.css">
+  <link rel="stylesheet" href="playerCampaignMain.css">
   <link rel="stylesheet" href="../../Styles/generalCampaignCss.css">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
@@ -65,20 +65,19 @@
 
       <label for="characterDescription"><textarea placeholder="Descripción" id="characterDescription"></textarea></label>
 
-      <section id="dropDownArea"> </section>
+      <section id="dropDown_mobile_menu">
+        <button class="dropDownButton">Inventario <span>></span></button>
+        <button class="dropDownButton">Habilidades de clase <span>></span></button>
+        <button class="dropDownButton">Habilidades <span>></span></button>
+      </section>
 
     </section>
   </div>
 
+  <div id="overlay-campaign" onclick="closeOtherDropDowns()"></div>
+
   <div id="logTiradas"></div>
 
-  <div id="dropDown_mobile_menu">
-    <button class="dropDownButton">Inventario <span>></span></button>
-    <button class="dropDownButton">Habilidades de clase <span>></span></button>
-    <button class="dropDownButton">Habilidades <span>></span></button>
-  </div>
-
-  <div id="overlay-campaign" onclick="closeOtherDropDowns()"></div>
 </main>
 
 <footer>
@@ -88,7 +87,6 @@
     <img id="throws-icon" src="../../Assets/d20.png" alt="dice" onclick="showMobileThrowLog()">
   </div>
 </footer>
-
 
 </body>
 </html>

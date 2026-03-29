@@ -72,6 +72,47 @@ p {
 h1 {
     margin-top: 1%;
 }
+#campNameMovil{
+    display: none;
+}
+#buttonMovil{
+    display: none;
+}
+@media screen and (max-width: 820px){
+    .img-foot {
+        display: none;
+    }
+   #players {
+       display: none;
+   }
+   .top{
+       width: 200%;
+   }
+   .right{
+       height: 50%;
+   }
+   .large-box{
+       width: 200%;
+   }
+   h1{
+       margin-top: 40%;
+   }
+   #campNameMovil{
+       display: flex;
+       width: 103%;
+   }
+   #buttonMovil{
+       display: grid;
+   }
+   .buttonsMovil{
+       height: 110%;
+       width: 200%;
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       column-gap: 50%;
+   }
+
+}
 
 
 

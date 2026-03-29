@@ -98,6 +98,7 @@ function closeOtherDropDowns() {
   throwLog.classList.remove('show');
   playerSideBar.classList.remove('show');
   overlay.classList.remove('show');
+  dropDown_menu.classList.remove('show');
 }
 
 
