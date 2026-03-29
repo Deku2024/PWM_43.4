@@ -16,16 +16,16 @@ form button {
     flex-direction: column;
     align-items: center;
     width: 80%;
-    padding: 1%;
 }
 
 .input input {
     width: 80%;
-    padding: 10px;
     border: 2px solid #4a4a4a;
     border-radius: 6px;
     outline: none;
     transition: 0.3s;
+    margin-bottom: 1%;
+    padding: 1%;
 }
 
 .error {
@@ -63,7 +63,7 @@ form button {
     color: #c9a24a;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px), (orientation: portrait) {
     .otherOptions {
         display: flex;
         flex-direction: column;
@@ -73,7 +73,6 @@ form button {
 
     form {
         width: 100%;
-        margin-bottom: 2%;
     }
 
 

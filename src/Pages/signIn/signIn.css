@@ -3,13 +3,13 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 22%;
+    width: 25%;
     justify-content: space-between;
 }
 
 .otherOptions button {
     margin-bottom: 10%;
-    padding: 5%;
+    padding: 3%;
 }
 
 .otherOptions a {
@@ -32,14 +32,11 @@ form {
     width: 35%;
 }
 
-form a {
-    width: 63%;
-    margin-bottom: 1%;
-}
 
 form button {
-    width: 100%;
+    width: 70%;
     padding: 1%;
+    margin-bottom: 1%;
 }
 
 /* Sign In */
@@ -48,12 +45,10 @@ form button {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 10%;
 }
 
 .input-control input {
     width: 80%;
-    padding: 10px;
     border: 2px solid #4a4a4a;
     border-radius: 6px;
     outline: none;
@@ -90,7 +85,7 @@ form button {
     transform: translateY(0);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px), (orientation: portrait) {
     .otherOptions {
         display: flex;
         flex-direction: column;

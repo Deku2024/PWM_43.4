@@ -31,8 +31,22 @@
 
   <div id="logTiradas"></div>
 
+  <div id="overlay-campaign" onclick="closeOtherDropDowns()"></div>
+
 </main>
-<footer id="footer"></footer>
+
+<div id="dropDown_mobile_menu">
+  <button class="dropDownButton">Inventario <span>></span></button>
+  <button class="dropDownButton">Habilidades de clase <span>></span></button>
+  <button class="dropDownButton">Habilidades <span>></span></button>
+</div>
+
+<footer>
+  <div>
+    <img id="players-icon" src="../../Assets/default_user_icon.png" alt="user-icon" onclick="showMobilePlayerSideBar()">
+    <img id="throws-icon" src="../../Assets/d20.png" alt="dice" onclick="showMobileThrowLog()">
+  </div>
+</footer>
 
 </body>
 </html>

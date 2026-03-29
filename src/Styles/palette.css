@@ -21,8 +21,6 @@
 
 body {
     background-color: var(--parchment-light);
-    /*overflow: hidden;*/
-
 }
 
 /* definicion de letras */
@@ -87,11 +85,6 @@ header #userIcon {
     margin-left: 1rem;
 }
 
-header #headerLogo{
-    height: 5rem;
-}
-
-
 #userIcon img {
     margin-top: 22%;
 }
@@ -154,19 +147,6 @@ nav a:hover {
     filter: brightness(var(--default-darken));
 }
 
-/* configuracion del main */
-/*main {
-    position: fixed;
-    top: 10%;
-    left: clamp(4rem, 100%, 7rem);
-    right: 0;
-    bottom: 0;
-    
-    padding-left: 2%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-}*/
-
 /* varias configuraciones */
 button {
     color: white;
@@ -217,7 +197,7 @@ input:focus {
 }
 
 /* media query para el nav bar */
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 600px), (orientation: portrait) {
     nav {
         top: 0;
         bottom: 0;
@@ -255,7 +235,7 @@ input:focus {
     }
 
 
-    #home_icon{
+    #home_icon {
         width: clamp(8rem, 100%, 14rem);
         min-width: 5rem;
         height: auto;
@@ -263,8 +243,9 @@ input:focus {
     }
 
     #home_icon img {
-        margin-left: 22%;
-        margin-top: 10%;
+        object-fit: fill;
+        width: 100%;
+        display: block;
     }
 
     main {
@@ -294,10 +275,6 @@ input:focus {
     input,
     textarea {
         font-size: 14pt;
-    }
-    
-    header #userIcon img {
-        margin-top: 70%;
     }
 
 }
