@@ -127,7 +127,11 @@ Los nombres de los mockups dentro de estos tres directorios son iguales y son lo
 - playercampaignmain.png
 - profilesettings.png
 - signin.png
-- [storyboardGrabacion.mp4](./src/Mockups/storyboardGrabacion.mp4) (hacen falta cambios)
+<br><br>
+
+Además, en la carpeta Mockups también se pueden encontrar los siguientes vídeos sobre el proyecto:
+- [storyboardGrabacion.mp4](./src/Mockups/storyboardGrabacion.mp4)
+- [demo-RWD.mov](./src/Mockups/demo-RWD.mov)
 
 <br>
 <h3>Breve explicación de los mockups</h3>
