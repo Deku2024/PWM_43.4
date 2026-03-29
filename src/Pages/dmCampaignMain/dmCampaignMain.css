@@ -57,7 +57,7 @@ textarea {
 
     margin-top: 2.3%
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px), (orientation: portrait) {
     #sessionArea {
         display: flex;
         flex-direction: column;
