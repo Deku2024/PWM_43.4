@@ -427,7 +427,7 @@ A continuación se listan las páginas y los cambios que ha sufrido cada una:
 
 <h2>Carga de templates y contenido JSON</h2>
 
-Las páginas que realizan carga de templates, y de qué templates se tratan, están ya especificadas en [este](https://github.com/Deku2024/PWM_43.4/edit/sprint2/README.md#templates-identificados-y-su-uso-en-las-p%C3%A1ginas-del-proyecto) apartado del README.md. En el proyecto, la única modificación que se ha realizado es la carga de estos templates utilizando JavaScript.
+Las páginas que realizan carga de templates, y de qué templates se tratan, están ya especificadas en [este](#Templates-identificados-y-su-uso-en-las-páginas-del-proyecto) apartado del README.md. En el proyecto, la única modificación que se ha realizado es la carga de estos templates utilizando JavaScript.
 
 En cuanto a las páginas que utilizan carga de contenidos JSON, se ha realizado de manera local. Los archivos .json se encuentran en el directorio Data y son los siguientes:
 
