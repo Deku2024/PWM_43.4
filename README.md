@@ -107,17 +107,17 @@ A continuación, se presentan los requisitos funcionales con los que cuenta el p
 Todos los mockups, así como el storyboard, se encuentran en imágenes individuales en la carpeta del proyecto, PWM_43.4, concretamente en la ruta ./src/Mockups. Los contenidos de dicho directorio se encuentran aquí listados:
 
 
-- [Sessions.png](./src/Mockups/Sessions.png)
-- [createdsession.png](./src/Mockups/createdsession.png)
-- [createsession.png](./src/Mockups/createsession.png)
-- [defaultsettings.png](./src/Mockups/defaultsettings.png)
-- [dmcampaignmain.png](./src/Mockups/dmcampaignmain.png)
-- [homepage.png](./src/Mockups/homepage.png)
-- [joinsession.png](./src/Mockups/joinsession.png)
-- [login.png](./src/Mockups/login.png)
-- [playercampaignmain.png](./src/Mockups/playercampaignmain.png)
-- [profilesettings.png](./src/Mockups/profilesettings.png)
-- [signin.png](./src/Mockups/signin.png)
+- [Sessions.png](src/Mockups/Desktop/Sessions.png)
+- [createdsession.png](src/Mockups/Desktop/createdsession.png)
+- [createsession.png](src/Mockups/Desktop/createsession.png)
+- [defaultsettings.png](src/Mockups/Desktop/defaultsettings.png)
+- [dmcampaignmain.png](src/Mockups/Desktop/dmcampaignmain.png)
+- [homepage.png](src/Mockups/Desktop/homepage.png)
+- [joinsession.png](src/Mockups/Desktop/joinsession.png)
+- [login.png](src/Mockups/Desktop/login.png)
+- [playercampaignmain.png](src/Mockups/Desktop/playercampaignmain.png)
+- [profilesettings.png](src/Mockups/Desktop/profilesettings.png)
+- [signin.png](src/Mockups/Desktop/signin.png)
 - [storyboardGrabacion.mp4](./src/Mockups/storyboardGrabacion.mp4)
 
 <br>

@@ -33,6 +33,8 @@ section ul {
     flex-direction: column;
 }
 
+
+
 .session {
     --i: 0;
     
@@ -110,13 +112,14 @@ h1 {
     margin-bottom: clamp(1rem, 4rem, 8rem);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px), (orientation: portrait) {
     .joinToThisSession, .joinToThisSession button {
         display: none;
     }
 
     .session {
         cursor: pointer;
+        width: 90%;
     }
 }
 
