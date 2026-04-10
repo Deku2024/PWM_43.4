@@ -180,6 +180,7 @@ footer div {
         bottom: 10%;
         left: 0 !important;
         right: 0 !important;
+        padding: 1%;
     }
     
     footer {
@@ -215,6 +216,7 @@ footer div {
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
+        z-index: 30;
     }
 
     #dropDown_mobile_menu button {

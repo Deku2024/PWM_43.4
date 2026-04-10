@@ -65,12 +65,19 @@
 
       <label for="characterDescription"><textarea placeholder="Descripción" id="characterDescription"></textarea></label>
 
-      <section id="dropDownArea"> </section>
+      <section id="dropDown_mobile_menu">
+        <button class="dropDownButton">Inventario <span>></span></button>
+        <button class="dropDownButton">Habilidades de clase <span>></span></button>
+        <button class="dropDownButton">Habilidades <span>></span></button>
+      </section>
 
     </section>
   </div>
 
+  <div id="overlay-campaign" onclick="closeOtherDropDowns()"></div>
+
   <div id="logTiradas"></div>
+
 </main>
 
 <footer>
