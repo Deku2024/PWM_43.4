@@ -1,0 +1,59 @@
+:host {
+  margin-right: 2%;
+  margin-left: 2%;
+  padding: 0;
+}
+
+section {
+  background-color: var(--parchment-dark);
+  border: 2px solid var(--very-dark-wood);
+  border-radius: 28px;
+  margin: 0;
+  height: 93.5%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 2% 2% 2% 7%;
+}
+
+button {
+  width: 100%;
+  margin-top: 3%;
+}
+
+section p {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px), (orientation: portrait) {
+  :host {
+    position: fixed;
+    top: 0;
+    height: calc(90% - 1px);
+    width: 60%;
+    z-index: 30;
+    margin: 0;
+    padding: 0;
+    right: -100%;
+    transition: right 0.4s ease-out;
+  }
+
+  :host.show {
+    right: 0;
+  }
+
+  a {
+    display: none;
+  }
+
+  section {
+    height: 100%;
+  }
+
+  section p {
+    box-sizing: border-box;
+    width: 90%;
+    max-width: 30ch;
+    min-width: 18ch;
+    word-wrap: break-word;
+  }
+}
