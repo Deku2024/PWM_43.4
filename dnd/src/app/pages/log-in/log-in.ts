@@ -3,9 +3,9 @@ import { Header } from '../../components/header/header';
 import { Footer } from '../../components/footer/footer';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-log-in',
   imports: [Header, Footer],
-  templateUrl: './home.html',
-  styleUrl: './home.css',
+  templateUrl: './log-in.html',
+  styleUrl: './log-in.css',
 })
-export class Home {}
+export class LogIn {}

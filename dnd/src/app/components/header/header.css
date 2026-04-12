@@ -1,0 +1,13 @@
+#headerItems {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  position: fixed;
+  background-color: var(--parchment-dark);
+
+  border: 1px solid var(--wood-dark);
+}
