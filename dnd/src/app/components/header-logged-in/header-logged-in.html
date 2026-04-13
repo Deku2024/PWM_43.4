@@ -1,1 +1,7 @@
-<p>header-logged-in works!</p>
+@if (!inCampaign()) {
+  <img id="hamburguer_menu" class="show-icon" src="../../Assets/hamburguer-menu.svg" alt="navegation-icon">
+} @else {
+  <img id="close_icon" class="show-icon" src="../../Assets/close-img.svg" alt="navegation-icon" (click)="goToSessions()">
+}
+<img src="../../Assets/logo.png" alt="logo" class="imagen" id="headerLogo" (click)="goToHomePage()">
+<user-icon-and-name-component />

@@ -1,4 +1,4 @@
-import { Component, effect, inject, OnInit, PLATFORM_ID, signal, WritableSignal } from '@angular/core';
+import { Component, inject, OnInit, PLATFORM_ID, signal, WritableSignal } from '@angular/core';
 import { LogTiradasComponent } from '../../components/log-tiradas-component/log-tiradas-component';
 import { Router } from '@angular/router';
 import { PlayerSideBarComponent } from '../../components/player-side-bar-component/player-side-bar-component';
@@ -7,6 +7,8 @@ import { CampaignFooterComponent } from '../../components/campaign-footer-compon
 import { isPlatformBrowser } from '@angular/common';
 import { HeaderLoggedIn } from '../../components/header-logged-in/header-logged-in';
 import { DropDownMenuComponent } from '../../components/drop-down-menu-component/drop-down-menu-component';
+import { FieldWithValueComponent } from '../../components/field-with-value-component/field-with-value-component';
+import { DiceRollerComponent } from '../../components/dice-roller-component/dice-roller-component';
 
 @Component({
   selector: 'app-player-campaign-main',
@@ -17,6 +19,8 @@ import { DropDownMenuComponent } from '../../components/drop-down-menu-component
     CampaignFooterComponent,
     HeaderLoggedIn,
     DropDownMenuComponent,
+    FieldWithValueComponent,
+    DiceRollerComponent,
   ],
   templateUrl: './player-campaign-main.html',
   styleUrl: './player-campaign-main.css',

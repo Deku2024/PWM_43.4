@@ -1,0 +1,22 @@
+:host {
+  position: fixed;
+  background-color: var(--parchment-dark);
+  border: 1px solid var(--wood-dark);
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 90%;
+
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3) inset;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 2%;
+}
+
+user-icon-and-name-component {
+  justify-self: end;
+}
