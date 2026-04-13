@@ -14,5 +14,9 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/created-session/created-session').then(m => m.CreatedSession)
   },
 
+  {path: 'createSession',
+    loadComponent: ()  => import('./pages/create-session/create-session').then(m => m.CreateSession)
+  },
+
   { path: '**', redirectTo: 'home' }
 ];
