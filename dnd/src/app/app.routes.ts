@@ -18,5 +18,9 @@ export const routes: Routes = [
     loadComponent: ()  => import('./pages/create-session/create-session').then(m => m.CreateSession)
   },
 
-  { path: '**', redirectTo: 'home' }
+  { path: 'joinSession',
+    loadComponent: () => import('./pages/join-session/join-session').then((m) => m.JoinSession)
+  },
+
+  { path: '**', redirectTo: 'home' },
 ];

@@ -1,0 +1,91 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin-bottom: 1%;
+}
+
+form button {
+  padding: 1%;
+  width: 45%;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+.input input {
+  width: 80%;
+  border: 2px solid #4a4a4a;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+  margin-bottom: 1%;
+  padding: 1%;
+}
+
+.error {
+  font-size: 1rem;
+  color: #e74c3c;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin-top: 6px;
+
+  opacity: 2;
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+
+.otherOptions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 22%;
+  justify-content: space-between;
+}
+
+.otherOptions button {
+  margin-bottom: 10%;
+  padding: 5%;
+}
+
+.otherOptions a {
+  font-family: "Crimson Text", serif;
+  font-size: 1rem;
+}
+
+.otherOptions a:hover {
+  color: #c9a24a;
+}
+
+@media (max-width: 600px), (orientation: portrait) {
+  .otherOptions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+  }
+
+  form {
+    width: 100%;
+  }
+}

@@ -1,0 +1,40 @@
+<app-header-logged-in></app-header-logged-in>
+
+<main>
+  <h1>Ajustes de perfil</h1>
+
+  <form id="mainForm">
+
+    <div id="userIconImageContainer">
+      <label for="profileImageUpload">
+        <img src="../../Assets/default_user_icon.png" alt="Profile Picture (click to change)">
+      </label>
+      <input type="file" id="profileImageUpload" accept="image/*" style="display: none;">
+    </div>
+
+    <div id="formFieldsGroups">
+
+      <label> Nombre de usuario
+        <input type="text">
+      </label>
+
+      <label> Correo
+        <input type="text">
+      </label>
+
+      <label> Contraseña
+        <input type="text">
+      </label>
+
+    </div>
+
+  </form>
+
+  <div id="buttons">
+    <button id="firstButton">Cancelar</button>
+    <a id="acceptButton" href="../allSessions/allSessions.html"><button class="link">Aceptar</button></a>
+    <button id="restablishButton">Restablecer</button>
+    <button id="lastButton">Cancelar</button>
+  </div>
+
+</main>
