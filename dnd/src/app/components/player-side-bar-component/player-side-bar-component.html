@@ -1,5 +1,8 @@
-<ul>
+<ul [class.show]="hideButton()">
 <!--aqui va un for cargando los distintos personajes que están en la partida-->
+  <user-icon-and-name-component />
 </ul>
 
-<button id="utility" (click)="goBack()">Salir de la sesión</button>
+@if (!hideButton()) {
+  <button id="utility" (click)="goBack()">Salir de la sesión</button>
+}

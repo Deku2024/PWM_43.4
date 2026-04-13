@@ -9,6 +9,15 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/profile-settings/profile-settings').then((m) => m.ProfileSettings)
   },
+
+  {path: 'defaultSettings',
+    loadComponent: () => import('./pages/default-settings/default-settings').then(m => m.DefaultSettings)
+
+  },
+  {path: 'createdSession',
+    loadComponent: () => import('./pages/created-session/created-session').then(m => m.CreatedSession)
+  },
+  { path: 'joinSession', loadComponent: () => import('./pages/join-session/join-session').then((m) => m.JoinSession) },
   {
     path: 'home',
     loadComponent: () =>

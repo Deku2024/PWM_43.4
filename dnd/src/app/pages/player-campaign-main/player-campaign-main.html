@@ -1,6 +1,8 @@
+<app-header-logged-in />
+
 <main>
   @if (isPlayerSideBarBeingShow()) {
-    <player-side-bar-component [class.show]="isPlayerSideBarBeingShow()" (callback)="goBack()"/>
+    <player-side-bar-component (callback)="goBack()" [hideButton]="mediaQuery()"/>
   }
 
   <div id="sessionArea">
@@ -49,13 +51,15 @@
 
       <label for="characterDescription"><textarea placeholder="Descripción" id="characterDescription"></textarea></label>
 
-
-
     </section>
   </div>
 
-  @if (isAnythingbeingShown()) {
-    <overlay-component [activate]="isAnythingbeingShown()" />
+  @if (isBottomMenuBeingShow()) {
+    <drop-down-menu-component />
+  }
+
+  @if (isAnythingbeingShown() && this.mediaQuery()) {
+    <overlay-component [activate]="isAnythingbeingShown()" (callback)="interactMenu(0)"/>
   }
 
   @if (isLogThrowsBeingShow()) {

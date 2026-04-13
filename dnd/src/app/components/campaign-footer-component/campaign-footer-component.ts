@@ -1,4 +1,5 @@
 import { Component, output } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'campaign-footer-component',

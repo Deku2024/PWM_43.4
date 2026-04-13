@@ -1,0 +1,121 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.otherOptions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 25%;
+  justify-content: space-between;
+}
+
+.otherOptions button {
+  margin-bottom: 10%;
+  padding: 3%;
+}
+
+.otherOptions a {
+  font-family: "Crimson Text", serif;
+  font-size: 1rem;
+}
+
+.otherOptions a:hover {
+  color: var(--gold);
+}
+
+input::placeholder {
+  padding-top: 2px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35%;
+}
+
+
+form button {
+  width: 70%;
+  padding: 1%;
+  margin-bottom: 1%;
+}
+
+/* Sign In */
+.input-control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.input-control input {
+  width: 80%;
+  border: 2px solid #4a4a4a;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+}
+
+
+.error-message {
+  font-size: 1rem;
+  color: var(--error-color);
+  background-color: #ffecec;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+.input-control.success input {
+  border-color: var(--correct-color);
+  background: #f0fff4;
+}
+
+.input-control.error input {
+  border-color: var(--error-color);
+  background: #fff5f5;
+}
+
+.input-control.error .error-message {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 600px), (orientation: portrait) {
+  .otherOptions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+  }
+
+  form {
+    width: 70%;
+    margin-bottom: 2%;
+  }
+
+
+  #buttonGroup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
