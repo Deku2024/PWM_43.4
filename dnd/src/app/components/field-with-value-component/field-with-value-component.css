@@ -13,6 +13,7 @@ p {
 }
 label {
   height: 100%;
+  max-height: 10vh;
 }
 
 .stat-value {
@@ -24,4 +25,10 @@ label {
 
 .stat-value::placeholder {
   font-size: 0.8rem;
+}
+
+@media screen and (max-width: 820px),(orientation: portrait) {
+  p {
+    font-size: 0.7rem;
+  }
 }

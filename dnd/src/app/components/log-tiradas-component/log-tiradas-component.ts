@@ -7,6 +7,5 @@ import { Component, input, InputSignal } from '@angular/core';
   styleUrl: './log-tiradas-component.css',
 })
 export class LogTiradasComponent {
-  isMenuBeingShow: InputSignal<boolean> = input.required<boolean>();
 
 }

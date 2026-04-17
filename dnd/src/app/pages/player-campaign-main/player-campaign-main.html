@@ -59,11 +59,11 @@
   }
 
   @if (isAnythingbeingShown() && this.mediaQuery()) {
-    <overlay-component [activate]="isAnythingbeingShown()" (callback)="interactMenu(0)"/>
+    <overlay-component [activate]="isAnythingbeingShown()" (callback)="interactMenu(0)" />
   }
 
   @if (isLogThrowsBeingShow()) {
-    <log-tiradas-component [class.show]="isLogThrowsBeingShow()" [isMenuBeingShow]="isLogThrowsBeingShow()" />
+    <log-tiradas-component [class.show]="isLogThrowsBeingShow()" />
   }
 </main>
 

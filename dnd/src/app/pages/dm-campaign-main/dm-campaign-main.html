@@ -1,1 +1,37 @@
-<p>dm-campaign-main works!</p>
+<header-logged-in [inCampaign]="true" />
+
+<main>
+  @if (isPlayerSideBarBeingShow()) {
+    <player-side-bar-component (callback)="goBack()" [hideButton]="mediaQuery()"/>
+  }
+
+  <div id="sessionArea">
+
+    <dm-note-component />
+    <dm-note-component />
+    <dm-note-component />
+    <dm-note-component />
+
+  </div>
+
+  @if (isBottomMenuBeingShow()) {
+    <drop-down-menu-component />
+  }
+
+  @if (isAnythingbeingShown() && this.mediaQuery()) {
+    <overlay-component [activate]="isAnythingbeingShown()" (callback)="interactMenu(0)" />
+  }
+
+  @if (isLogThrowsBeingShow()) {
+    <log-tiradas-component [class.show]="isLogThrowsBeingShow()" />
+  }
+</main>
+
+@if (mediaQuery()) {
+  <campaign-footer-component
+    (click)="updateIsAnythingbeingShown()"
+    (usersClicked)="interactMenu(2)"
+    (diceClicked)="interactMenu(1)"
+    (arrowClicked)="interactMenu(3)"
+  />
+}
