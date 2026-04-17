@@ -61,42 +61,6 @@ nav, header, footer {
   border: 1px solid var(--wood-dark);
 }
 
-/* configuracion header */
-header {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 90%;
-
-  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3) inset;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 0 2%;
-}
-
-header #userIcon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: clamp(1rem, 5%, 5rem);
-  margin-left: 1rem;
-}
-
-#userIcon img {
-  margin-top: 22%;
-}
-
-#userIcon p {
-  margin: 0 0 0 5%;
-}
-
-header a {
-  transition: filter 0.2s;
-}
-
 header a:hover {
   filter: brightness(var(--default-darken));
 }
