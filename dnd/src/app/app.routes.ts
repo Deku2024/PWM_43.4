@@ -7,7 +7,7 @@ export const routes: Routes = [
   {
     path: 'profileSettings',
     loadComponent: () =>
-      import('./pages/profile-settings/profile-settings').then((m) => m.ProfileSettings),
+      import('./pages/profile-settings/profile-settings').then((m) => m.ProfileSettings)
   },
 
   {path: 'defaultSettings',
@@ -18,5 +18,17 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/created-session/created-session').then(m => m.CreatedSession)
   },
   { path: 'joinSession', loadComponent: () => import('./pages/join-session/join-session').then((m) => m.JoinSession) },
+  {
+    path: 'home',
+    loadComponent: () =>
+      import('./pages/home/home').then((m) => m.Home) },
+  {
+    path: 'player-campaign-main',
+    loadComponent: () =>
+      import('./pages/player-campaign-main/player-campaign-main').then((m) => m.PlayerCampaignMain),
+  },
+  { path: 'joinSession',
+    loadComponent: () =>
+      import('./pages/join-session/join-session').then((m) => m.JoinSession) },
   { path: '**', redirectTo: 'home' },
 ];

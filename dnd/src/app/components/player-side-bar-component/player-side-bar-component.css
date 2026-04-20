@@ -1,0 +1,47 @@
+:host {
+  margin-right: 2%;
+  margin-left: 2%;
+  padding: 0;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 93.5%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  list-style: none;
+  background-color: var(--parchment-dark);
+  border: 2px solid var(--very-dark-wood);
+  border-radius: 28px;
+}
+
+.userIconAndName a {
+  width: 20%;
+}
+
+button {
+  width: 100%;
+  margin-top: 3%;
+}
+
+@media screen and (max-width: 600px), (orientation: portrait) {
+  ul {
+    position: fixed;
+    top: 0;
+    height: calc(89% - 1px);
+    width: 60%;
+    z-index: 30;
+    padding: 0;
+    left: -100%;
+    transition: left 0.4s ease-out;
+    margin: 0.5% 0 0;
+  }
+
+  ul.show {
+    left: 0;
+  }
+}
