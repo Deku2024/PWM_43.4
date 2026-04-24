@@ -1,0 +1,117 @@
+<app-header-logged-in />
+
+<main>
+  @if (isPlayerSideBarBeingShow()) {
+    <player-side-bar-component (callback)="goBack()" [hideButton]="mediaQuery()"/>
+  }
+
+  <div id="sessionArea">
+
+    <section id="leftSection">
+      <div id="characterImageContainer">
+        <label for="characterImageUpload">
+          <img src="../../Assets/sheet_img_example.png" alt="Character's Image (click to change)">
+        </label>
+        <input type="file" id="characterImageUpload" accept="image/*" style="display: none;">
+      </div>
+      <div id="characteristicsGroup">
+        <article class="characteristicBlock"></article>
+        <article class="characteristicBlock"></article>
+        <article class="characteristicBlock"></article>
+        <article class="characteristicBlock"></article>
+        <article class="characteristicBlock"></article>
+        <article class="characteristicBlock"></article>
+      </div>
+
+      <button class="dropDownButton">Inventario <span>></span></button>
+      <button class="dropDownButton">Habilidades de clase <span>></span></button>
+      <button class="dropDownButton">Habilidades <span>></span></button>
+
+    </section>
+    <section id="rightSection">
+      <form [formGroup]="playerCampaignForm" class="rightSectionWrapper">
+        <div class="form-field">
+            <label for="characterName"></label>
+            <input formControlName="name" class="firstField" id="characterName" type="text" placeholder="Nombre" required maxlength="50">
+
+            @if (playerCampaignForm.get('name')?.errors?.['required']) {
+              <span class="error">Se requiere nombre</span>
+            }
+
+            @if (playerCampaignForm.get('name')?.errors?.['maxLength']) {
+              <span class="error">Máximo de caracteres alcanzado</span>
+            }
+        </div>
+
+        <div class="form-field">
+          <label for="characterRace"></label>
+          <input formControlName="race" class="secondField" id="characterRace" type="text" placeholder="Raza">
+
+          @if (playerCampaignForm.get('race')?.errors?.['required']) {
+            <span class="error">Se requiere raza</span>
+          }
+
+          @if (playerCampaignForm.get('race')?.errors?.['raceInvalid']) {
+            <span class="error">La raza introducida no es válida</span>
+          }
+        </div>
+
+        <div class="form-field">
+          <label for="characterAge"></label>
+          <input formControlName="age" class="thirdField" id="characterAge" type="text" placeholder="Edad">
+
+          @if (playerCampaignForm.get('age')?.errors?.['required']) {
+            <span class="error">La edad es requerida</span>
+          }
+
+          @if (playerCampaignForm.get('age')?.errors?.['min']) {
+            <span class="error">La edad mínima es 1</span>
+          }
+
+          @if (playerCampaignForm.get('age')?.errors?.['max']) {
+            <span class="error">La edad máxima es 1000</span>
+          }
+        </div>
+
+        <div class="form-field">
+          <label for="characterClasses"> </label>
+          <input class="firstField" id="characterClasses" type="text" placeholder="Clases">
+        </div>
+         <input class="firstField" id="characterClasses" type="text" placeholder="Clases">
+        <label for="characterExperience"> <input class="secondField" id="characterExperience" type="text" placeholder="Experiencia"> </label>
+        <label for="characterAligment"> <input class="thirdField" id="characterAligment" type="text" placeholder="Alineamiento">  </label>
+        <label for="salvationThrows"><input id="salvationThrows" type="text" placeholder="Tiradas de salvación"></label>
+
+        <article class="miscValueField"></article>
+        <article class="miscValueField"></article>
+        <article class="miscValueField"></article>
+      </form>
+
+      <label for="characterDescription"><textarea placeholder="Descripción" id="characterDescription"></textarea></label>
+
+    </section>
+  </div>
+
+  @if (isBottomMenuBeingShow()) {
+    <drop-down-menu-component />
+  }
+
+  @if (isAnythingbeingShown() && this.mediaQuery()) {
+    <overlay-component [activate]="isAnythingbeingShown()" (callback)="interactMenu(0)"/>
+  }
+
+  @if (isLogThrowsBeingShow()) {
+    <log-tiradas-component [class.show]="isLogThrowsBeingShow()" [isMenuBeingShow]="isLogThrowsBeingShow()" />
+  }
+</main>
+
+@if (mediaQuery()) {
+  <campaign-footer-component
+    (click)="updateIsAnythingbeingShown()"
+    (usersClicked)="interactMenu(2)"
+    (diceClicked)="interactMenu(1)"
+    (arrowClicked)="interactMenu(3)"
+  />
+}
+
+
