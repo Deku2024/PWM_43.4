@@ -1,0 +1,9 @@
+<header-logged-in #header />
+
+@if (header.clickOnHamburger()) {
+  <nav-bar-component (click)="header.clickOnHamburger.set(false)" [hideButton]="header.clickOnHamburger() || header.isMobile()" />
+}
+
+<main>
+
+</main>

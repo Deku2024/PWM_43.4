@@ -13,5 +13,5 @@ img {
 }
 
 p {
-  font-size: 14pt;
+  font-size: clamp(10pt, 12pt, 16pt);
 }

@@ -1,0 +1,8 @@
+@if (!hideButton()) {
+  <img id="close-nav-bar-button" src="/Assets/close-img.svg" alt="navegation-button" >
+}
+<ul [class.show]="hideButton()">
+  <img src="/Assets/all_sessions_img.png" alt="all-sessions-icon" (click)="goToAllSessions()">
+  <img src="/Assets/add_img.png" alt="add-session-icon" (click)="goToCreateSession()">
+  <img src="/Assets/conf_img.png" alt="conf-icon" (click)="goToConfiguration()">
+</ul>

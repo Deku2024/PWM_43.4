@@ -1,0 +1,46 @@
+:host {
+  position: fixed;
+  background-color: var(--parchment-dark);
+  border: 1px solid var(--wood-dark);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 87%;
+  min-width: 8rem;
+}
+
+:host.navbar-hidden {
+  top: calc(10% - 1px);
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  height: 80%;
+}
+
+ul.show {
+  height: 100%;
+}
+
+ul img {
+  width: 70%;
+  min-width: 6rem;
+  height: auto;
+}
+
+#close-nav-bar-button {
+  width: 40%;
+}
+
+

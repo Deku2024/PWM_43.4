@@ -20,3 +20,11 @@
 user-icon-and-name-component {
   justify-self: end;
 }
+
+#hamburguer_menu {
+  min-width: 3rem;
+}
+
+#headerLogo {
+  min-width: 1rem;
+}

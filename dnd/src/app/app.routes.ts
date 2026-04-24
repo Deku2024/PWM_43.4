@@ -30,6 +30,8 @@ export const routes: Routes = [
   { path: 'joinSession',
     loadComponent: () =>
       import('./pages/join-session/join-session').then((m) => m.JoinSession) },
+  {path: 'all-sessions', loadComponent: () => import('./pages/all-sessions/all-sessions').then((m) => m.AllSessions) },
+  {path: 'create-session', loadComponent: () => import('./pages/create-session/create-session').then((m) => m.CreateSession) },
   {path: 'dm-notes',
   loadComponent: () => import('./pages/dm-campaign-main/dm-campaign-main').then((m) => m.DmCampaignMain) },
   { path: '**', redirectTo: 'home' },
