@@ -21,8 +21,9 @@ user-icon-and-name-component {
   justify-self: end;
 }
 
-#hamburguer_menu {
+#hamburguer_menu, #close_icon{
   min-width: 3rem;
+  display: block;
 }
 
 #headerLogo {

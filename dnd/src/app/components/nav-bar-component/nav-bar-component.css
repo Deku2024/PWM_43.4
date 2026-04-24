@@ -7,15 +7,21 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  left: 0;
-  top: 0;
+  left: -100%;
+  top: calc(10% - 1px);
   bottom: 0;
-  right: 87%;
+  right: 100%;
   min-width: 8rem;
+  z-index: 30;
 }
 
-:host.navbar-hidden {
-  top: calc(10% - 1px);
+:host.visible {
+  right: 87%;
+  left: 0;
+}
+
+:host.takeAll {
+  top: 0;
 }
 
 ul {
@@ -29,7 +35,7 @@ ul {
   height: 80%;
 }
 
-ul.show {
+ul.desktop {
   height: 100%;
 }
 
@@ -42,5 +48,3 @@ ul img {
 #close-nav-bar-button {
   width: 40%;
 }
-
-

@@ -1,17 +1,17 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { Router } from '@angular/router';
+import { OverlayComponent } from '../overlay-component/overlay-component';
 
 @Component({
   selector: 'nav-bar-component',
-  imports: [],
+  imports: [OverlayComponent],
   templateUrl: './nav-bar-component.html',
   styleUrl: './nav-bar-component.css',
-  host: {
-    '[class.navbar-hidden]': 'hideButton()',
-  },
 })
 export class NavBarComponent {
-  hideButton = input<boolean>(false);
+  callback = output<void>();
+  hideCloseButton = input<boolean>(true);
+
 
   constructor(private router: Router) {}
 
