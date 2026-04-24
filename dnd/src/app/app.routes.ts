@@ -22,5 +22,10 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/join-session/join-session').then((m) => m.JoinSession)
   },
 
+  {
+    path: 'profileSettings',
+    loadComponent: () => import('./pages/profile-settings/profile-settings').then(m => m.ProfileSettings)
+  },
+
   { path: '**', redirectTo: 'home' },
 ];
