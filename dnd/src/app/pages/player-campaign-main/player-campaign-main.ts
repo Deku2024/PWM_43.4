@@ -13,6 +13,8 @@ FormGroup,
 Validators,
 AbstractControl,
 ValidatorFn} from '@angular/forms';
+import { FieldWithValueComponent } from '../../components/field-with-value-component/field-with-value-component';
+import { DiceRollerComponent } from '../../components/dice-roller-component/dice-roller-component';
 
 @Component({
   selector: 'app-player-campaign-main',
@@ -24,6 +26,8 @@ ValidatorFn} from '@angular/forms';
     HeaderLoggedIn,
     DropDownMenuComponent,
     ReactiveFormsModule,
+    FieldWithValueComponent,
+    DiceRollerComponent,
   ],
   templateUrl: './player-campaign-main.html',
   styleUrl: './player-campaign-main.css',

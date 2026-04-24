@@ -1,4 +1,4 @@
-<app-header-logged-in />
+<header-logged-in [inCampaign]="true"/>
 
 <main>
   @if (isPlayerSideBarBeingShow()) {
@@ -15,12 +15,12 @@
         <input type="file" id="characterImageUpload" accept="image/*" style="display: none;">
       </div>
       <div id="characteristicsGroup">
-        <article class="characteristicBlock"></article>
-        <article class="characteristicBlock"></article>
-        <article class="characteristicBlock"></article>
-        <article class="characteristicBlock"></article>
-        <article class="characteristicBlock"></article>
-        <article class="characteristicBlock"></article>
+        <dice-roller-component [tittle]="'STR'" />
+        <dice-roller-component [tittle]="'DEX'" />
+        <dice-roller-component [tittle]="'CON'" />
+        <dice-roller-component [tittle]="'INT'" />
+        <dice-roller-component [tittle]="'WIS'" />
+        <dice-roller-component [tittle]="'CHR'" />
       </div>
 
       <button class="dropDownButton">Inventario <span>></span></button>
@@ -119,9 +119,9 @@
           <input id="salvationThrows" type="text" placeholder="Tiradas de salvación">
         </div>
 
-        <article class="miscValueField"></article>
-        <article class="miscValueField"></article>
-        <article class="miscValueField"></article>
+        <field-with-value-component [tittle]="'Vida'" [placeholder]="'Vida'" />
+        <field-with-value-component [tittle]="'Vida máx'" [placeholder]="'Vida máx.'" />
+        <field-with-value-component [tittle]="'Vida temp'" [placeholder]="'Vida temp.'" />
       </form>
 
       <label for="characterDescription"><textarea placeholder="Descripción" id="characterDescription"></textarea></label>
@@ -134,11 +134,11 @@
   }
 
   @if (isAnythingbeingShown() && this.mediaQuery()) {
-    <overlay-component [activate]="isAnythingbeingShown()" (callback)="interactMenu(0)"/>
+    <overlay-component [activate]="isAnythingbeingShown()" (callback)="interactMenu(0)" />
   }
 
   @if (isLogThrowsBeingShow()) {
-    <log-tiradas-component [class.show]="isLogThrowsBeingShow()" [isMenuBeingShow]="isLogThrowsBeingShow()" />
+    <log-tiradas-component [class.show]="isLogThrowsBeingShow()" />
   }
 </main>
 

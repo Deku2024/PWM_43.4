@@ -2,19 +2,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5%;
-  width: 100%;
+  gap: clamp(0.5rem, 5%, 1rem);
   margin-top: 2.5%;
   margin-bottom: 2.5%;
 }
 
 img {
-  width: 20%;
+  width: clamp(2.5rem, 20%, 4rem);
   height: auto;
-
-  min-width: 2.5rem;
 }
 
 p {
-  font-size: 14pt;
+  font-size: clamp(10pt, 12pt, 16pt);
 }

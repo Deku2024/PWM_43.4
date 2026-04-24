@@ -1,14 +1,20 @@
+main {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 10%;
+}
+
 .banner {
   width: 100%;
   height: 50vh;
-
-  background-image: url("/Assets/homepageimg.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
-
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 #mainInformation {
   display: flex;

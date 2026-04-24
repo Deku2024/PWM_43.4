@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeaderLoggedIn } from './header-logged-in';
+import { AllSessions } from './all-sessions';
 
-describe('HeaderLoggedIn', () => {
-  let component: HeaderLoggedIn;
-  let fixture: ComponentFixture<HeaderLoggedIn>;
+describe('AllSessions', () => {
+  let component: AllSessions;
+  let fixture: ComponentFixture<AllSessions>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HeaderLoggedIn],
+      imports: [AllSessions],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(HeaderLoggedIn);
+    fixture = TestBed.createComponent(AllSessions);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

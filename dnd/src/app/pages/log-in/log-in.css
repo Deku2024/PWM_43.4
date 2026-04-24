@@ -53,13 +53,12 @@ form button {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 22%;
+  width: 22.5%;
   justify-content: space-between;
 }
 
 .otherOptions button {
-  margin-bottom: 10%;
-  padding: 5%;
+  padding: 2%;
 }
 
 .otherOptions a {
