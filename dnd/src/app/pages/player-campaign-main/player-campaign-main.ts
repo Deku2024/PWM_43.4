@@ -104,7 +104,7 @@ export class PlayerCampaignMain implements OnInit {
 
   private validateClass(): ValidatorFn {
     return (group: AbstractControl): { [key: string]: any } | null => {
-      const classes = group.get('class')?.value;
+      const classes = group.get('classes')?.value;
       const classList: string[] = this.getClassList();
 
       if (classes !== null && !classList.includes(classes)) {
