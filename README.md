@@ -582,12 +582,226 @@ Esta validación se ha realizado comparando los datos introducidos con los exist
 
 <br><br>
 
+<h2>Estructura del proyecto una vez realizada la migración a Angular</h2>
+
+La estructura del proyecto resultante es la siguiente:
+
+```
+.
+├── .angular
+├── .vscode
+├── dist
+├── node_modules
+├── public
+│   ├── assets
+│   └── favicon.ico
+├── src
+│   ├── app
+│   │   ├── components
+│   │   │   ├── campaign-footer-component
+│   │   │   ├── dice-roller-component
+│   │   │   ├── dm-note-component
+│   │   │   ├── drop-down-menu-component
+│   │   │   ├── field-with-value-component
+│   │   │   ├── footer
+│   │   │   ├── header
+│   │   │   ├── header-logged-in
+│   │   │   ├── log-tiradas-component
+│   │   │   ├── nav-bar-component
+│   │   │   ├── overlay-component
+│   │   │   ├── player-side-bar-component
+│   │   │   └── user-icon-and-name-component
+│   │   ├── pages
+│   │   │   ├── all-sessions
+│   │   │   ├── create-session
+│   │   │   ├── created-session
+│   │   │   ├── default-settings
+│   │   │   ├── dm-campaign-main
+│   │   │   ├── home
+│   │   │   ├── join-session
+│   │   │   ├── log-in
+│   │   │   ├── player-campaign-main
+│   │   │   ├── profile-settings
+│   │   │   └── sign-in
+│   │   ├── services
+│   │   │   ├── auth.service.ts
+│   │   │   ├── player.service.spec.ts
+│   │   │   └── player.service.ts
+│   │   ├── app.config.server.ts
+│   │   ├── app.config.ts
+│   │   ├── app.css
+│   │   ├── app.html
+│   │   ├── app.routes.server.ts
+│   │   ├── app.routes.ts
+│   │   ├── app.spec.ts
+│   │   └── app.ts
+│   ├── environments
+│   │   ├── environment.prod.ts
+│   │   └── environment.ts
+│   ├── index.html
+│   ├── main.server.ts
+│   ├── main.ts
+│   ├── server.ts
+│   └── styles.css
+```
+
+Faltarían en este árbol los archivos correspondientes a la configuración de Angular y de Typescript, por ejemplo.
+
+Los directorios principales se encuentran dentro de App y son: Pages, Components, Services.
+
+En <em>Pages</em> se encuentran, como bien el nombre indica, las páginas del proyecto que se corresponden con las páginas con las que se contaba en sprints anteriores.
+
+En el directorio <em>Services</em> se ubican los servicios que se han usado para la realización de las tareas del Sprint.
+
+Finalmente, en <em>Components</em> están los componentes usados después en las diferentes páginas. Cabe destacar que todos los Templates identificados en sprints anteriores durante la migración a Angular se han traducido como componentes. Se listan a continuación los componentes y su funcionalidad en el proyecto.
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre del componente</th>
+      <th>Funcionalidad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>campaign-footer-component</td>
+      <td>
+        <ul>
+          <li>Es el footer que se muestra en el diseño responsive de dm-campaign-main y player-campaign-main.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>dice-roller-component</td>
+      <td>
+        <ul>
+          <li>Está conformado por la imagen del dado y su campo numérico correspondiente.</li>
+          <li>Se usa en player-campaign-main.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>dm-note-component</td>
+      <td>
+        <ul>
+          <li>Representa la nota individual del DM.</li>
+          <li>Se utiliza en dm-campaign-main.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>drop-down-menu-component</td>
+      <td>
+        <ul>
+          <li>En el diseño responsive de player-campaign-main y dm-campaign-main, se encarga de mostrar el Inventario, Habilidades y Habilidades de clase.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>field-with-value-component</td>
+      <td>
+        <ul>
+          <li>Contiene el título y el input de algunos campos del formulario</li>
+          <li>Se usa en player-campaign-main.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>footer</td>
+      <td>
+        <ul>
+          <li>Pie de página que muestra las redes sociales de las que dispone el sitio.</li>
+          <li>Se utiliza en log-in, sign-in y home.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>header</td>
+      <td>
+        <ul>
+          <li>Es el header por defecto, sin que el usuario tenga que iniciar sesión.</li>
+          <li>Se utiliza en log-in, sign-in y home.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>header-logged-in</td>
+      <td>
+        <ul>
+          <li>Es el header que se muestra una vez el usuario ha iniciado sesión.</li>
+          <li>Se utiliza en all-sessions, create-session, created-session, default-settings, dm-campaign-main, join-session, player-campaign-main, profile-settings</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>log-tiradas-component</td>
+      <td>
+        <ul>
+          <li>Este componente es el que muestra el registro de las tiradas realizadas.</li>
+          <li>Se utiliza en player-campaign-main y dm-campaign-main.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>nav-bar-component</td>
+      <td>
+        <ul>
+          <li>Es la barra de navegación lateral, con tres botones para navegar por el espacio personal del usuario.</li>
+          <li>Se usa en all-sessions, create-session, created-session, default-settings, join-session.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>overlay-component</td>
+      <td>
+        <ul>
+          <li>Se encarga en el diseño responsive de player-campaign-main y dm-campaign-main de oscurecer el fondo cuando se accionan los desplegables.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>player-side-bar-component</td>
+      <td>
+        <ul>
+          <li>Contiene una lista de los jugadores de la sesión.</li>
+          <li>Se usa en player-campaign-main y dm-campaign-main.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>user-icon-and-name-component</td>
+      <td>
+        <ul>
+          <li>Contiene el icono con la foto de usuario y el nombre de usuario. </li>
+          <li>Se usa en otros componentes, como header-logged-in y player-side-bar-component.</li>
+        </ul>
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+
+<h2>Estructura de los datos en Firebase</h2>
+
+En total se cuentan con 4 colecciones en Firebase que se corresponden con los ficheros JSON que se tenían en el Sprint anterior.
+  - users
+  - characters
+  - sessions
+  - content
+
+
+
+
 <h2>Otros aspectos del proyecto</h2>
 Respecto al sprint anterior, creemos necesario comentar ciertos cambios que han ocurrido en la estructura del proyecto. Mientras que cada página cuenta con su directorio propio donde se encuentran sus respectivos archivos .html, .css y .js, en la realización del sprint se ha considerado la necesidad de tener scripts de JavaScript y hojas de estilo que son comunes para algunas páginas. Es por ello que en ./src existen dos directorios destinados a contener estos ficheros. Se tratan de ./src/Scripts y ./src/Styles.
 <br><br>
 Otro cambio a destacar en relación al sprint anterior, es que ya se han determinado cuáles serán los ajustes por defecto de la sesión y se ha modificado el defaultSettings.html acorde a estas decisiones. Además, con la incorporación de JS se ha podido dotar de funcionalidad a algunos botones: ahora al entrar en una sesión se detectará si el usuario es el DM (Dungeon Master) de dicha sesión para mostrar la página que corresponde. Sin embargo, el botón de borrar sigue careciendo de funcionalidad.
 <br><br>
 En este sprint, también se ha dotado a las páginas de una estética y estilos más similares a lo que habíamos pensado para el proyecto en un principio, pudiéndose mejorar en próximos sprints. Por otro lado, la carga de contenido en dmCampaignMain.html, playerCampaignMain.html y createdSession.html, debido a la complejidad que supone se ha aplazado para el sprint siguiente.
+
+
+
 
 
 
