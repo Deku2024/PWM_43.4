@@ -1,16 +1,38 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Header } from '../../components/header/header';
 import { Footer } from '../../components/footer/footer';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-log-in',
-  imports: [Header, Footer],
+  standalone: true,
+  imports: [Header, Footer, ReactiveFormsModule, RouterLink],
   templateUrl: './log-in.html',
   styleUrl: './log-in.css',
 })
 export class LogIn {
-  constructor(private router: Router) {
+  public router = inject(Router); // Cambiado a public
+  private authService = inject(AuthService);
+
+  loginForm = new FormGroup({
+    email: new FormControl('', [Validators.required, Validators.email]),
+    password: new FormControl('', [Validators.required]),
+  });
+
+  errorMessage: string | null = null;
+
+  async onSubmit() {
+    if (this.loginForm.valid) {
+      const { email, password } = this.loginForm.value;
+      try {
+        await this.authService.login(email!, password!); //
+        this.router.navigate(['/home']);
+      } catch (error) {
+        this.errorMessage = 'Credenciales incorrectas.';
+      }
+    }
   }
 
   goToHome(): void {
