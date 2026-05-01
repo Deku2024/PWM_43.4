@@ -1,1 +1,10 @@
-<p>session-menu-component works!</p>
+<p class="nombre">
+  {{sessionName()}}
+</p>
+
+<div class="buttons">
+
+  <button>&#9661;</button>
+  <button (click)="joinThisSession()">Unirse</button>
+  <button (click)="remnoveThisSession()">Borrar</button>
+</div>

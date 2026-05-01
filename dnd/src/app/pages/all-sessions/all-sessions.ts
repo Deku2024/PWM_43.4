@@ -3,10 +3,12 @@ import { HeaderLoggedIn } from '../../components/header-logged-in/header-logged-
 import { NavBarComponent } from '../../components/nav-bar-component/nav-bar-component';
 import { isPlatformBrowser } from '@angular/common';
 import { OverlayComponent } from '../../components/overlay-component/overlay-component';
+import { SessionMenuComponent } from '../../components/session-menu-component/session-menu-component';
+import { Session, SessionService } from '../../services/session.service';
 
 @Component({
   selector: 'app-all-sessions',
-  imports: [HeaderLoggedIn, NavBarComponent, OverlayComponent],
+  imports: [HeaderLoggedIn, NavBarComponent, OverlayComponent, SessionMenuComponent],
   templateUrl: './all-sessions.html',
   styleUrl: './all-sessions.css',
 })
@@ -18,6 +20,9 @@ export class AllSessions implements OnInit, OnDestroy {
 
   private mediaQueryList!: MediaQueryList;
   private mediaQueryHandler!: (e: MediaQueryListEvent) => void;
+
+  sessions = signal<Session[]>([]);
+  sessioService =  inject(SessionService);
 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
@@ -34,6 +39,10 @@ export class AllSessions implements OnInit, OnDestroy {
 
       this.mediaQueryList.addEventListener('change', this.mediaQueryHandler);
     }
+
+    this.sessioService.getSessions().subscribe(sessions => {
+      this.sessions.set(sessions);
+    });
   }
 
   ngOnDestroy() {

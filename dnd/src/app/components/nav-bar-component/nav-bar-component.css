@@ -16,7 +16,7 @@
 }
 
 :host.visible {
-  right: 87%;
+  right: 90%;
   left: 0;
 }
 
@@ -33,6 +33,7 @@ ul {
   margin: 0;
   list-style: none;
   height: 80%;
+  width: 100%;
 }
 
 ul.desktop {
