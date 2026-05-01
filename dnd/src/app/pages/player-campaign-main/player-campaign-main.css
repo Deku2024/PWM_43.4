@@ -1,3 +1,4 @@
+
 main {
   position: fixed;
   top: 10%;
@@ -17,19 +18,22 @@ main {
   border: 2px solid var(--very-dark-wood);
   border-radius: 28px;
   padding: 2% 2% 0;
-}
 
-
-#sessionArea {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  gap: 5%; /* Añade gap en lugar de margin-right manual */
+  overflow: hidden; /* Evita desbordamientos */
+  width: calc(100% - 4%); /* Ajusta el ancho total */
+  box-sizing: border-box;
 }
 
 #leftSection {
-  margin-right: 5%;
+  /*margin-right: 5%;*/
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 0;
+  overflow: hidden;
 
 }
 
@@ -108,6 +112,13 @@ main {
   filter: brightness(var(--default-darken));
 }
 
+#rightSection {
+  min-width: 0; /* Permite que el contenido se reduzca */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
 #rightSection label {
   width: 80%;
   height: 100%
@@ -116,24 +127,41 @@ main {
 #rightSection input {
   width: 100%;
   padding: 2.5%;
-  height: 100%;
-
   box-sizing: border-box;
-}
-
-.rightSectionWrapper {
-  margin-bottom: 2%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4%;
 }
 
 #miscCharacterValues {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  height: 15%;
-  column-gap: 1%;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+#miscCharacterValues field-with-value-component {
+  width: 100%;
+}
+
+.rightSectionWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 2%;
+  gap: 4%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.rightSectionWrapper .form-field {
+  width: 100%;
+  min-width: 0; /* Permite que los inputs se reduzcan */
+  position: relative;
+}
+
+.rightSectionWrapper input {
+  width: 30%;
+  padding: 2.5%;
+  box-sizing: border-box;
+  font-size: 0.9rem; /* Reduce ligeramente el tamaño en pantallas pequeñas */
 }
 
 #miscCharacterValues label {
@@ -149,13 +177,47 @@ main {
 #characterDescription {
   width: 100%;
   height: 30%;
-
   resize: none;
-
-  padding-left: 2%;
-  padding-top: 1%;
-
+  padding: 2%;
+  margin-top: 2%;
   box-sizing: border-box;
+}
+
+#submit-button {
+  align-self: flex-start;
+  margin-bottom: 1rem;
+}
+
+/*Mensajes de error*/
+
+.life-errors {
+  margin-top: 1%;
+  font-size: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.form-field .error {
+  font-size: 0.7rem;
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+/*Campos del formulario*/
+.form-field {
+  position: relative;
+}
+
+.form-field .error {
+  font-size: 0.7rem;
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 600px), (orientation: portrait) {

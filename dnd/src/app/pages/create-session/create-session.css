@@ -78,7 +78,7 @@ h1 {
 #buttonMovil{
   display: none;
 }
-@media screen and (max-width: 820px){
+@media screen and (max-width: 820px), (orientation: portrait) {
   .img-foot {
     display: none;
   }

@@ -19,18 +19,10 @@ export const routes: Routes = [
   },
   { path: 'joinSession', loadComponent: () => import('./pages/join-session/join-session').then((m) => m.JoinSession) },
   {
-    path: 'home',
-    loadComponent: () =>
-      import('./pages/home/home').then((m) => m.Home) },
-  {
     path: 'player-campaign-main',
     loadComponent: () =>
       import('./pages/player-campaign-main/player-campaign-main').then((m) => m.PlayerCampaignMain),
   },
-
-  { path: 'joinSession',
-    loadComponent: () =>
-      import('./pages/join-session/join-session').then((m) => m.JoinSession) },
   {path: 'all-sessions', loadComponent: () => import('./pages/all-sessions/all-sessions').then((m) => m.AllSessions) },
   {path: 'create-session', loadComponent: () => import('./pages/create-session/create-session').then((m) => m.CreateSession) },
   {path: 'dm-notes',

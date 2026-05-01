@@ -6,7 +6,7 @@ import {
   deleteDoc,
   doc,
   Firestore,
-  updateDoc,
+  updateDoc
 } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
@@ -33,11 +33,11 @@ export class SessionService {
   }
 
   getSessions() : Observable<Session[]> {
-    return collectionData(this.refCol()) as Observable<Session[]>;
+    return collectionData(this.refCol(), {idField: 'id'}) as Observable<Session[]>;
   }
 
   updateSession(session: Partial<Session>) : void {
-      updateDoc(doc(this.firestore, `${this.col}/${session.id}`), session);
+    updateDoc(doc(this.firestore, `${this.col}/${session.id}`), session);
   }
 
   private refCol() {

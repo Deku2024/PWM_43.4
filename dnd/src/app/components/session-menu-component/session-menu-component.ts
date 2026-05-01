@@ -1,4 +1,4 @@
-import { Component, inject, Input, input, signal } from '@angular/core';
+import { Component, computed, inject, Input, input, signal } from '@angular/core';
 import { Session, SessionService } from '../../services/session.service';
 import { Router } from '@angular/router';
 
@@ -11,21 +11,18 @@ import { Router } from '@angular/router';
 export class SessionMenuComponent {
   session = input.required<Session>();
 
-  sessionName = signal('');
-  sessionDescription = signal('');
+  sessionName = computed(() => this.session().name);
+  sessionDescription = computed(() => this.session().description);
 
   sessionService = inject(SessionService);
 
-  constructor(private router: Router) {
-    this.sessionName.set(this.session().name);
-    this.sessionDescription.set(this.session().description);
-  }
+  constructor(private router: Router) {}
 
   remnoveThisSession() {
     this.sessionService.removeSession(this.session());
   }
 
   joinThisSession() {
-   this.router.navigate(['/player-campaign-main']);
+    this.router.navigate(['/player-campaign-main']);
   }
 }

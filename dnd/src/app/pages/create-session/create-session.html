@@ -1,3 +1,11 @@
+<header-logged-in [isMobile]="isMobile()" (callback)="toggleNavBar()"/>
+
+<nav-bar-component [hideCloseButton]="!isMobile()"
+                   [class.takeAll]="isMobile()"
+                   (callback)="toggleNavBar()"
+                   [class.visible]="showNavBar()" />
+
+<overlay-component (callback)="toggleNavBar()" [activate]="showNavBar() && isMobile()"/>
 
 <main>
 
@@ -38,7 +46,7 @@
 
   <div class="right">
 
-    <img src="../../Assets/campaign-img.png">
+    <img src="../../assets/campaign-img.png">
 
     <div class="img-foot">
       <p>
@@ -50,4 +58,3 @@
   </div>
 
 </main>
-<div id="overlay" onclick="changeNavBarVisibility()"></div>

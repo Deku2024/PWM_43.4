@@ -1,8 +1,11 @@
-<body>
-<header></header>
+<header-logged-in [isMobile]="isMobile()" (callback)="toggleNavBar()"/>
 
-<nav></nav>
+<nav-bar-component [hideCloseButton]="!isMobile()"
+                   [class.takeAll]="isMobile()"
+                   (callback)="toggleNavBar()"
+                   [class.visible]="showNavBar()" />
 
+<overlay-component (callback)="toggleNavBar()" [activate]="showNavBar() && isMobile()"/>
 <main>
   <h1>Únete a una campaña</h1>
 
@@ -17,11 +20,9 @@
     </a>
 
 
-<!--      <button (click)="goToPlayerCampaingMain">-->
-<!--        Aceptar-->
-<!--      </button>-->
+      <button (click)="goToPlayerCampaign()">
+        Aceptar
+      </button>
   </div>
 
 </main>
-<div id="overlay" onclick="changeNavBarVisibility()"></div>
-</body>

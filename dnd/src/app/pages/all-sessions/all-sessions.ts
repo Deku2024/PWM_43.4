@@ -32,7 +32,9 @@ export class AllSessions implements OnInit, OnDestroy {
       this.mediaQueryHandler = (e: MediaQueryListEvent) => {
         this.isMobile.set(e.matches);
 
-        if (!this.showNavBar()) {
+        if (e.matches) {
+          this.showNavBar.set(false);
+        } else {
           this.showNavBar.set(true);
         }
       };

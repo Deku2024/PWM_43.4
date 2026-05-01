@@ -1,5 +1,48 @@
 :host {
   display: flex;
-  background-color: #2ecc71;
-  width: 60%;
+  background-color: var(--wood-dark);
+  border-radius: 12px;
+  border: 2px solid silver;
+  width: clamp(10rem, 100%, 50rem);
+  height: clamp(3rem, 3.5rem, 5rem);
+  margin-top: 1%;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding-left: 2%;
+  padding-right: 1%;
+}
+
+p {
+  color: var(--gold);
+  font-size: 15pt;
+}
+
+div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 3%;
+  padding-right: 1rem;
+}
+
+button {
+  height: 70%;
+  background-color: var(--gold);
+  color: var(--very-dark-wood);
+  border-radius: 12px;
+}
+
+button:hover {
+  color: var(--gold);
+  background-color: var(--very-dark-wood);
+}
+
+@media screen and (max-width: 600px), (orientation: portrait) {
+  :host {
+    cursor: pointer;
+    width: 90%;
+  }
 }
