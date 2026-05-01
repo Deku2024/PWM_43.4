@@ -1,4 +1,4 @@
-import { Component, inject, OnInit, PLATFORM_ID, signal, WritableSignal } from '@angular/core';
+import { Component, effect, inject, OnInit, PLATFORM_ID, signal, WritableSignal } from '@angular/core';
 import { LogTiradasComponent } from '../../components/log-tiradas-component/log-tiradas-component';
 import { Router } from '@angular/router';
 import { PlayerSideBarComponent } from '../../components/player-side-bar-component/player-side-bar-component';
@@ -7,6 +7,12 @@ import { CampaignFooterComponent } from '../../components/campaign-footer-compon
 import { isPlatformBrowser } from '@angular/common';
 import { HeaderLoggedIn } from '../../components/header-logged-in/header-logged-in';
 import { DropDownMenuComponent } from '../../components/drop-down-menu-component/drop-down-menu-component';
+import { ReactiveFormsModule,
+FormBuilder,
+FormGroup,
+Validators,
+AbstractControl,
+ValidatorFn} from '@angular/forms';
 import { FieldWithValueComponent } from '../../components/field-with-value-component/field-with-value-component';
 import { DiceRollerComponent } from '../../components/dice-roller-component/dice-roller-component';
 
@@ -19,6 +25,7 @@ import { DiceRollerComponent } from '../../components/dice-roller-component/dice
     CampaignFooterComponent,
     HeaderLoggedIn,
     DropDownMenuComponent,
+    ReactiveFormsModule,
     FieldWithValueComponent,
     DiceRollerComponent,
   ],
@@ -33,10 +40,108 @@ export class PlayerCampaignMain implements OnInit {
   mediaQuery = signal<boolean>(false);
   isAnythingbeingShown = signal<boolean>(false);
   plataformId: Object = inject(PLATFORM_ID);
+  playerCampaignForm: FormGroup;
 
   lastMenuOpened: WritableSignal<boolean> | null = null;
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private fb: FormBuilder,
+  ) {
+    this.playerCampaignForm = this.fb.group(
+      {
+        name: ['Legolas', [Validators.required, Validators.maxLength(50)]],
+        age: [0, [Validators.required, Validators.max(1000), Validators.min(1)]],
+        experience: [0, [Validators.required, Validators.max(9999999)]],
+
+        classes: ['', [Validators.required]],
+        alignment: ['', [Validators.required]],
+        race: ['elfo', [Validators.required]],
+
+        life: [0, [Validators.required, Validators.min(0)]],
+        maxLife: [0, [Validators.required, Validators.min(0)]],
+        tempLife: [0, [Validators.min(0)]],
+
+        attributes: this.fb.group({
+          strength: [10, [Validators.required, Validators.min(1), Validators.max(20)]],
+          dexterity: [10, [Validators.required, Validators.min(1), Validators.max(20)]],
+          constitution: [10, [Validators.required, Validators.min(1), Validators.max(20)]],
+          intelligence: [10, [Validators.required, Validators.min(1), Validators.max(20)]],
+          wisdom: [10, [Validators.required, Validators.min(1), Validators.max(20)]],
+          charisma: [10, [Validators.required, Validators.min(1), Validators.max(20)]],
+        }),
+      },
+      { validators: [
+          this.validateLifeNotExceedMax(),
+          this.validateRace(),
+          this.validateClass(),
+          this.validateAlignment()
+        ]},
+    );
+  }
+
+  private validateRace(): ValidatorFn {
+    return (group: AbstractControl): { [key: string]: any } | null => {
+      const race = group.get('race')?.value;
+      const raceList: string[] = this.getRaceList();
+
+      if (race !== null && !raceList.includes(race)) {
+        return { 'raceInvalid': true };
+      }
+      return null;
+    };
+  }
+
+  private validateAlignment(): ValidatorFn {
+    return (group: AbstractControl): { [key: string]: any } | null => {
+      const alignment = group.get('alignment')?.value;
+      const alignList: string[] = this.getAlignmentList();
+
+      if (alignment !== null && !alignList.includes(alignment)) {
+        return { 'alignmentInvalid': true };
+      }
+
+      return null;
+    };
+
+  }
+
+  private validateClass(): ValidatorFn {
+    return (group: AbstractControl): { [key: string]: any } | null => {
+      const classes = group.get('classes')?.value;
+      const classList: string[] = this.getClassList();
+
+      if (classes !== null && !classList.includes(classes)) {
+        return { 'classInvalid': true };
+      }
+
+      return null;
+    };
+  }
+
+  private validateLifeNotExceedMax(): ValidatorFn {
+    return (group: AbstractControl): { [key: string]: any } | null => {
+      const life = group.get('life')?.value;
+      const maxLife = group.get('maxLife')?.value;
+
+      if (life !== null && maxLife !== null && life > maxLife) {
+        return { lifeExceedsMax: true };
+      }
+      return null;
+    };
+  }
+
+  private getRaceList(): string[] {
+    return ["humano", "elfo", "enano", "mediano", "dracónido", "tiefling"];
+  }
+
+  private getClassList(): string[] {
+    return ["guerrero", "mago", "pícaro", "clérigo", "explorador", "bárbaro"];
+  }
+
+  private getAlignmentList(): string[] {
+    return ["LG", "NG", "CG", "LN", "NN", "CN", "LC", "NC", "LG"];
+  }
 
   public interactMenu(which: number): void {
     if (this.mediaQuery()) {
