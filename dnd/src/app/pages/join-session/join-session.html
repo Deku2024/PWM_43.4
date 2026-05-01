@@ -1,1 +1,27 @@
+<body>
+<header></header>
 
+<nav></nav>
+
+<main>
+  <h1>Únete a una campaña</h1>
+
+  <label for="idSession"></label><input id="idSession" placeholder="ID de la campaña">
+  <label for="sessionPassword"></label><input id="sessionPassword" placeholder="Contraseña de la campaña">
+
+  <div id="buttons">
+    <a class="link" href="../allSessions/allSessions.html" id="cancelButton">
+      <button>
+        Cancelar
+      </button>
+    </a>
+
+
+      <button (click)="goToPlayerCampaingMain">
+        Aceptar
+      </button>
+  </div>
+
+</main>
+<div id="overlay" onclick="changeNavBarVisibility()"></div>
+</body>

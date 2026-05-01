@@ -1,1 +1,53 @@
-<p>create-session works!</p>
+
+<main>
+
+  <div class="left">
+    <h1>Crear sesión</h1>
+
+    <div class="top">
+      <label>
+        <input placeholder="Nombre">
+      </label>
+
+      <label id="players">
+        <input placeholder="Nº jugadores">
+      </label>
+    </div>
+
+    <label>
+      <textarea class="large-box" placeholder="Introduzca la descripción de la campaña"></textarea>
+    </label>
+
+    <label id="campNameMovil">
+      <input placeholder="Nº jugadores">
+    </label>
+
+    <label>
+      <input placeholder="Contraseña">
+    </label>
+
+    <div class="buttonsMovil">
+      <a class="link" href="../allSessions/allSessions.html">
+
+        <button>Cancelar</button>
+
+      </a>
+      <a class="link" href="../createdSession/createdSession.html" id="buttonMovil"><button>Crear sesión</button></a>
+    </div>
+  </div>
+
+  <div class="right">
+
+    <img src="../../Assets/campaign-img.png">
+
+    <div class="img-foot">
+      <p>
+        ¡¡Pon un nombre a tu campaña!! Limita el número de jugadores y descríbela a tu antojo. Añade una contraseña para evitar que el pícaro de turno se cuele en tus sesiones. Por último, ¡¡añade una iamgen para que tu campaña sea única e inigualable!!
+      </p>
+
+     <button (click)="goToCreatedSession()">Crear sesión</button>
+    </div>
+  </div>
+
+</main>
+<div id="overlay" onclick="changeNavBarVisibility()"></div>

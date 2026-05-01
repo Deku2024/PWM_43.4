@@ -1,0 +1,50 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: fixed;
+  top: 10%;
+  left: clamp(4rem, 100%, 7rem);
+  right: 0;
+  bottom: 0;
+
+  padding-left: 2%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+h1 {
+  margin-top: clamp(1rem, 10%, 10rem);
+}
+
+input {
+  width: clamp(17rem, 70%, 40rem);
+  height: 5%;
+  margin-top: 2%;
+  padding: 1%;
+}
+
+#buttons {
+  margin-top: 2%;
+  width: clamp(17rem, 71%, 40rem);
+  height: 7%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#buttons > * {
+  padding: 0;
+}
+
+button, #buttons a {
+  width: 70%;
+  height: 100%;
+  padding: 1%;
+}
+
+#acceptButton {
+  justify-self: end;
+  display: flex;
+  justify-content: flex-end;
+}
