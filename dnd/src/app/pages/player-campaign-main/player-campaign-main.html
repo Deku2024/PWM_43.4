@@ -9,10 +9,19 @@
 
     <section id="leftSection">
       <div id="characterImageContainer">
-        <label for="characterImageUpload">
-          <img src="../../Assets/sheet_img_example.png" alt="Character's Image (click to change)">
-        </label>
-        <input type="file" id="characterImageUpload" accept="image/*" style="display: none;">
+        <img
+          [src]="imagePreview || 'assets/sheet_img_example.png'"
+          (click)="fileInput.click()"
+          alt="Character image"
+        >
+
+        <input
+          #fileInput
+          type="file"
+          accept="image/*"
+          style="display: none"
+          (change)="onFileSelected($event)"
+        >
       </div>
       <div id="characteristicsGroup">
         <dice-roller-component [tittle]="'STR'" />
@@ -29,102 +38,152 @@
 
     </section>
     <section id="rightSection">
-      <form [formGroup]="playerCampaignForm" class="rightSectionWrapper">
-        <div class="form-field">
+      <form [formGroup]="playerCampaignForm" (ngSubmit)="onSubmit()">
+        <button type="submit" id="submit-button">💾</button>
+        <div class="rightSectionWrapper">
+          <div class="form-field">
             <label for="characterName"></label>
             <input formControlName="name" class="firstField" id="characterName" type="text" placeholder="Nombre" required maxlength="50">
 
-            @if (playerCampaignForm.get('name')?.errors?.['required']) {
+            @if (playerCampaignForm.get('name')?.errors?.['required'] && playerCampaignForm.get('name')?.touched) {
               <span class="error">Se requiere nombre</span>
             }
 
-            @if (playerCampaignForm.get('name')?.errors?.['maxLength']) {
+            @if (playerCampaignForm.get('name')?.errors?.['maxLength'] && playerCampaignForm.get('name')?.touched) {
               <span class="error">Máximo de caracteres alcanzado</span>
             }
+          </div>
+
+          <div class="form-field">
+            <label for="characterRace"></label>
+            <input formControlName="race" class="secondField" id="characterRace" type="text" placeholder="Raza">
+
+            @if (playerCampaignForm.get('race')?.errors?.['required'] && playerCampaignForm.get('race')?.touched) {
+              <span class="error">Se requiere raza</span>
+            }
+
+            @if (playerCampaignForm.errors?.['raceInvalid'] && playerCampaignForm.get('race')?.touched) {
+              <span class="error">La raza introducida no es válida</span>
+            }
+          </div>
+
+          <div class="form-field">
+            <label for="characterAge"></label>
+            <input formControlName="age" class="thirdField" id="characterAge" type="number" placeholder="Edad">
+
+            @if (playerCampaignForm.get('age')?.errors?.['required'] && playerCampaignForm.get('age')?.touched) {
+              <span class="error">La edad es requerida</span>
+            }
+
+            @if (playerCampaignForm.get('age')?.errors?.['min'] && playerCampaignForm.get('age')?.touched) {
+              <span class="error">La edad mínima es 1</span>
+            }
+
+            @if (playerCampaignForm.get('age')?.errors?.['max'] && playerCampaignForm.get('age')?.touched) {
+              <span class="error">La edad máxima es 1000</span>
+            }
+          </div>
         </div>
 
-        <div class="form-field">
-          <label for="characterRace"></label>
-          <input formControlName="race" class="secondField" id="characterRace" type="text" placeholder="Raza">
 
-          @if (playerCampaignForm.get('race')?.errors?.['required']) {
-            <span class="error">Se requiere raza</span>
+        <div class="rightSectionWrapper">
+          <div class="form-field">
+            <label for="characterClasses"> </label>
+            <input formControlName="classes" class="firstField" id="characterClasses" type="text" placeholder="Clases">
+
+            @if (playerCampaignForm.get('classes')?.errors?.['required'] && playerCampaignForm.get('classes')?.touched) {
+              <span class="error">Se requiere clase</span>
+            }
+
+            @if (playerCampaignForm.errors?.['classInvalid'] && playerCampaignForm.get('classes')?.touched) {
+              <span class="error">Clase inválida</span>
+            }
+          </div>
+
+          <div class="form-field">
+            <label for="characterExperience"> </label>
+            <input formControlName="experience" class="secondField" id="characterExperience" type="number" placeholder="Experiencia">
+
+            @if (playerCampaignForm.get('experience')?.errors?.['required'] && playerCampaignForm.get('experience')?.touched) {
+              <span class="error">Se requiere experiencia</span>
+            }
+
+            @if (playerCampaignForm.get('experience')?.errors?.['max'] && playerCampaignForm.get('experience')?.touched) {
+              <span class="error">Experiencia máxima alcanzada</span>
+            }
+
+          </div>
+
+          <div class="form-field">
+            <label for="characterAligment"></label>
+            <input formControlName="alignment" class="thirdField" id="characterAligment" type="text" placeholder="Alineamiento (ej. LG)">
+
+            @if (playerCampaignForm.get('alignment')?.errors?.['required'] && playerCampaignForm.get('alignment')?.touched) {
+              <span class="error">Se requiere alineamiento</span>
+            }
+
+            @if (playerCampaignForm.errors?.['alignmentInvalid'] && playerCampaignForm.get('alignment')?.touched) {
+              <span class="error">Alineamiento inválido</span>
+            }
+
+          </div>
+        </div>
+
+        <div class="rightSectionWrapper">
+          <div class="form-field">
+            <label for="salvationThrows"></label>
+            <input id="salvationThrows" type="text" placeholder="Tiradas de salvación">
+          </div>
+        </div>
+
+        <div id="miscCharacterValues">
+          <field-with-value-component
+            formControlName="life"
+            [title]="'Vida'"
+            [placeholder]="'Vida'">
+          </field-with-value-component>
+
+          <field-with-value-component
+            formControlName="maxLife"
+            [title]="'Vida máx'"
+            [placeholder]="'Vida máx.'">
+          </field-with-value-component>
+
+          <field-with-value-component
+            formControlName="tempLife"
+            [title]="'Vida temp'"
+            [placeholder]="'Vida temp.'">
+          </field-with-value-component>
+        </div>
+
+        <div class="life-errors">
+          @if (playerCampaignForm.get('life')?.errors?.['required'] && playerCampaignForm.get('life')?.touched) {
+            <span class="error">Se requiere vida</span>
           }
 
-          @if (playerCampaignForm.get('race')?.errors?.['raceInvalid']) {
-            <span class="error">La raza introducida no es válida</span>
+          @if (playerCampaignForm.get('life')?.errors?.['min'] && playerCampaignForm.get('life')?.touched) {
+            <span class="error">El valor mínimo es 0</span>
+          }
+
+          @if (playerCampaignForm.get('life')?.errors?.['min'] && playerCampaignForm.get('lifeExceedsMax')?.touched) {
+            <span class="error">La vida no puede superar la vida máxima</span>
+          }
+
+          @if (playerCampaignForm.get('maxLife')?.errors?.['required'] && playerCampaignForm.get('maxLife')?.touched) {
+            <span class="error">Se requiere vida máxima</span>
+          }
+
+          @if (playerCampaignForm.get('maxLife')?.errors?.['min'] && playerCampaignForm.get('maxLife')?.touched) {
+            <span class="error">El mínimo es 0</span>
+          }
+
+          @if (playerCampaignForm.get('tempLife')?.errors?.['min'] && playerCampaignForm.get('tempLife')?.touched) {
+            <span class="error">El mínimo es 0</span>
           }
         </div>
 
-        <div class="form-field">
-          <label for="characterAge"></label>
-          <input formControlName="age" class="thirdField" id="characterAge" type="text" placeholder="Edad">
-
-          @if (playerCampaignForm.get('age')?.errors?.['required']) {
-            <span class="error">La edad es requerida</span>
-          }
-
-          @if (playerCampaignForm.get('age')?.errors?.['min']) {
-            <span class="error">La edad mínima es 1</span>
-          }
-
-          @if (playerCampaignForm.get('age')?.errors?.['max']) {
-            <span class="error">La edad máxima es 1000</span>
-          }
-        </div>
-
-        <div class="form-field">
-          <label for="characterClasses"> </label>
-          <input class="firstField" id="characterClasses" type="text" placeholder="Clases">
-
-          @if (playerCampaignForm.get('classes')?.errors?.['required']) {
-            <span class="error">Se requiere clase</span>
-          }
-
-          @if (playerCampaignForm.get('classes')?.errors?.['classInvalid']) {
-            <span class="error">Clase inválida</span>
-          }
-        </div>
-
-        <div class="form-field">
-          <label for="characterExperience"> </label>
-          <input class="secondField" id="characterExperience" type="text" placeholder="Experiencia">
-
-          @if (playerCampaignForm.get('experience')?.errors?.['required']) {
-            <span class="error">Se requiere experiencia</span>
-          }
-
-          @if (playerCampaignForm.get('experience')?.errors?.['max']) {
-            <span class="error">Experiencia máxima alcanzada</span>
-          }
-
-        </div>
-
-        <div class="form-field">
-          <label for="characterAligment"></label>
-          <input class="thirdField" id="characterAligment" type="text" placeholder="Alineamiento">
-
-          @if (playerCampaignForm.get('alignment')?.errors?.['required']) {
-            <span class="error">Se requiere alineamiento</span>
-          }
-
-          @if (playerCampaignForm.get('alignment')?.errors?.['alignmentInvalid']) {
-            <span class="error">Alineamiento inválido</span>
-          }
-
-        </div>
-
-        <div class="form-field">
-          <label for="salvationThrows"></label>
-          <input id="salvationThrows" type="text" placeholder="Tiradas de salvación">
-        </div>
-
-        <field-with-value-component [tittle]="'Vida'" [placeholder]="'Vida'" />
-        <field-with-value-component [tittle]="'Vida máx'" [placeholder]="'Vida máx.'" />
-        <field-with-value-component [tittle]="'Vida temp'" [placeholder]="'Vida temp.'" />
+        <textarea placeholder="Descripción" id="characterDescription"></textarea>
       </form>
-
-      <label for="characterDescription"><textarea placeholder="Descripción" id="characterDescription"></textarea></label>
 
     </section>
   </div>

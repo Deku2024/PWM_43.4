@@ -1,2 +1,9 @@
-<p>{{tittle()}}</p>
-<label><input class="stat-value" placeholder="{{placeholder()}}" type="text"></label>
+<label>{{ title }}</label>
+<input
+  #inputRef
+  [value]="value"
+  [placeholder]="placeholder"
+  type="number"
+  (input)="setValue(inputRef.valueAsNumber)"
+  (blur)="onTouched()"
+/>
