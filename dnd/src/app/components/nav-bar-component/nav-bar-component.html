@@ -1,10 +1,8 @@
 @if (!hideCloseButton()) {
   <img id="close-nav-bar-button" src="/assets/close-img.svg" alt="navegation-button" (click)="callback.emit()">
 }
-
-<ul [class.desktop]="hideCloseButton()">
+<ul [class.show]="hideCloseButton()">
   <img src="/assets/all_sessions_img.png" alt="all-sessions-icon" (click)="goToAllSessions()">
   <img src="/assets/add_img.png" alt="add-session-icon" (click)="goToCreateSession()">
   <img src="/assets/conf_img.png" alt="conf-icon" (click)="goToConfiguration()">
 </ul>
-

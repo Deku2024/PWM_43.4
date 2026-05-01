@@ -25,7 +25,7 @@ export function initCampaignMenu() {
   overlay = document.getElementById('overlay-campaign');
   hamburger = document.getElementById('hamburguer_menu');
   
-  hamburger.src = "../../Assets/close-img.svg";
+  hamburger.src = "../../assets/close-img.svg";
 
   hamburger.onclick = function() {
     window.location.href = "../allSessions/allSessions.html";
