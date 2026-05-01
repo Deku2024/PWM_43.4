@@ -27,6 +27,7 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/player-campaign-main/player-campaign-main').then((m) => m.PlayerCampaignMain),
   },
+
   { path: 'joinSession',
     loadComponent: () =>
       import('./pages/join-session/join-session').then((m) => m.JoinSession) },
