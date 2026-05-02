@@ -6,7 +6,12 @@
   <section class="banner"><img src="/assets/homepageimg.png" alt="homepage image"></section>
 
   <div id="mainInformation">
-
+    @for (content of contents; track $index) {
+        <section class="card">
+          <h2>{{content.title}}</h2>
+          <p>{{content.description}}</p>
+        </section>
+    }
   </div>
 
 </main>
