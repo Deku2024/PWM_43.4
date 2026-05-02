@@ -10,7 +10,7 @@
 <main>
 
   <h1>Tus campañas</h1>
-
+  <button (click)="goToJoinSession()" id="joinSession">Unirse a campaña</button>
   <div>
     @for (session of sessions(); track $index) {
       <app-session-menu-component [session]="session"/>

@@ -10,11 +10,10 @@ main {
   padding-bottom: 1%;
 }
 
-
 #left {
-  display: grid;
-  grid-template-columns: repeat(2, 40%);
+  display: flex;
   gap: 7%;
+  max-height: 15rem;
 }
 
 
@@ -23,9 +22,7 @@ section {
   height: 100%;
 }
 
-
 h1 {
-
   font-family: "Macondo", cursive;
   font-weight: 400;
   font-style: normal;
@@ -68,8 +65,11 @@ input {
 
 @media screen and (max-width: 600px), (orientation: portrait) {
   main {
-    position: fixed;
     top: 10%;
-    margin-left: 10%;
+    margin: 0;
+  }
+
+  #left {
+    flex-direction: column;
   }
 }

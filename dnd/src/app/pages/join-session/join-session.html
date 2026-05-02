@@ -13,16 +13,14 @@
   <label for="sessionPassword"></label><input id="sessionPassword" placeholder="Contraseña de la campaña">
 
   <div id="buttons">
-    <a class="link" href="../allSessions/allSessions.html" id="cancelButton">
-      <button>
-        Cancelar
-      </button>
-    </a>
+    <button (click)="goToAllSessions()">
+      Cancelar
+    </button>
 
 
-      <button (click)="goToPlayerCampaign()">
-        Aceptar
-      </button>
+    <button (click)="goToPlayerCampaign()">
+      Aceptar
+    </button>
   </div>
 
 </main>

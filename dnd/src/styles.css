@@ -124,6 +124,7 @@ button {
   border-radius: 12px;
 
   transition: background-color 0.15s, color 0.15s;
+  cursor: pointer;
 }
 
 button:hover {
@@ -197,12 +198,6 @@ input:focus {
     display: flex;
     padding: 0;
   }
-
-  header > * {
-    padding: 0;
-    height: 100%;
-  }
-
 
   #home_icon {
     width: clamp(8rem, 100%, 14rem);

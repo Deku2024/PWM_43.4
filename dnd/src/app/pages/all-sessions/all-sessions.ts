@@ -1,10 +1,12 @@
-import { Component, inject, OnDestroy, OnInit, PLATFORM_ID, signal } from '@angular/core';
+import { Component, inject, OnDestroy, OnInit, PLATFORM_ID, signal, WritableSignal } from '@angular/core';
 import { HeaderLoggedIn } from '../../components/header-logged-in/header-logged-in';
 import { NavBarComponent } from '../../components/nav-bar-component/nav-bar-component';
 import { isPlatformBrowser } from '@angular/common';
 import { OverlayComponent } from '../../components/overlay-component/overlay-component';
 import { SessionMenuComponent } from '../../components/session-menu-component/session-menu-component';
-import { Session, SessionService } from '../../services/session.service';
+import { SessionService } from '../../services/session.service';
+import { Session } from '../../models/session';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-all-sessions',
@@ -21,10 +23,13 @@ export class AllSessions implements OnInit, OnDestroy {
   private mediaQueryList!: MediaQueryList;
   private mediaQueryHandler!: (e: MediaQueryListEvent) => void;
 
-  sessions = signal<Session[]>([]);
-  sessioService =  inject(SessionService);
+  sessioService = inject(SessionService);
+  sessions: WritableSignal<Session[]> = signal<Session[]>([]);
 
-  ngOnInit() {
+  constructor(private router: Router) {
+  }
+
+  async ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
       this.mediaQueryList = window.matchMedia('(max-width: 600px), (orientation: portrait)');
       this.isMobile.set(this.mediaQueryList.matches);
@@ -41,10 +46,7 @@ export class AllSessions implements OnInit, OnDestroy {
 
       this.mediaQueryList.addEventListener('change', this.mediaQueryHandler);
     }
-
-    this.sessioService.getSessions().subscribe(sessions => {
-      this.sessions.set(sessions);
-    });
+    this.sessions = this.sessioService.getSessionsList();
   }
 
   ngOnDestroy() {
@@ -55,5 +57,9 @@ export class AllSessions implements OnInit, OnDestroy {
 
   toggleNavBar() {
     this.showNavBar.set(!this.showNavBar());
+  }
+
+  goToJoinSession() {
+    this.router.navigate(['/joinSession']);
   }
 }

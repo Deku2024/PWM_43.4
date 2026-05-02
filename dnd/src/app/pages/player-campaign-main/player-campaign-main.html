@@ -98,8 +98,7 @@
           @if (playerCampaignForm.get('classes')?.errors?.['classInvalid']) {
             <span class="error">Clase inválida</span>
           }
-        </div>
-
+          </div>
           <div class="form-field">
             <label for="characterExperience"> </label>
             <input formControlName="experience" class="secondField" id="characterExperience" type="number" placeholder="Experiencia">
@@ -129,34 +128,34 @@
           </div>
         </div>
 
-        <div class="rightSectionWrapper">
+
+        <div class="rightSectionWrapper" id="miscFormField">
           <div class="form-field">
             <label for="salvationThrows"></label>
             <input id="salvationThrows" type="text" placeholder="Tiradas de salvación">
           </div>
+          <div id="miscCharacterValues">
+            <field-with-value-component
+              formControlName="life"
+              [title]="'Vida'"
+              [placeholder]="'Vida'">
+            </field-with-value-component>
+
+            <field-with-value-component
+              formControlName="maxLife"
+              [title]="'Vida máx'"
+              [placeholder]="'Vida máx.'">
+            </field-with-value-component>
+
+            <field-with-value-component
+              formControlName="tempLife"
+              [title]="'Vida temp'"
+              [placeholder]="'Vida temp.'">
+            </field-with-value-component>
+          </div>
         </div>
 
-        <div id="miscCharacterValues">
-          <field-with-value-component
-            formControlName="life"
-            [title]="'Vida'"
-            [placeholder]="'Vida'">
-          </field-with-value-component>
-
-          <field-with-value-component
-            formControlName="maxLife"
-            [title]="'Vida máx'"
-            [placeholder]="'Vida máx.'">
-          </field-with-value-component>
-
-          <field-with-value-component
-            formControlName="tempLife"
-            [title]="'Vida temp'"
-            [placeholder]="'Vida temp.'">
-          </field-with-value-component>
-        </div>
-
-        <div class="life-errors">
+        <div class="life-errors rightSectionWrapper">
           @if (playerCampaignForm.get('life')?.errors?.['required'] && playerCampaignForm.get('life')?.touched) {
             <span class="error">Se requiere vida</span>
           }
@@ -181,7 +180,6 @@
             <span class="error">El mínimo es 0</span>
           }
         </div>
-
         <textarea placeholder="Descripción" id="characterDescription"></textarea>
       </form>
 

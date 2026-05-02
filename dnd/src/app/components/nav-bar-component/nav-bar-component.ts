@@ -4,7 +4,7 @@ import { OverlayComponent } from '../overlay-component/overlay-component';
 
 @Component({
   selector: 'nav-bar-component',
-  imports: [OverlayComponent],
+  imports: [],
   templateUrl: './nav-bar-component.html',
   styleUrl: './nav-bar-component.css',
 })
@@ -24,6 +24,6 @@ export class NavBarComponent {
   }
 
   public goToConfiguration(): void {
-    this.router.navigate(['/profileSettings']);
+    this.router.navigate(['/defaultSettings']);
   }
 }

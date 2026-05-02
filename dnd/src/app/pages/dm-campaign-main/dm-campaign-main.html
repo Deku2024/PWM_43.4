@@ -29,6 +29,7 @@
 
 @if (mediaQuery()) {
   <campaign-footer-component
+    [hideMiddleButton]="true"
     (click)="updateIsAnythingbeingShown()"
     (usersClicked)="interactMenu(2)"
     (diceClicked)="interactMenu(1)"

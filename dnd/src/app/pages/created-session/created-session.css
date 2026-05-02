@@ -153,6 +153,10 @@ main {
     width: clamp(3rem, 40%, 10rem);
   }
 
+  .id-row {
+    margin-top: 5%;
+  }
+
   #additionalSection h2 {
     margin: 0;
   }

@@ -55,4 +55,8 @@ export class JoinSession implements OnInit, OnDestroy {
   goToPlayerCampaign() {
     this.router.navigate(['player-campaign-main']);
   }
+
+  goToAllSessions() {
+    this.router.navigate(['/all-sessions']);
+  }
 }

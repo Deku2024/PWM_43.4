@@ -1,5 +1,4 @@
-import { Component, output } from '@angular/core';
-import { NgOptimizedImage } from '@angular/common';
+import { Component, input, InputSignal, output } from '@angular/core';
 
 @Component({
   selector: 'campaign-footer-component',
@@ -11,4 +10,6 @@ export class CampaignFooterComponent {
   diceClicked = output<boolean>();
   usersClicked = output<boolean>();
   arrowClicked = output<boolean>();
+
+  hideMiddleButton : InputSignal<boolean> = input<boolean>(false);
 }

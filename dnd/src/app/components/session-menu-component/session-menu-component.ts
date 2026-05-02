@@ -1,6 +1,7 @@
-import { Component, computed, inject, Input, input, signal } from '@angular/core';
-import { Session, SessionService } from '../../services/session.service';
+import { Component, computed, inject, input } from '@angular/core';
+import { SessionService } from '../../services/session.service';
 import { Router } from '@angular/router';
+import { Session } from '../../models/session';
 
 @Component({
   selector: 'app-session-menu-component',
@@ -23,6 +24,7 @@ export class SessionMenuComponent {
   }
 
   joinThisSession() {
+    this.sessionService.setCurrentSession(this.session());
     this.router.navigate(['/player-campaign-main']);
   }
 }

@@ -1,4 +1,5 @@
-import { Component, output } from '@angular/core';
+import { Component, input, InputSignal, output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'user-icon-and-name-component',
@@ -7,9 +8,11 @@ import { Component, output } from '@angular/core';
   styleUrl: './user-icon-and-name-component.css',
 })
 export class UserIconAndNameComponent {
-  callback = output();
+  userProfile: InputSignal<boolean> = input<boolean>(false);
 
-  goBack(): void {
-    this.callback.emit();
+  constructor(private router: Router) {}
+
+  goToProfileSettings(): void {
+    this.router.navigate(['/profileSettings']);
   }
 }

@@ -20,31 +20,26 @@ h1 {
 
 input {
   width: clamp(17rem, 70%, 40rem);
-  height: 5%;
+  height: 7%;
   margin-top: 2%;
   padding: 1%;
+  box-sizing: border-box;
 }
 
 #buttons {
   margin-top: 2%;
-  width: clamp(17rem, 71%, 40rem);
   height: 7%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
+  width: clamp(17rem, 70%, 40rem);
 }
 
-#buttons > * {
-  padding: 0;
-}
-
-button, #buttons a {
-  width: 70%;
-  height: 100%;
+button {
   padding: 1%;
+  width: 7rem;
+  height: 2.8rem;
 }
 
 #acceptButton {
   justify-self: end;
-  display: flex;
-  justify-content: flex-end;
 }

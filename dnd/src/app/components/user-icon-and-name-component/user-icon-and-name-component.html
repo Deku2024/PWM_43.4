@@ -1,2 +1,6 @@
-<img alt="User Icon" width="35" height="35" src="assets/default_user_icon.png">
+<img
+  alt="User Icon" width="35" height="35"
+  src="/assets/default_user_icon.png"
+  [class.clickable] = "userProfile()"
+  (click)="userProfile() && goToProfileSettings()">
 <p>&commat;elmagofurioso</p>

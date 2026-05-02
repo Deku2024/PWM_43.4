@@ -164,14 +164,21 @@ main {
   font-size: 0.9rem; /* Reduce ligeramente el tamaño en pantallas pequeñas */
 }
 
-#miscCharacterValues label {
+#miscCharacterValues {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
-  height: 90%;
+  padding: 0 1%;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-#miscCharacterValues textarea {
-  width: 100%;
-  padding: 2.5%;
+#salvationThrows {
+  height: 100%;
+}
+
+#miscFormField {
+  display: flex;
 }
 
 #characterDescription {
@@ -254,6 +261,10 @@ main {
     left: 0 !important;
     right: 0 !important;
     padding: 1%;
+  }
+
+  #miscCharacterValues {
+    padding: 0 1rem;
   }
 
 }

@@ -1,8 +1,11 @@
-import { Component, inject, OnDestroy, OnInit, PLATFORM_ID, signal } from '@angular/core';
+import { Component, inject, OnDestroy, OnInit, PLATFORM_ID, signal, WritableSignal } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { HeaderLoggedIn } from '../../components/header-logged-in/header-logged-in';
 import { NavBarComponent } from '../../components/nav-bar-component/nav-bar-component';
 import { OverlayComponent } from '../../components/overlay-component/overlay-component';
+import { SessionService } from '../../services/session.service';
+import { Session } from '../../models/session';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-created-session',
@@ -18,6 +21,11 @@ export class CreatedSession implements OnInit, OnDestroy {
 
   private mediaQueryList!: MediaQueryList;
   private mediaQueryHandler!: (e: MediaQueryListEvent) => void;
+
+  sessionService = inject(SessionService);
+  session: WritableSignal<Session | null> = signal<Session | null>(null);
+
+  constructor(private router: Router) {}
 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
@@ -36,6 +44,8 @@ export class CreatedSession implements OnInit, OnDestroy {
 
       this.mediaQueryList.addEventListener('change', this.mediaQueryHandler);
     }
+
+    this.session.set(this.sessionService.getCurrentSession());
   }
 
   ngOnDestroy() {
@@ -46,5 +56,10 @@ export class CreatedSession implements OnInit, OnDestroy {
 
   toggleNavBar() {
     this.showNavBar.set(!this.showNavBar());
+  }
+
+  protected returnToAllSessions() {
+    this.sessionService.clearCurrentSession();
+    this.router.navigate(['/all-sessions']);
   }
 }
