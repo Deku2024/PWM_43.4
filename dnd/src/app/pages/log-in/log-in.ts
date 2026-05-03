@@ -28,7 +28,7 @@ export class LogIn {
       const { email, password } = this.loginForm.value;
       try {
         await this.authService.login(email!, password!); //
-        this.router.navigate(['/home']);
+        this.router.navigate(['/all-sessions']);
       } catch (error) {
         this.errorMessage = 'Credenciales incorrectas.';
       }

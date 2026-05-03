@@ -1,5 +1,5 @@
 // home.component.ts
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal, WritableSignal } from '@angular/core';
 import { Header } from '../../components/header/header';
 import { Footer } from '../../components/footer/footer';
 import { ChargeContentService } from '../../services/charge-content.service';
@@ -12,7 +12,7 @@ import { Content } from '../../models/content';
   styleUrl: './home.css',
 })
 export class Home implements OnInit {
-  contents: Content[] = [];
+  contents : WritableSignal<Content[]> = signal<Content[]>([]);
   loading: boolean = true;
   error: string | null = null;
 
@@ -25,8 +25,7 @@ export class Home implements OnInit {
   async loadContent() {
     try {
       this.loading = true;
-      this.contents = await this.contentService.getHomeContent();
-      console.log('Contenido final en componente:', this.contents);
+      this.contents.set(await this.contentService.getHomeContent());
       this.loading = false;
     } catch (error) {
       console.error('Error:', error);

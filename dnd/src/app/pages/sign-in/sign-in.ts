@@ -25,9 +25,9 @@ export class SignIn {
 
   signInForm = new FormGroup(
     {
-      username: new FormControl('', [Validators.required, Validators.minLength(6)]),
+      username: new FormControl('', [Validators.required, Validators.minLength(4)]),
       email: new FormControl('', [Validators.required, Validators.email]),
-      password: new FormControl('', [Validators.required, Validators.minLength(8)]),
+      password: new FormControl('', [Validators.required, Validators.minLength(6)]),
       repeatpassw: new FormControl('', [Validators.required]),
     },
     { validators: this.passwordMatchValidator },
@@ -49,7 +49,7 @@ export class SignIn {
       console.log("Se envia a registrar");
       try {
         await this.authService.register(email!, password!, username!);
-        this.router.navigate(['/home']);
+        this.router.navigate(['/all-sessions']);
       } catch (error: any) {
         this.errorMessage = 'Error al registrar: el correo ya existe o los datos son inválidos.';
       }

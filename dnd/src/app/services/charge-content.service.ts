@@ -16,7 +16,7 @@ export class ChargeContentService {
     console.log('Número de documentos:', querySnapshot.docs.length);
 
     const contents = querySnapshot.docs.map(doc => {
-      console.log('Documento:', doc.id, doc.data()); // ← Ver qué hay en cada documento
+      console.log('Documento:', doc.id, doc.data());
       const data = doc.data();
       return {
         id: doc.id,
@@ -29,3 +29,4 @@ export class ChargeContentService {
     return contents;
   }
 }
+
