@@ -26,6 +26,7 @@ export class Home implements OnInit {
     try {
       this.loading = true;
       this.contents.set(await this.contentService.getHomeContent());
+      console.log('Contenido final en componente:', this.contents);
       this.loading = false;
     } catch (error) {
       console.error('Error:', error);
