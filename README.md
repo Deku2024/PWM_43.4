@@ -127,7 +127,11 @@ Los nombres de los mockups dentro de estos tres directorios son iguales y son lo
 - playercampaignmain.png
 - profilesettings.png
 - signin.png
-- [storyboardGrabacion.mp4](./src/Mockups/storyboardGrabacion.mp4) (hacen falta cambios)
+<br><br>
+
+Además, en la carpeta Mockups también se pueden encontrar los siguientes vídeos sobre el proyecto:
+- [storyboardGrabacion.mp4](./src/Mockups/storyboardGrabacion.mp4)
+- [demo-RWD.mov](./src/Mockups/demo-RWD.mov)
 
 <br>
 <h3>Breve explicación de los mockups</h3>
@@ -578,12 +582,299 @@ Esta validación se ha realizado comparando los datos introducidos con los exist
 
 <br><br>
 
+<h2>Estructura del proyecto una vez realizada la migración a Angular</h2>
+
+La estructura del proyecto resultante es la siguiente:
+
+```
+.
+├── .angular
+├── .vscode
+├── dist
+├── node_modules
+├── public
+│   ├── assets
+│   └── favicon.ico
+├── src
+│   ├── app
+│   │   ├── components
+│   │   │   ├── campaign-footer-component
+│   │   │   ├── dice-roller-component
+│   │   │   ├── dm-note-component
+│   │   │   ├── drop-down-menu-component
+│   │   │   ├── field-with-value-component
+│   │   │   ├── footer
+│   │   │   ├── header
+│   │   │   ├── header-logged-in
+│   │   │   ├── log-tiradas-component
+│   │   │   ├── nav-bar-component
+│   │   │   ├── overlay-component
+│   │   │   ├── player-side-bar-component
+│   │   │   └── user-icon-and-name-component
+|   |   ├── models
+│   │   │   ├── character.ts
+│   │   │   ├── session.ts
+│   │   │   └── content.ts
+│   │   ├── pages
+│   │   │   ├── all-sessions
+│   │   │   ├── create-session
+│   │   │   ├── created-session
+│   │   │   ├── default-settings
+│   │   │   ├── dm-campaign-main
+│   │   │   ├── home
+│   │   │   ├── join-session
+│   │   │   ├── log-in
+│   │   │   ├── player-campaign-main
+│   │   │   ├── profile-settings
+│   │   │   └── sign-in
+│   │   ├── services
+│   │   │   ├── auth.service.ts
+│   │   │   ├── charge-content.service.ts
+│   │   │   ├── session.service.ts
+│   │   │   └── player.service.ts
+│   │   ├── app.config.server.ts
+│   │   ├── app.config.ts
+│   │   ├── app.css
+│   │   ├── app.html
+│   │   ├── app.routes.server.ts
+│   │   ├── app.routes.ts
+│   │   ├── app.spec.ts
+│   │   └── app.ts
+│   ├── environments
+│   │   ├── environment.prod.ts
+│   │   └── environment.ts
+│   ├── index.html
+│   ├── main.server.ts
+│   ├── main.ts
+│   ├── server.ts
+│   └── styles.css
+```
+
+Faltarían en este árbol los archivos correspondientes a la configuración de Angular y de Typescript, por ejemplo.
+
+Los directorios principales se encuentran dentro de App y son: Pages, Components, Services.
+
+En <em>Pages</em> se encuentran, como bien el nombre indica, las páginas del proyecto que se corresponden con las páginas con las que se contaba en sprints anteriores.
+
+En el directorio <em>Services</em> se ubican los servicios que se han usado para la realización de las tareas del Sprint.
+
+Finalmente, en <em>Components</em> están los componentes usados después en las diferentes páginas. Cabe destacar que todos los Templates identificados en sprints anteriores durante la migración a Angular se han traducido como componentes. Se listan a continuación los componentes y su funcionalidad en el proyecto.
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre del componente</th>
+      <th>Funcionalidad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>campaign-footer-component</td>
+      <td>
+        <ul>
+          <li>Es el footer que se muestra en el diseño responsive de dm-campaign-main y player-campaign-main.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>dice-roller-component</td>
+      <td>
+        <ul>
+          <li>Está conformado por la imagen del dado y su campo numérico correspondiente.</li>
+          <li>Se usa en player-campaign-main.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>dm-note-component</td>
+      <td>
+        <ul>
+          <li>Representa la nota individual del DM.</li>
+          <li>Se utiliza en dm-campaign-main.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>drop-down-menu-component</td>
+      <td>
+        <ul>
+          <li>En el diseño responsive de player-campaign-main y dm-campaign-main, se encarga de mostrar el Inventario, Habilidades y Habilidades de clase.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>field-with-value-component</td>
+      <td>
+        <ul>
+          <li>Contiene el título y el input de algunos campos del formulario</li>
+          <li>Se usa en player-campaign-main.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>footer</td>
+      <td>
+        <ul>
+          <li>Pie de página que muestra las redes sociales de las que dispone el sitio.</li>
+          <li>Se utiliza en log-in, sign-in y home.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>header</td>
+      <td>
+        <ul>
+          <li>Es el header por defecto, sin que el usuario tenga que iniciar sesión.</li>
+          <li>Se utiliza en log-in, sign-in y home.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>header-logged-in</td>
+      <td>
+        <ul>
+          <li>Es el header que se muestra una vez el usuario ha iniciado sesión.</li>
+          <li>Se utiliza en all-sessions, create-session, created-session, default-settings, dm-campaign-main, join-session, player-campaign-main, profile-settings</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>log-tiradas-component</td>
+      <td>
+        <ul>
+          <li>Este componente es el que muestra el registro de las tiradas realizadas.</li>
+          <li>Se utiliza en player-campaign-main y dm-campaign-main.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>nav-bar-component</td>
+      <td>
+        <ul>
+          <li>Es la barra de navegación lateral, con tres botones para navegar por el espacio personal del usuario.</li>
+          <li>Se usa en all-sessions, create-session, created-session, default-settings, join-session.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>overlay-component</td>
+      <td>
+        <ul>
+          <li>Se encarga en el diseño responsive de player-campaign-main y dm-campaign-main de oscurecer el fondo cuando se accionan los desplegables.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>player-side-bar-component</td>
+      <td>
+        <ul>
+          <li>Contiene una lista de los jugadores de la sesión.</li>
+          <li>Se usa en player-campaign-main y dm-campaign-main.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>user-icon-and-name-component</td>
+      <td>
+        <ul>
+          <li>Contiene el icono con la foto de usuario y el nombre de usuario. </li>
+          <li>Se usa en otros componentes, como header-logged-in y player-side-bar-component.</li>
+        </ul>
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+
+<h2>Estructura de los datos en Firebase</h2>
+
+En total se cuentan con 4 colecciones en Firebase que se corresponden con los ficheros JSON que se tenían en el Sprint anterior.
+  - users
+  - characters
+  - sessions
+  - content
+
+La estructura de la BD se puede observar en la siguiente imagen:
+
+<img width="2497" height="1451" alt="Captura de pantalla 2026-05-03 173159" src="https://github.com/user-attachments/assets/6b29310b-c50d-49bc-b03b-f8dade963e60" />
+
+Los documentos dentro de estas colecciones siguen las siguientes interfaces como estructuras:
+<br><br>
+
+Personajes:
+
+```
+export interface Character {
+  age: number;
+  alignment: string,
+  classes: string,
+  experience: number,
+  life: number,
+  maxLife: number,
+  tempLife: number,
+  name: string,
+  race: string,
+  attributes: {
+    charisma: number,
+    constitution: number,
+    dexterity: number,
+    intelligence: number,
+    strength: number,
+    wisdom: number
+  }
+}
+
+```
+
+<br><br>
+Contenido del Home:
+
+```
+export interface Content {
+  id?: string;
+  title: string;
+  description: string;
+}
+```
+
+<br><br>
+Sesiones:
+
+```
+export interface Session {
+  id?: string;
+  name: string;
+  description: string;
+  players: string[];
+  numberOfPlayers: number;
+  password: string;
+}
+
+```
+
+<br><br>
+<h2>Tour de la página web</h2>
+
+Los aspectos más importantes de la web, como por ejemplo uso de formularios reactivos, componentes, autenticación, etc; se encuentran documentados en la presentación PPTX sobre este sprint. Además, se incluirá en la misma un pequeño vídeo donde se ve un recorrido por la página así como un ejemplo de introducción de datos.
+
+
+<br><br>
 <h2>Otros aspectos del proyecto</h2>
-Respecto al sprint anterior, creemos necesario comentar ciertos cambios que han ocurrido en la estructura del proyecto. Mientras que cada página cuenta con su directorio propio donde se encuentran sus respectivos archivos .html, .css y .js, en la realización del sprint se ha considerado la necesidad de tener scripts de JavaScript y hojas de estilo que son comunes para algunas páginas. Es por ello que en ./src existen dos directorios destinados a contener estos ficheros. Se tratan de ./src/Scripts y ./src/Styles.
+En este sprint para la tarea de carga de imágenes, se ha optado por guardarlas en el navegador, ya que no se pudo guardar de manera local en el proyecto, Angular no lo permite, y en la funcionalidad de Storage de Firestore pedía una cuenta bancaria.
 <br><br>
-Otro cambio a destacar en relación al sprint anterior, es que ya se han determinado cuáles serán los ajustes por defecto de la sesión y se ha modificado el defaultSettings.html acorde a estas decisiones. Además, con la incorporación de JS se ha podido dotar de funcionalidad a algunos botones: ahora al entrar en una sesión se detectará si el usuario es el DM (Dungeon Master) de dicha sesión para mostrar la página que corresponde. Sin embargo, el botón de borrar sigue careciendo de funcionalidad.
+Además, a efectos de la demostración del funcionamiento de los formularios reactivos y la carga de contenido según el usuario loggeado, al entrar a una sesión solo redirige a PlayerCampaignMain, que es donde está implementado el poder seleccionar una imagen, crear un personaje, etc. Las notas del DM podrán seguir siendo accesibles mediante la ruta.
 <br><br>
-En este sprint, también se ha dotado a las páginas de una estética y estilos más similares a lo que habíamos pensado para el proyecto en un principio, pudiéndose mejorar en próximos sprints. Por otro lado, la carga de contenido en dmCampaignMain.html, playerCampaignMain.html y createdSession.html, debido a la complejidad que supone se ha aplazado para el sprint siguiente.
+Se ha creado una cuenta de prueba con las siguientes credenciales:
+
+```
+  correo: elmagofurioso@alu.ulpgc.es
+  contraseña: pwm2026
+```
+
+Dentro de esta cuenta se dispone de alguna sesión de prueba, en la que se puede crear un personaje, por ejemplo.
+
+
 
 
 
