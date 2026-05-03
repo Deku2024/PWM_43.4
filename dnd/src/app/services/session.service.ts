@@ -7,11 +7,14 @@ import {
   DocumentData,
   Firestore,
   onSnapshot,
+  query,
   QueryDocumentSnapshot,
   QuerySnapshot,
-  updateDoc
+  updateDoc,
+  where
 } from '@angular/fire/firestore';
 import { Session } from '../models/session';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root',
@@ -19,6 +22,7 @@ import { Session } from '../models/session';
 export class SessionService implements OnDestroy {
   private readonly col: string = 'sessions';
   private readonly firestore = inject(Firestore);
+  private readonly auth = inject(AuthService);
   currentSession = signal<Session | null>(null);
   sessionList = signal<Session[]>([]);
   private unsubscribe: (() => void) | null = null;
@@ -28,8 +32,15 @@ export class SessionService implements OnDestroy {
   }
 
   private initRealtimeListener() {
+    const currentUser = this.auth.getCurrentUser();
+
+    if (!currentUser) {
+      console.log('No hay usuario autenticado, no se inicializa el listener');
+      return;
+    }
+
     this.unsubscribe = onSnapshot(
-      collection(this.firestore, this.col),
+      query(collection(this.firestore, this.col), where('masterId', '==', currentUser.uid)),
       (snapshot: QuerySnapshot<DocumentData>) => {
         const sessions: Session[] = [];
         snapshot.forEach((doc) => {
@@ -39,8 +50,10 @@ export class SessionService implements OnDestroy {
       },
     );
   }
-
-  private introduceNewSession(sessions: Session[], doc: QueryDocumentSnapshot<DocumentData, DocumentData>) {
+  private introduceNewSession(
+    sessions: Session[],
+    doc: QueryDocumentSnapshot<DocumentData, DocumentData>,
+  ) {
     sessions.push({
       id: doc.id,
       name: doc.data()['name'] || '',
@@ -48,6 +61,7 @@ export class SessionService implements OnDestroy {
       players: doc.data()['players'] || [],
       numberOfPlayers: doc.data()['numberOfPlayers'] || 0,
       password: doc.data()['password'] || '',
+      masterId: this.auth.getCurrentUser()?.uid,
     } as Session);
   }
 

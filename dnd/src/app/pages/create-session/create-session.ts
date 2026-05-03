@@ -6,6 +6,7 @@ import { NavBarComponent } from '../../components/nav-bar-component/nav-bar-comp
 import { OverlayComponent } from '../../components/overlay-component/overlay-component';
 import { Session } from '../../models/session';
 import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-create-session',
@@ -15,6 +16,7 @@ import { Router } from '@angular/router';
 })
 export class CreateSession implements OnInit, OnDestroy {
   private platformId = inject(PLATFORM_ID);
+  private readonly auth = inject(AuthService);
 
   isMobile = signal<boolean>(false);
   showNavBar = signal<boolean>(true);
@@ -96,6 +98,7 @@ export class CreateSession implements OnInit, OnDestroy {
       players: [],
       numberOfPlayers: parseInt(numberOfPlayers) || 0,
       password: password,
+      masterId : <string> this.auth.getCurrentUser()?.uid
     };
   }
 }

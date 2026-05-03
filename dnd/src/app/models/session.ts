@@ -5,5 +5,6 @@ export interface Session {
   players: string[];
   numberOfPlayers: number;
   password: string;
+  masterId : string;
 }
 

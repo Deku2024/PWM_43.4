@@ -4,8 +4,10 @@ import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
   updateProfile,
+  User
 } from '@angular/fire/auth';
-import { Firestore, doc, setDoc } from '@angular/fire/firestore'; // Importar Firestore
+import { Firestore, doc, setDoc } from '@angular/fire/firestore';
+import firebase from 'firebase/compat/app';
 
 @Injectable({
   providedIn: 'root',
@@ -43,5 +45,9 @@ export class AuthService {
 
   logout() {
     return this.auth.signOut();
+  }
+
+  getCurrentUser(): User | null {
+    return this.auth.currentUser;
   }
 }

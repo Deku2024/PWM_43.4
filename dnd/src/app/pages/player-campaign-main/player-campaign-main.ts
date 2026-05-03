@@ -232,7 +232,7 @@ export class PlayerCampaignMain implements OnInit {
   }
 
   public goBack(): void {
-    this.router.navigate(['/sessions']);
+    this.router.navigate(['/all-sessions']);
   }
 
   public updateIsAnythingbeingShown() {
