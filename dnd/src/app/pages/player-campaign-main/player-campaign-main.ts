@@ -177,6 +177,10 @@ export class PlayerCampaignMain implements OnInit {
     reader.onload = () => {
       console.log('preview generado');
       this.imagePreview = reader.result;
+
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('imagenPreview', this.imagePreview as string);
+      }
       this.cdr.markForCheck();
     };
 
@@ -246,7 +250,14 @@ export class PlayerCampaignMain implements OnInit {
   private previousMediaQuery = signal<boolean | null>(null);
 
   ngOnInit(): void {
+
     if (isPlatformBrowser(this.plataformId)) {
+      //imagenes
+      const data = localStorage.getItem('imagenPreview');
+      if (data) {
+        this.imagePreview = data;
+      }
+
       const mql = matchMedia('(max-width: 600px), (orientation: portrait)');
 
       this.mediaQuery.set(mql.matches);

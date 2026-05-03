@@ -1,3 +1,4 @@
+// home.component.ts
 import { Component, OnInit } from '@angular/core';
 import { Header } from '../../components/header/header';
 import { Footer } from '../../components/footer/footer';
@@ -12,6 +13,8 @@ import { Content } from '../../models/content';
 })
 export class Home implements OnInit {
   contents: Content[] = [];
+  loading: boolean = true;
+  error: string | null = null;
 
   constructor(private contentService: ChargeContentService) {}
 
@@ -19,10 +22,16 @@ export class Home implements OnInit {
     this.loadContent();
   }
 
-  loadContent() {
-    this.contentService.getHomeContent().subscribe((contents) => {
-      this.contents = contents;
-      console.log(this.contents);
-    });
+  async loadContent() {
+    try {
+      this.loading = true;
+      this.contents = await this.contentService.getHomeContent();
+      console.log('Contenido final en componente:', this.contents);
+      this.loading = false;
+    } catch (error) {
+      console.error('Error:', error);
+      this.error = 'Error al cargar contenido';
+      this.loading = false;
+    }
   }
 }
