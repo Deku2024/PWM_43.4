@@ -48,7 +48,7 @@ export class SignIn {
       const { email, password, username } = this.signInForm.value;
       try {
         await this.authService.register(email!, password!, username!);
-        this.router.navigate(['/home']);
+        this.router.navigate(['/all-sessions']);
       } catch (error: any) {
         this.errorMessage = 'Error al registrar: el correo ya existe o los datos son inválidos.';
       }
