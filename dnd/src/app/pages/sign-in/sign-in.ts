@@ -46,6 +46,7 @@ export class SignIn {
   async onRegister() {
     if (this.signInForm.valid) {
       const { email, password, username } = this.signInForm.value;
+      console.log("Se envia a registrar");
       try {
         await this.authService.register(email!, password!, username!);
         this.router.navigate(['/all-sessions']);

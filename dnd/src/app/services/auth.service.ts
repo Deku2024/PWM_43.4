@@ -4,7 +4,7 @@ import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
   updateProfile,
-  authState, // <-- 1. Importamos authState
+  authState,
 } from '@angular/fire/auth';
 import { Firestore, doc, setDoc } from '@angular/fire/firestore';
 
@@ -25,6 +25,7 @@ export class AuthService {
     const user = userCredential.user;
 
     await updateProfile(user, { displayName: username });
+
     const userDocRef = doc(this.firestore, `users/${user.uid}`);
 
     await setDoc(userDocRef, {
@@ -39,5 +40,9 @@ export class AuthService {
 
   logout() {
     return this.auth.signOut();
+  }
+
+  getCurrentUser(): User | null {
+    return this.auth.currentUser;
   }
 }
