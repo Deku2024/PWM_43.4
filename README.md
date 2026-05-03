@@ -790,9 +790,71 @@ En total se cuentan con 4 colecciones en Firebase que se corresponden con los fi
   - sessions
   - content
 
+La estructura de la BD se puede observar en la siguiente imagen:
+
+<img width="2497" height="1451" alt="Captura de pantalla 2026-05-03 173159" src="https://github.com/user-attachments/assets/6b29310b-c50d-49bc-b03b-f8dade963e60" />
+
+Los documentos dentro de estas colecciones siguen las siguientes interfaces como estructuras:
+<br><br>
+
+Personajes:
+
+```
+export interface Character {
+  age: number;
+  alignment: string,
+  classes: string,
+  experience: number,
+  life: number,
+  maxLife: number,
+  tempLife: number,
+  name: string,
+  race: string,
+  attributes: {
+    charisma: number,
+    constitution: number,
+    dexterity: number,
+    intelligence: number,
+    strength: number,
+    wisdom: number
+  }
+}
+
+```
+
+<br><br>
+Contenido del Home:
+
+```
+export interface Content {
+  id?: string;
+  title: string;
+  description: string;
+}
+```
+
+<br><br>
+Sesiones:
+
+```
+export interface Session {
+  id?: string;
+  name: string;
+  description: string;
+  players: string[];
+  numberOfPlayers: number;
+  password: string;
+}
+
+```
+
+<br><br>
+<h2>Tour de la página web</h2>
+
+Los aspectos más importantes de la web, como por ejemplo uso de formularios reactivos, componentes, autenticación, etc; se encuentran documentados en la presentación PPTX sobre este sprint. Además, se incluirá en la misma un pequeño vídeo donde se ve un recorrido por la página así como un ejemplo de introducción de datos.
 
 
-
+<br><br>
 <h2>Otros aspectos del proyecto</h2>
 Respecto al sprint anterior, creemos necesario comentar ciertos cambios que han ocurrido en la estructura del proyecto. Mientras que cada página cuenta con su directorio propio donde se encuentran sus respectivos archivos .html, .css y .js, en la realización del sprint se ha considerado la necesidad de tener scripts de JavaScript y hojas de estilo que son comunes para algunas páginas. Es por ello que en ./src existen dos directorios destinados a contener estos ficheros. Se tratan de ./src/Scripts y ./src/Styles.
 <br><br>
