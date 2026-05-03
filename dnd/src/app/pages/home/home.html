@@ -1,15 +1,18 @@
-
 <app-header></app-header>
 
 <main>
-
-  <section class="banner"><img src="/assets/homepageimg.png" alt="homepage image"></section>
+  <section class="banner">
+    <img src="/assets/homepageimg.png" alt="homepage image">
+  </section>
 
   <div id="mainInformation">
-
+    @for (content of contents; track content.title) {
+      <section class="card">
+        <h2>{{content.title}}</h2>
+        <p>{{content.description}}</p>
+      </section>
+    }
   </div>
-
 </main>
 
 <app-footer></app-footer>
-
