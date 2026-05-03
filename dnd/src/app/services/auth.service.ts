@@ -5,8 +5,10 @@ import {
   createUserWithEmailAndPassword,
   updateProfile,
   authState,
+  User,
 } from '@angular/fire/auth';
 import { Firestore, doc, setDoc } from '@angular/fire/firestore';
+
 
 @Injectable({
   providedIn: 'root',
