@@ -6,7 +6,7 @@
   </section>
 
   <div id="mainInformation">
-    @for (content of contents; track content.title) {
+    @for (content of contents(); track $index) {
       <section class="card">
         <h2>{{content.title}}</h2>
         <p>{{content.description}}</p>
