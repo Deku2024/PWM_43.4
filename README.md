@@ -611,6 +611,10 @@ La estructura del proyecto resultante es la siguiente:
 │   │   │   ├── overlay-component
 │   │   │   ├── player-side-bar-component
 │   │   │   └── user-icon-and-name-component
+|   |   ├── models
+│   │   │   ├── character.ts
+│   │   │   ├── session.ts
+│   │   │   └── content.ts
 │   │   ├── pages
 │   │   │   ├── all-sessions
 │   │   │   ├── create-session
@@ -625,7 +629,8 @@ La estructura del proyecto resultante es la siguiente:
 │   │   │   └── sign-in
 │   │   ├── services
 │   │   │   ├── auth.service.ts
-│   │   │   ├── player.service.spec.ts
+│   │   │   ├── charge-content.service.ts
+│   │   │   ├── session.service.ts
 │   │   │   └── player.service.ts
 │   │   ├── app.config.server.ts
 │   │   ├── app.config.ts
@@ -856,12 +861,18 @@ Los aspectos más importantes de la web, como por ejemplo uso de formularios rea
 
 <br><br>
 <h2>Otros aspectos del proyecto</h2>
-Respecto al sprint anterior, creemos necesario comentar ciertos cambios que han ocurrido en la estructura del proyecto. Mientras que cada página cuenta con su directorio propio donde se encuentran sus respectivos archivos .html, .css y .js, en la realización del sprint se ha considerado la necesidad de tener scripts de JavaScript y hojas de estilo que son comunes para algunas páginas. Es por ello que en ./src existen dos directorios destinados a contener estos ficheros. Se tratan de ./src/Scripts y ./src/Styles.
+En este sprint para la tarea de carga de imágenes, se ha optado por guardarlas en el navegador, ya que no se pudo guardar de manera local en el proyecto, Angular no lo permite, y en la funcionalidad de Storage de Firestore pedía una cuenta bancaria.
 <br><br>
-Otro cambio a destacar en relación al sprint anterior, es que ya se han determinado cuáles serán los ajustes por defecto de la sesión y se ha modificado el defaultSettings.html acorde a estas decisiones. Además, con la incorporación de JS se ha podido dotar de funcionalidad a algunos botones: ahora al entrar en una sesión se detectará si el usuario es el DM (Dungeon Master) de dicha sesión para mostrar la página que corresponde. Sin embargo, el botón de borrar sigue careciendo de funcionalidad.
+Además, a efectos de la demostración del funcionamiento de los formularios reactivos y la carga de contenido según el usuario loggeado, al entrar a una sesión solo redirige a PlayerCampaignMain, que es donde está implementado el poder seleccionar una imagen, crear un personaje, etc. Las notas del DM podrán seguir siendo accesibles mediante la ruta.
 <br><br>
-En este sprint, también se ha dotado a las páginas de una estética y estilos más similares a lo que habíamos pensado para el proyecto en un principio, pudiéndose mejorar en próximos sprints. Por otro lado, la carga de contenido en dmCampaignMain.html, playerCampaignMain.html y createdSession.html, debido a la complejidad que supone se ha aplazado para el sprint siguiente.
+Se ha creado una cuenta de prueba con las siguientes credenciales:
 
+```
+  correo: elmagofurioso@alu.ulpgc.es
+  contraseña: pwm2026
+```
+
+Dentro de esta cuenta se dispone de alguna sesión de prueba, en la que se puede crear un personaje, por ejemplo.
 
 
 
