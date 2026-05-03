@@ -160,8 +160,6 @@ export class PlayerCampaignMain implements OnInit {
   onFileSelected(event: Event) {
     const input = event.target as HTMLInputElement;
 
-    console.log(input.files);
-
     if (!input.files || input.files.length === 0) return;
 
     const file = input.files[0];
