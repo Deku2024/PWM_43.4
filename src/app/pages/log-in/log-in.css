@@ -1,90 +1,163 @@
 main {
-  margin-top: 8%;
-  position: fixed;
-  top: 10%;
-  bottom: 10%;
-  left: 0;
-  right: 0;
-
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  padding: 2rem;
+}
+
+img {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  margin-bottom: 2rem;
 }
 
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50%;
-  margin-bottom: 1%;
-}
 
-form button {
-  padding: 1%;
-  width: 45%;
+  width: 50%;
+  margin-bottom: 1rem;
 }
 
 .input {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 80%;
+  margin-bottom: 1rem;
 }
 
-.input input {
-  width: 80%;
+/* ===== ION INPUT ===== */
+
+ion-input {
+  --border-radius: 6px;
+
+  --border-color: #4a4a4a;
+  --highlight-color-focused: #c9a24a;
+
+  --padding-start: 12px;
+  --padding-end: 12px;
+
+  --background: white;
+  --color: #000;
+
+  font-size: 1rem;
+}
+
+/* outline real del input */
+ion-input::part(native) {
   border: 2px solid #4a4a4a;
   border-radius: 6px;
-  outline: none;
+
+  padding: 12px;
+
   transition: 0.3s;
-  margin-bottom: 1%;
-  padding: 1%;
 }
+
+/* focus */
+ion-input.ion-focused::part(native) {
+  border-color: #c9a24a;
+}
+
+/* ===== ERRORES ===== */
 
 .error {
   font-size: 1rem;
   color: #e74c3c;
+
   padding: 6px 10px;
   border-radius: 6px;
+
   margin-top: 6px;
 
-  opacity: 2;
-  transform: translateY(-5px);
+  opacity: 1;
+
   transition: all 0.3s ease;
 }
 
+/* ===== BOTONES ===== */
+
+ion-button.mainButton {
+  --background: #4a4a4a;
+  --background-hover: #c9a24a;
+
+  --color: white;
+
+  --border-radius: 6px;
+
+  font-family: "Crimson Text", serif;
+
+  width: 45%;
+
+  margin-top: 1rem;
+}
+
+/* botón cancelar */
+#cancelButton {
+  --background: transparent;
+  --color: #4a4a4a;
+
+  --border-color: #4a4a4a;
+
+  --border-style: solid;
+  --border-width: 2px;
+}
+
+/* ===== OPCIONES ===== */
 
 .otherOptions {
   display: flex;
   flex-direction: row;
+
   align-items: center;
-  width: 22.5%;
   justify-content: space-between;
+
+  width: 22.5%;
 }
 
-.otherOptions button {
-  padding: 2%;
+.otherOptions ion-button {
+  width: auto;
 }
 
 .otherOptions a {
   font-family: "Crimson Text", serif;
   font-size: 1rem;
+
+  text-decoration: none;
+
+  transition: 0.3s;
 }
 
 .otherOptions a:hover {
   color: #c9a24a;
 }
 
-@media (max-width: 600px), (orientation: portrait) {
-  .otherOptions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-  }
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 600px),
+(orientation: portrait) {
 
   form {
     width: 100%;
   }
+
+  .input {
+    width: 100%;
+  }
+
+  ion-button.mainButton {
+    width: 100%;
+  }
+
+  .otherOptions {
+    flex-direction: column;
+
+    width: 60%;
+
+    gap: 1rem;
+  }
+
 }

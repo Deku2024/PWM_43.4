@@ -1,54 +1,100 @@
 <app-header></app-header>
 
-<main id="Main">
+<ion-content [fullscreen]="true">
 
-  <img src="/assets/logInSignInImage.png" alt="Logo" width="300" height="150">
+  <main id="Main">
 
-  <h1>Inicio de Sesión</h1>
+    <img
+      src="/assets/logInSignInImage.png"
+      alt="Logo"
+      width="300"
+      height="150"
+    >
 
-  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" id="logIn-form">
+    <h1>Inicio de Sesión</h1>
 
-    <div class="input">
-      <label for="firstInput"></label>
-      <input
-        formControlName="email"
-        placeholder="Correo electrónico"
-        id="firstInput"
-        type="email">
+    <form
+      [formGroup]="loginForm"
+      (ngSubmit)="onSubmit()"
+      id="logIn-form"
+    >
+
+      <div class="input">
+
+        <ion-input
+          formControlName="email"
+          placeholder="Correo electrónico"
+          type="email"
+          fill="outline">
+        </ion-input>
+
+      </div>
+
+      <div class="input">
+
+        <ion-input
+          formControlName="password"
+          placeholder="Contraseña"
+          type="password"
+          fill="outline">
+        </ion-input>
+
+      </div>
+
+      @if (loginForm.get('email')?.errors &&
+      loginForm.get('email')?.touched) {
+
+        <div class="error">
+          Ingresa un correo válido
+        </div>
+
+      }
+
+      @if (errorMessage){
+
+        <div class="error">
+          {{ errorMessage }}
+        </div>
+
+      }
+
+      <ion-button
+        expand="block"
+        type="submit"
+        id="acceptButton"
+        class="mainButton"
+        [disabled]="loginForm.invalid">
+
+        Iniciar sesión
+
+      </ion-button>
+
+    </form>
+
+    <div class="otherOptions">
+
+      <ion-button
+        fill="outline"
+        (click)="goToHome()"
+        id="cancelButton"
+        class="mainButton">
+
+        Cancelar
+
+      </ion-button>
+
+      <a
+        routerLink="/signIn"
+        class="link">
+
+        ¿No tienes cuenta? Regístrate
+
+      </a>
+
     </div>
 
-    <div class="input">
-      <label for="lastInput"></label>
-      <input
-        formControlName="password"
-        placeholder="Contraseña"
-        id="lastInput"
-        type="password">
-    </div>
+  </main>
 
-    @if (loginForm.get('email')?.errors && loginForm.get('email')?.touched) {
-      <div class="error">Ingresa un correo válido</div>
-    }
-
-    @if (errorMessage){
-      <div class="error">{{ errorMessage }}</div>
-    }
-
-    <button
-      type="submit"
-      id="acceptButton"
-      class="mainButton"
-      [disabled]="loginForm.invalid">
-      Iniciar sesión
-    </button>
-
-  </form>
-
-  <div class="otherOptions">
-    <button (click)="goToHome()" id="cancelButton" class="mainButton">Cancelar</button>
-    <a routerLink="/signIn" class="link">¿No tienes cuenta? Regístrate</a>
-  </div>
-
-</main>
+</ion-content>
 
 <app-footer></app-footer>

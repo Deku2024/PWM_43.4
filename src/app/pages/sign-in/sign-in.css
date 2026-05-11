@@ -1,97 +1,180 @@
 main {
-  position: fixed;
-  top: 10%;
-  bottom: 10%;
-  left: 0;
-  right: 0;
+  min-height: 100%;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  padding: 2rem;
 }
 
+img {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+}
+
+/* ===== FORM ===== */
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 35%;
+}
+
+/* ===== INPUTS ===== */
+
+.input-control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+}
+
+ion-input {
+  width: 80%;
+
+  --background: white;
+  --color: #000;
+
+  --border-radius: 6px;
+
+  --padding-start: 12px;
+  --padding-end: 12px;
+
+  --highlight-color-focused: var(--gold);
+}
+
+/* borde visual real */
+ion-input::part(native) {
+  border: 2px solid #4a4a4a;
+  border-radius: 6px;
+
+  transition: 0.3s;
+
+  padding: 10px;
+}
+
+/* focus */
+ion-input.ion-focused::part(native) {
+  border-color: var(--gold);
+}
+
+/* placeholder */
+ion-input::part(native)::placeholder {
+  padding-top: 2px;
+}
+
+/* ===== ERROR ===== */
+
+.error-text {
+  color: red;
+
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+
+  font-size: 0.95rem;
+}
+
+/* ===== BOTONES ===== */
+
+ion-button.mainButton {
+  width: 70%;
+
+  --background: #4a4a4a;
+  --background-hover: var(--gold);
+
+  --color: white;
+
+  --border-radius: 6px;
+
+  font-family: "Crimson Text", serif;
+
+  margin-bottom: 1%;
+}
+
+/* botón cancelar */
+.otherOptions ion-button {
+  width: auto;
+
+  --background: transparent;
+
+  --color: #4a4a4a;
+
+  --border-color: #4a4a4a;
+  --border-style: solid;
+  --border-width: 2px;
+
+  padding: 3%;
+}
+
+/* ===== OPCIONES ===== */
 
 .otherOptions {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  width: 25%;
-  justify-content: space-between;
-}
 
-.otherOptions button {
-  margin-bottom: 10%;
-  padding: 3%;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 25%;
 }
 
 .otherOptions a {
   font-family: "Crimson Text", serif;
   font-size: 1rem;
+
+  text-decoration: none;
+
+  transition: 0.3s;
 }
 
 .otherOptions a:hover {
   color: var(--gold);
 }
 
-input::placeholder {
-  padding-top: 2px;
-}
+/* ===== ESTADOS ===== */
 
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 35%;
-}
-
-
-form button {
-  width: 70%;
-  padding: 1%;
-  margin-bottom: 1%;
-}
-
-/* Sign In */
-.input-control {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin-top: 2.5%;
-  margin-bottom: 2.5%;
-}
-
-.input-control input {
-  width: 80%;
-  border: 2px solid #4a4a4a;
-  border-radius: 6px;
-  outline: none;
-  transition: 0.3s;
-}
-
-.error-message {
-  font-size: 1rem;
-  color: var(--error-color);
-  background-color: #ffecec;
-  padding: 6px 10px;
-  border-radius: 6px;
-  margin-top: 6px;
-  margin-bottom: 6px;
-
-  opacity: 0;
-  transform: translateY(-5px);
-  transition: all 0.3s ease;
-}
-
-.input-control.success input {
+.input-control.success ion-input::part(native) {
   border-color: var(--correct-color);
   background: #f0fff4;
 }
 
-.input-control.error input {
+.input-control.error ion-input::part(native) {
   border-color: var(--error-color);
   background: #fff5f5;
+}
+
+/* ===== ERROR MESSAGE ===== */
+
+.error-message {
+  font-size: 1rem;
+
+  color: var(--error-color);
+
+  background-color: #ffecec;
+
+  padding: 6px 10px;
+
+  border-radius: 6px;
+
+  margin-top: 6px;
+  margin-bottom: 6px;
+
+  opacity: 0;
+
+  transform: translateY(-5px);
+
+  transition: all 0.3s ease;
 }
 
 .input-control.error .error-message {
@@ -99,23 +182,30 @@ form button {
   transform: translateY(0);
 }
 
-@media (max-width: 600px), (orientation: portrait) {
-  .otherOptions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-  }
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 600px),
+(orientation: portrait) {
 
   form {
     width: 70%;
     margin-bottom: 2%;
   }
 
+  .otherOptions {
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 50%;
+
+    gap: 1rem;
+  }
 
   #buttonGroup {
     display: flex;
     flex-direction: row;
     align-items: center;
   }
+
 }
