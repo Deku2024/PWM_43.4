@@ -7,10 +7,17 @@ import { SessionMenuComponent } from '../../components/session-menu-component/se
 import { SessionService } from '../../services/session.service';
 import { Session } from '../../models/session';
 import { Router } from '@angular/router';
+import { IonContent, IonGrid, IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'app-all-sessions',
-  imports: [HeaderLoggedIn, NavBarComponent, OverlayComponent, SessionMenuComponent],
+  imports: [
+    HeaderLoggedIn,
+    NavBarComponent,
+    OverlayComponent,
+    SessionMenuComponent,
+    IonicModule,
+  ],
   templateUrl: './all-sessions.html',
   styleUrl: './all-sessions.css',
 })
@@ -23,11 +30,10 @@ export class AllSessions implements OnInit, OnDestroy {
   private mediaQueryList!: MediaQueryList;
   private mediaQueryHandler!: (e: MediaQueryListEvent) => void;
 
-  sessioService = inject(SessionService);
+  sessionService = inject(SessionService);
   sessions: WritableSignal<Session[]> = signal<Session[]>([]);
 
-  constructor(private router: Router) {
-  }
+  constructor(private router: Router) {}
 
   async ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
@@ -46,7 +52,7 @@ export class AllSessions implements OnInit, OnDestroy {
 
       this.mediaQueryList.addEventListener('change', this.mediaQueryHandler);
     }
-    this.sessions = this.sessioService.getSessionsList();
+    this.sessions = this.sessionService.getSessionsList();
   }
 
   ngOnDestroy() {
