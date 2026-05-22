@@ -26,15 +26,13 @@
           expand="block"
           id="joinSession"
           (click)="goToJoinSession()">
-
           Unirse a campaña
-
         </ion-button>
 
       </ion-col>
     </ion-row>
 
-    <ion-row>
+    <ion-row id="main-row">
 
       @for (session of sessions(); track $index) {
 
