@@ -33,14 +33,10 @@
               "node_modules/@ionic/angular/css/structure.css",
               "node_modules/@ionic/angular/css/typography.css"
             ],
-            "server": "src/main.server.ts",
-            "outputMode": "server",
+            "outputMode": "static",
             "security": {
               "allowedHosts": []
             },
-            "ssr": {
-              "entry": "src/server.ts"
-            }
           },
           "configurations": {
             "production": {
@@ -48,7 +44,7 @@
                 {
                   "type": "initial",
                   "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumError": "10MB"
                 },
                 {
                   "type": "anyComponentStyle",
