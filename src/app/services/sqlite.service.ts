@@ -8,24 +8,50 @@ import { Capacitor } from '@capacitor/core';
 export class FavoritesService {
   private sqlite: SQLiteConnection | null = null;
   private db: SQLiteDBConnection | null = null;
+  private isInitialized = false;
 
   constructor() {
     if (Capacitor.getPlatform() !== 'web' && CapacitorSQLite) {
       this.sqlite = new SQLiteConnection(CapacitorSQLite);
+      console.log('se ha llamado al método');
     } else {
       console.warn('SQLite no está disponible en esta plataforma.');
     }
   }
 
+  private async initSQLite(): Promise<void> {
+    const platform = Capacitor.getPlatform();
+    const isNative = platform === 'ios' || platform === 'android';
+
+    if (isNative && CapacitorSQLite) {
+      try {
+        this.sqlite = new SQLiteConnection(CapacitorSQLite);
+        await this.initDB();
+        this.isInitialized = true;
+        console.log('SQLite inicializado correctamente');
+      } catch (error) {
+        console.error('Error inicializando SQLite:', error);
+      }
+    } else {
+      console.warn('SQLite solo disponible en iOS/Android. Plataforma actual:', platform);
+    }
+  }
+
   private async initDB(): Promise<void> {
     if (!this.sqlite) {
-      console.warn('SQLite no inicializado');
-      return;
+      throw new Error('SQLite no inicializado');
     }
 
     if (this.db) return;
 
-    this.db = await this.sqlite.createConnection('favoritos', false, 'no-encryption', 1, false);
+    this.db = await this.sqlite.createConnection(
+      'favoritos',
+      false,
+      'no-encryption',
+      1,
+      false,
+    );
+
     await this.db.open();
 
     await this.db.execute(`

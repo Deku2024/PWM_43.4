@@ -6,7 +6,7 @@ ion-content {
   top: 10%;
   bottom: 0;
   right: 0;
-  left: 10%;
+  left: max(10%, 8rem);
 
   &::part(scroll) {
     padding: 1%;
