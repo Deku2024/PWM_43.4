@@ -4,10 +4,11 @@ import {
 } from '@angular/core';
 import { UserIconAndNameComponent } from '../user-icon-and-name-component/user-icon-and-name-component';
 import { Router } from '@angular/router';
+import { IonHeader, IonButtons, IonImg, IonToolbar } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'header-logged-in',
-  imports: [UserIconAndNameComponent],
+  imports: [UserIconAndNameComponent, IonImg, IonButtons, IonHeader, IonToolbar],
   templateUrl: './header-logged-in.html',
   styleUrl: './header-logged-in.css',
 })

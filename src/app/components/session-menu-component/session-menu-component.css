@@ -9,9 +9,6 @@
 
   justify-content: space-between;
   align-items: center;
-
-  padding-left: 2%;
-  padding-right: 1%;
 }
 
 p {
@@ -28,16 +25,21 @@ div {
   padding-right: 1rem;
 }
 
-button {
-  height: 70%;
-  background-color: var(--gold);
-  color: var(--very-dark-wood);
-  border-radius: 12px;
+ion-button {
+  --background: var(--primary-red);
+  --color: white;
+
+  --border-radius: 12px;
+
+  font-family: "Crimson Text", serif;
+  font-size: 12pt;
+
+  text-transform: none;
 }
 
-button:hover {
-  color: var(--gold);
-  background-color: var(--very-dark-wood);
+ion-button:hover {
+  --background: var(--gold);
+  --color: #2f2f2f;
 }
 
 @media screen and (max-width: 600px), (orientation: portrait) {
@@ -45,4 +47,25 @@ button:hover {
     cursor: pointer;
     width: 90%;
   }
+}
+
+ion-card-content {
+  background: none;
+  display: flex;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+ion-card {
+  background: none;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border: none;
+  border-radius: 12px;
+}
+
+.buttons {
+  padding: 0;
 }

@@ -1,8 +1,55 @@
-@if (!inCampaign() && isMobile()) {
-  <img id="hamburguer_menu" class="show-icon" src="/assets/hamburguer-menu.svg" alt="navegation-icon" (click)="callback.emit()">
-} @else if (inCampaign() && isMobile()) {
-  <img id="close_icon" class="show-icon" src="/assets/close-img.svg" alt="navegation-icon" (click)="goToSessions()">
-}
-<img src="/assets/logo.png" alt="logo" class="imagen" id="headerLogo" (click)="goToSessions()">
-<user-icon-and-name-component [userProfile]="true"/>
+<ion-header class="custom-header">
 
+  <ion-toolbar>
+
+    <div class="header-container">
+      <div class="left-section">
+
+        @if (!inCampaign() && isMobile()) {
+
+          <ion-img
+            id="hamburguer_menu"
+            class="show-icon"
+            src="/assets/hamburguer-menu.svg"
+            alt="navigation-icon"
+            (click)="callback.emit()">
+          </ion-img>
+
+        } @else if (inCampaign() && isMobile()) {
+
+          <ion-img
+            id="close_icon"
+            class="show-icon"
+            src="/assets/close-img.svg"
+            alt="navigation-icon"
+            (click)="goToSessions()">
+          </ion-img>
+
+        }
+
+      </div>
+
+      <div class="center-section">
+
+        <ion-img
+          src="/assets/logo.png"
+          alt="logo"
+          id="headerLogo"
+          (click)="goToSessions()">
+        </ion-img>
+
+      </div>
+
+      <div class="right-section">
+
+        <user-icon-and-name-component
+          [userProfile]="true">
+        </user-icon-and-name-component>
+
+      </div>
+
+    </div>
+
+  </ion-toolbar>
+
+</ion-header>

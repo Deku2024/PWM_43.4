@@ -1,100 +1,43 @@
 <app-header></app-header>
 
-<ion-content [fullscreen]="true">
-
+<ion-content>
   <main id="Main">
-
-    <img
-      src="/assets/logInSignInImage.png"
-      alt="Logo"
-      width="300"
-      height="150"
-    >
-
+    <img src="/assets/logInSignInImage.png" alt="Logo" width="300" height="150">
     <h1>Inicio de Sesión</h1>
-
-    <form
-      [formGroup]="loginForm"
-      (ngSubmit)="onSubmit()"
-      id="logIn-form"
-    >
-
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" id="logIn-form">
       <div class="input">
-
-        <ion-input
+        <label for="firstInput"></label>
+        <input
           formControlName="email"
           placeholder="Correo electrónico"
-          type="email"
-          fill="outline">
-        </ion-input>
-
+          id="firstInput"
+          type="email">
       </div>
 
       <div class="input">
-
-        <ion-input
+        <label for="lastInput"></label>
+        <input
           formControlName="password"
           placeholder="Contraseña"
-          type="password"
-          fill="outline">
-        </ion-input>
-
+          id="lastInput"
+          type="password">
       </div>
 
-      @if (loginForm.get('email')?.errors &&
-      loginForm.get('email')?.touched) {
-
-        <div class="error">
-          Ingresa un correo válido
-        </div>
-
+      @if (loginForm.get('email')?.errors && loginForm.get('email')?.touched) {
+        <p style="color: red;">Ingresa un correo válido</p>
       }
 
       @if (errorMessage){
-
-        <div class="error">
-          {{ errorMessage }}
-        </div>
-
+        <p style="color: red;">{{ errorMessage }}</p>
       }
 
-      <ion-button
-        expand="block"
-        type="submit"
-        id="acceptButton"
-        class="mainButton"
-        [disabled]="loginForm.invalid">
-
-        Iniciar sesión
-
-      </ion-button>
-
+      <ion-button type="submit" [disabled]="loginForm.invalid" class="mainButton">Iniciar sesión</ion-button>
     </form>
-
     <div class="otherOptions">
-
-      <ion-button
-        fill="outline"
-        (click)="goToHome()"
-        id="cancelButton"
-        class="mainButton">
-
-        Cancelar
-
-      </ion-button>
-
-      <a
-        routerLink="/signIn"
-        class="link">
-
-        ¿No tienes cuenta? Regístrate
-
-      </a>
-
+      <ion-button (click)="goToHome()" class="mainButton">Cancelar</ion-button>
+      <a routerLink="/signIn" class="link">¿No tienes cuenta? Regístrate</a>
     </div>
-
   </main>
-
 </ion-content>
 
 <app-footer></app-footer>

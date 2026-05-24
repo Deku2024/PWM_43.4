@@ -1,110 +1,34 @@
 <app-header></app-header>
 
-<ion-content [fullscreen]="true">
-
+<ion-content>
   <main id="Main">
-
-    <img
-      src="/assets/logInSignInImage.png"
-      alt="Logo"
-      width="275"
-      height="125">
-
+    <img src="/assets/logInSignInImage.png" alt="Logo" width="275" height="125">
     <h1>Regístrate</h1>
-
-    <form
-      [formGroup]="signInForm"
-      (ngSubmit)="onRegister()">
-
+    <form [formGroup]="signInForm" (ngSubmit)="onRegister()">
       <div class="input-control">
-
-        <ion-input
-          formControlName="username"
-          placeholder="Nombre de Usuario"
-          type="text"
-          fill="outline">
-        </ion-input>
-
+        <input formControlName="username" placeholder="Nombre de Usuario" type="text">
+      </div>
+      <div class="input-control">
+        <input formControlName="email" placeholder="Correo Electrónico" type="email">
+      </div>
+      <div class="input-control">
+        <input formControlName="password" placeholder="Contraseña" type="password">
+      </div>
+      <div class="input-control">
+        <input formControlName="repeatpassw" placeholder="Repita Contraseña" type="password">
       </div>
 
-      <div class="input-control">
-
-        <ion-input
-          formControlName="email"
-          placeholder="Correo Electrónico"
-          type="email"
-          fill="outline">
-        </ion-input>
-
-      </div>
-
-      <div class="input-control">
-
-        <ion-input
-          formControlName="password"
-          placeholder="Contraseña"
-          type="password"
-          fill="outline">
-        </ion-input>
-
-      </div>
-
-      <div class="input-control">
-
-        <ion-input
-          formControlName="repeatpassw"
-          placeholder="Repita Contraseña"
-          type="password"
-          fill="outline">
-        </ion-input>
-
-      </div>
-
-      @if (
-        signInForm.hasError('passwordMismatch') &&
-        signInForm.get('repeatpassw')?.touched
-        ) {
-
-        <p class="error-text">
-          Las contraseñas no coinciden
-        </p>
-
+      @if (signInForm.hasError('passwordMismatch') && signInForm.get('repeatpassw')?.touched) {
+        <p style="color: red;">Las contraseñas no coinciden</p>
       }
 
-      <ion-button
-        type="submit"
-        [disabled]="signInForm.invalid"
-        class="mainButton">
-
-        Registrarse
-
-      </ion-button>
-
+      <ion-button type="submit" [disabled]="signInForm.invalid" class="mainButton">Registrarse</ion-button>
     </form>
-
     <div class="otherOptions">
-
-      <ion-button
-        fill="outline"
-        (click)="router.navigate(['/index'])"
-        class="mainButton">
-
-        Cancelar
-
-      </ion-button>
-
-      <a
-        routerLink="/logIn"
-        class="link">
-
-        ¿Ya tienes cuenta? Inicia sesión
-
-      </a>
-
+      <ion-button (click)="router.navigate(['/index'])" class="mainButton">Cancelar</ion-button>
+      <a routerLink="/logIn" class="link">¿Ya tienes cuenta? Inicia sesión</a>
     </div>
-
   </main>
-
 </ion-content>
 
 <app-footer></app-footer>

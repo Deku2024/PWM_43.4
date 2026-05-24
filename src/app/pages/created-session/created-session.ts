@@ -6,10 +6,15 @@ import { OverlayComponent } from '../../components/overlay-component/overlay-com
 import { SessionService } from '../../services/session.service';
 import { Session } from '../../models/session';
 import { Router } from '@angular/router';
+import {
+  IonContent,
+  IonButton,
+  IonImg
+} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-created-session',
-  imports: [HeaderLoggedIn, NavBarComponent, OverlayComponent],
+  imports: [HeaderLoggedIn, NavBarComponent, OverlayComponent, IonContent, IonButton, IonImg],
   templateUrl: './created-session.html',
   styleUrl: './created-session.css',
 })

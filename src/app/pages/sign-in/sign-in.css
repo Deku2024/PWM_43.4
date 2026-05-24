@@ -1,180 +1,101 @@
+ion-content {
+  position: absolute;
+  top: 10%;
+  bottom: calc(50px + 1rem);
+  left: 0;
+  right: 0;
+  height: auto;
+}
+
 main {
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  padding: 2rem;
+  padding-top: 2.5%;
 }
-
-img {
-  margin-bottom: 1rem;
-}
-
-h1 {
-  margin-bottom: 1.5rem;
-}
-
-/* ===== FORM ===== */
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  width: 35%;
-}
-
-/* ===== INPUTS ===== */
-
-.input-control {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  width: 100%;
-
-  margin-top: 2.5%;
-  margin-bottom: 2.5%;
-}
-
-ion-input {
-  width: 80%;
-
-  --background: white;
-  --color: #000;
-
-  --border-radius: 6px;
-
-  --padding-start: 12px;
-  --padding-end: 12px;
-
-  --highlight-color-focused: var(--gold);
-}
-
-/* borde visual real */
-ion-input::part(native) {
-  border: 2px solid #4a4a4a;
-  border-radius: 6px;
-
-  transition: 0.3s;
-
-  padding: 10px;
-}
-
-/* focus */
-ion-input.ion-focused::part(native) {
-  border-color: var(--gold);
-}
-
-/* placeholder */
-ion-input::part(native)::placeholder {
-  padding-top: 2px;
-}
-
-/* ===== ERROR ===== */
-
-.error-text {
-  color: red;
-
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
-
-  font-size: 0.95rem;
-}
-
-/* ===== BOTONES ===== */
-
-ion-button.mainButton {
-  width: 70%;
-
-  --background: #4a4a4a;
-  --background-hover: var(--gold);
-
-  --color: white;
-
-  --border-radius: 6px;
-
-  font-family: "Crimson Text", serif;
-
-  margin-bottom: 1%;
-}
-
-/* botón cancelar */
-.otherOptions ion-button {
-  width: auto;
-
-  --background: transparent;
-
-  --color: #4a4a4a;
-
-  --border-color: #4a4a4a;
-  --border-style: solid;
-  --border-width: 2px;
-
-  padding: 3%;
-}
-
-/* ===== OPCIONES ===== */
 
 .otherOptions {
   display: flex;
   flex-direction: row;
-
   align-items: center;
-  justify-content: space-between;
-
   width: 25%;
+  justify-content: space-between;
+}
+
+.otherOptions ion-button {
+  padding: 3%;
 }
 
 .otherOptions a {
   font-family: "Crimson Text", serif;
   font-size: 1rem;
-
-  text-decoration: none;
-
-  transition: 0.3s;
 }
 
 .otherOptions a:hover {
   color: var(--gold);
 }
 
-/* ===== ESTADOS ===== */
-
-.input-control.success ion-input::part(native) {
-  border-color: var(--correct-color);
-  background: #f0fff4;
+ion-input::part(placeholder) {
+  padding-top: 2px;
 }
 
-.input-control.error ion-input::part(native) {
-  border-color: var(--error-color);
-  background: #fff5f5;
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35%;
 }
 
-/* ===== ERROR MESSAGE ===== */
+form ion-button {
+  width: 70%;
+  padding: 1%;
+  margin-bottom: 1%;
+}
+
+.input-control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+}
+
+.input-control input {
+  width: 80%;
+  border: 2px solid #4a4a4a;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+}
 
 .error-message {
   font-size: 1rem;
-
   color: var(--error-color);
-
   background-color: #ffecec;
-
   padding: 6px 10px;
-
   border-radius: 6px;
-
   margin-top: 6px;
   margin-bottom: 6px;
 
   opacity: 0;
-
   transform: translateY(-5px);
-
   transition: all 0.3s ease;
+}
+
+.input-control.success input {
+  border-color: var(--correct-color);
+  background: #f0fff4;
+}
+
+.input-control.error input {
+  border-color: var(--error-color);
+  background: #fff5f5;
 }
 
 .input-control.error .error-message {
@@ -182,24 +103,17 @@ ion-button.mainButton {
   transform: translateY(0);
 }
 
-/* ===== RESPONSIVE ===== */
-
-@media (max-width: 600px),
-(orientation: portrait) {
+@media (max-width: 600px), (orientation: portrait) {
+  .otherOptions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+  }
 
   form {
     width: 70%;
     margin-bottom: 2%;
-  }
-
-  .otherOptions {
-    flex-direction: column;
-
-    align-items: center;
-
-    width: 50%;
-
-    gap: 1rem;
   }
 
   #buttonGroup {
@@ -207,5 +121,20 @@ ion-button.mainButton {
     flex-direction: row;
     align-items: center;
   }
+}
 
+ion-button {
+  color: white;
+  --background: var(--primary-red);
+  --border-radius: 12px;
+  --border-width: 2px;
+  --border-style: solid;
+  --border-color: var(--iron);
+  transition: --background 0.15s, color 0.15s;
+  cursor: pointer;
+}
+
+ion-button:hover {
+  color: #2f2f2f;
+  --background: var(--gold);
 }

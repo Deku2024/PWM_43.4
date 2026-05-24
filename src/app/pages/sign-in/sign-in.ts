@@ -11,12 +11,12 @@ import {
   ValidationErrors,
 } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
-import { IonButton, IonContent, IonInput } from '@ionic/angular/standalone';
+import { IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'app-sign-in',
   standalone: true,
-  imports: [Header, Footer, ReactiveFormsModule, RouterLink, IonContent, IonInput, IonButton],
+  imports: [Header, Footer, ReactiveFormsModule, RouterLink, IonicModule],
   templateUrl: './sign-in.html',
   styleUrl: './sign-in.css',
 })

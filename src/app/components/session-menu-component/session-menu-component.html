@@ -1,10 +1,55 @@
-<p class="nombre">
-  {{sessionName()}}
-</p>
+<ion-card>
 
-<div class="buttons">
+  <ion-card-content>
 
-  <button>&#9661;</button>
-  <button (click)="joinThisSession()">Unirse</button>
-  <button (click)="remnoveThisSession()">Borrar</button>
-</div>
+    <div class="session-header">
+
+      <p class="nombre">
+        {{ sessionName() }}
+      </p>
+
+      <ion-button
+        fill="clear"
+        size="small"
+        (click)="toggleFavorite()">
+
+        <ion-icon
+          [name]="isFavorite() ? 'star' : 'star-outline'">
+        </ion-icon>
+
+      </ion-button>
+
+    </div>
+
+    <div class="buttons">
+
+      <ion-button
+        fill="clear"
+        size="small"
+      (click)="goToSessionDetails(session())">
+
+        <ion-icon name="chevron-down-outline"></ion-icon>
+
+      </ion-button>
+
+      <ion-button
+        color="primary"
+        (click)="joinThisSession()">
+
+        Unirse
+
+      </ion-button>
+
+      <ion-button
+        color="danger"
+        (click)="remnoveThisSession()">
+
+        Borrar
+
+      </ion-button>
+
+    </div>
+
+  </ion-card-content>
+
+</ion-card>
