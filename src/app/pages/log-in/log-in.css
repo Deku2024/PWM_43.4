@@ -6,7 +6,6 @@ ion-content {
   right: 0;
   height: auto;
 }
-
 main {
   width: 100%;
   height: 100%;
@@ -40,10 +39,6 @@ main {
   color: var(--gold);
 }
 
-ion-input::part(placeholder) {
-  padding-top: 2px;
-}
-
 form {
   display: flex;
   flex-direction: column;
@@ -55,16 +50,6 @@ form ion-button {
   width: 70%;
   padding: 1%;
   margin-bottom: 1%;
-}
-
-ion-input {
-  width: 100%;
-  border: 1px solid black;
-  border-radius: 12px;
-  padding: 1%;
-  margin-top: 2.5%;
-  margin-bottom: 2.5%;
-  transition: 0.3s;
 }
 
 .error-message {
@@ -81,19 +66,16 @@ ion-input {
   transition: all 0.3s ease;
 }
 
-.input-control.success ion-input {
-  --border-color: var(--correct-color);
-  --background: #f0fff4;
-}
+.error {
+  font-size: 1rem;
+  color: #e74c3c;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin-top: 6px;
 
-.input-control.error ion-input {
-  --border-color: var(--error-color);
-  --background: #fff5f5;
-}
-
-.input-control.error .error-message {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 2;
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
 }
 
 @media (max-width: 600px), (orientation: portrait) {
@@ -130,4 +112,21 @@ ion-button {
 ion-button:hover {
   color: #2f2f2f;
   --background: var(--gold);
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+.input input {
+  width: 80%;
+  border: 2px solid #4a4a4a;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+  margin-bottom: 1%;
+  padding: 1%;
 }

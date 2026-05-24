@@ -5,10 +5,18 @@
     <img src="/assets/logInSignInImage.png" alt="Logo" width="275" height="125">
     <h1>Regístrate</h1>
     <form [formGroup]="signInForm" (ngSubmit)="onRegister()">
-      <ion-input formControlName="username" placeholder="Nombre de Usuario" type="text"></ion-input>
-      <ion-input formControlName="email" placeholder="Correo Electrónico" type="email"></ion-input>
-      <ion-input formControlName="password" placeholder="Contraseña" type="password"></ion-input>
-      <ion-input formControlName="repeatpassw" placeholder="Repita Contraseña" type="password"></ion-input>
+      <div class="input-control">
+        <input formControlName="username" placeholder="Nombre de Usuario" type="text">
+      </div>
+      <div class="input-control">
+        <input formControlName="email" placeholder="Correo Electrónico" type="email">
+      </div>
+      <div class="input-control">
+        <input formControlName="password" placeholder="Contraseña" type="password">
+      </div>
+      <div class="input-control">
+        <input formControlName="repeatpassw" placeholder="Repita Contraseña" type="password">
+      </div>
 
       @if (signInForm.hasError('passwordMismatch') && signInForm.get('repeatpassw')?.touched) {
         <p style="color: red;">Las contraseñas no coinciden</p>
