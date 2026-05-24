@@ -1,13 +1,12 @@
 main {
-  position: fixed;
-  top: 10%;
-  left: clamp(4rem, 100%, 7rem);
-  right: 0;
-  bottom: 0;
-
   padding-left: 2%;
   padding-top: 1%;
   padding-bottom: 1%;
+
+  margin-top: 10vh;
+  margin-left: clamp(4rem, 100%, 7rem);
+
+  min-height: 100%;
 }
 
 #mainSection {
@@ -172,6 +171,12 @@ main {
   .users {
     max-height: clamp(5rem, 45%, 15rem);
   }
+
+  main {
+    margin-left: 0;
+    margin-top: 5rem;
+    padding: 0;
+  }
 }
 
 @media screen and (min-width: 600px) and (orientation: portrait) {
@@ -194,3 +199,28 @@ button:hover {
   background-color: var(--gold);
 }
 
+/*Ionic*/
+ion-content {
+  --background: var(--parchment-light);
+}
+
+ion-button {
+  --background: var(--primary-red);
+  --color: white;
+
+  --border-radius: 12px;
+
+  font-family: "Crimson Text", serif;
+  font-size: 16pt;
+
+  text-transform: none;
+}
+
+ion-button:hover {
+  --background: var(--gold);
+  --color: #2f2f2f;
+}
+
+ion-img {
+  display: block;
+}

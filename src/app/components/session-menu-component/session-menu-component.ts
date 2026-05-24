@@ -43,4 +43,9 @@ export class SessionMenuComponent {
       await this.favoriteService.removeFavorite(this.session().id!);
     }
   }
+
+  protected goToSessionDetails(session: Session) {
+    this.sessionService.setCurrentSession(session);
+    this.router.navigate(['/createdSession']);
+  }
 }
