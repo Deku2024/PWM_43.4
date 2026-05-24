@@ -1,16 +1,23 @@
-main {
-  position: fixed;
+ion-content {
+  position: absolute;
   top: 10%;
-  bottom: 10%;
+  bottom: calc(50px + 1rem);
   left: 0;
   right: 0;
+  height: auto;
+}
+
+main {
+  width: 100%;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
 
+  padding-top: 2.5%;
+}
 
 .otherOptions {
   display: flex;
@@ -20,8 +27,7 @@ main {
   justify-content: space-between;
 }
 
-.otherOptions button {
-  margin-bottom: 10%;
+.otherOptions ion-button {
   padding: 3%;
 }
 
@@ -34,7 +40,7 @@ main {
   color: var(--gold);
 }
 
-input::placeholder {
+ion-input::part(placeholder) {
   padding-top: 2px;
 }
 
@@ -45,28 +51,19 @@ form {
   width: 35%;
 }
 
-
-form button {
+form ion-button {
   width: 70%;
   padding: 1%;
   margin-bottom: 1%;
 }
 
-/* Sign In */
-.input-control {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+ion-input {
   width: 100%;
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 1%;
   margin-top: 2.5%;
   margin-bottom: 2.5%;
-}
-
-.input-control input {
-  width: 80%;
-  border: 2px solid #4a4a4a;
-  border-radius: 6px;
-  outline: none;
   transition: 0.3s;
 }
 
@@ -84,14 +81,14 @@ form button {
   transition: all 0.3s ease;
 }
 
-.input-control.success input {
-  border-color: var(--correct-color);
-  background: #f0fff4;
+.input-control.success ion-input {
+  --border-color: var(--correct-color);
+  --background: #f0fff4;
 }
 
-.input-control.error input {
-  border-color: var(--error-color);
-  background: #fff5f5;
+.input-control.error ion-input {
+  --border-color: var(--error-color);
+  --background: #fff5f5;
 }
 
 .input-control.error .error-message {
@@ -112,23 +109,25 @@ form button {
     margin-bottom: 2%;
   }
 
-
   #buttonGroup {
     display: flex;
     flex-direction: row;
     align-items: center;
   }
 }
-button {
+
+ion-button {
   color: white;
-  background-color: var(--primary-red);
-  border-radius: 12px;
-  border: 2px solid var(--iron);
-  transition: background-color 0.15s, color 0.15s;
+  --background: var(--primary-red);
+  --border-radius: 12px;
+  --border-width: 2px;
+  --border-style: solid;
+  --border-color: var(--iron);
+  transition: --background 0.15s, color 0.15s;
   cursor: pointer;
 }
 
-button:hover {
+ion-button:hover {
   color: #2f2f2f;
-  background-color: var(--gold);
+  --background: var(--gold);
 }

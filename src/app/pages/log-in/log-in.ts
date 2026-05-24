@@ -4,11 +4,12 @@ import { Footer } from '../../components/footer/footer';
 import { Router, RouterLink } from '@angular/router';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
+import { IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'app-log-in',
   standalone: true,
-  imports: [Header, Footer, ReactiveFormsModule, RouterLink],
+  imports: [Header, Footer, ReactiveFormsModule, RouterLink, IonicModule],
   templateUrl: './log-in.html',
   styleUrl: './log-in.css',
 })

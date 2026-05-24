@@ -11,11 +11,12 @@ import {
   ValidationErrors,
 } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
+import { IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'app-sign-in',
   standalone: true,
-  imports: [Header, Footer, ReactiveFormsModule, RouterLink],
+  imports: [Header, Footer, ReactiveFormsModule, RouterLink, IonicModule],
   templateUrl: './sign-in.html',
   styleUrl: './sign-in.css',
 })
@@ -46,7 +47,7 @@ export class SignIn {
   async onRegister() {
     if (this.signInForm.valid) {
       const { email, password, username } = this.signInForm.value;
-      console.log("Se envia a registrar");
+      console.log('Se envia a registrar');
       try {
         await this.authService.register(email!, password!, username!);
         this.router.navigate(['/all-sessions']);
